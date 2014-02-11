@@ -1,0 +1,24 @@
+# Bootstrap
+app/bootstrap*
+.buildpath
+.gitignore~
+
+# Symfony directories
+vendor/*
+*/bin/*
+*/logs/*
+*/cache/*
+web/uploads/*
+web/bundles/*
+
+# Configuration files
+app/config/parameters.yml
+
+#composer
+composer.lock
+composer.phar
+
+# eclipse
+.project
+.settings/
+

@@ -1,77 +1,91 @@
 {
-    "name": "symfony-cmf/sandbox",
-    "description": "Demo Sandbox for the Symfony Content Management Framework",
-    "homepage": "http://cmf.symfony.com",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Symfony CMF Community",
-            "homepage": "https://github.com/symfony-cmf/SimpleCmsBundle/contributors"
-        }
-    ],
+    "name": "sonata-project/sandbox",
+    "description": "Sonata Project's sandbox",
+
     "autoload": {
         "psr-0": { "": "src/" }
     },
     "minimum-stability": "stable",
+    "license": "MIT",
+
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.3.*",
+
+        "twig/twig": "~1.12",
         "twig/extensions": "~1.0",
-        "symfony/assetic-bundle": "2.3.*",
-        "symfony/swiftmailer-bundle": "2.3.*",
-        "symfony/monolog-bundle": "2.3.*",
-        "sensio/distribution-bundle": "2.3.*",
-        "sensio/framework-extra-bundle": "2.3.*",
-        "sensio/generator-bundle": "2.3.*",
-        "symfony-cmf/symfony-cmf": "1.0.*",
-        "symfony-cmf/simple-cms-bundle": "1.0.*",
-        "symfony-cmf/search-bundle": "1.0.*",
-        "symfony-cmf/create-bundle": "1.0.*",
-        "symfony-cmf/routing-auto-bundle": "1.0.0-alpha8@dev",
-        "symfony-cmf/blog-bundle": "~1.0.0-beta7@dev",
-        "jackalope/jackalope-doctrine-dbal": "1.0.*",
-        "jackalope/jackalope-jackrabbit": "1.0.*",
-        "doctrine/doctrine-bundle": "1.2.*",
-        "doctrine/data-fixtures": "1.0.*",
-        "sonata-project/cache-bundle": "2.1.*",
-        "sonata-project/doctrine-phpcr-admin-bundle": "1.0.*",
-        "eko/feedbundle": "1.0.*",
-        "lunetics/locale-bundle": "2.2.*",
-        "liip/imagine-bundle": "~0.12",
-        "wjzijderveld/check-bundles": "1.0.*@dev",
-        "helios-ag/fm-elfinder-bundle": "~1.4",
-        "doctrine/phpcr-odm": "~1.0.1"
+
+        "symfony/symfony": "~2.3",
+        "symfony/assetic-bundle": "~2.3",
+        "symfony/swiftmailer-bundle": "~2.3",
+        "symfony/monolog-bundle": "~2.3",
+
+        "sensio/distribution-bundle": "~2.3",
+        "sensio/framework-extra-bundle": "~2.3",
+        "sensio/generator-bundle": "~2.3",
+
+        "doctrine/doctrine-bundle": "~1.2",
+        "doctrine/doctrine-migrations-bundle": "dev-master",
+        "doctrine/migrations": "dev-master",
+        "doctrine/doctrine-fixtures-bundle": "2.1.*@dev",
+        "doctrine/data-fixtures": "1.0.*@dev",
+        "stof/doctrine-extensions-bundle": "~1.1",
+
+        "jms/security-extra-bundle": "~1.5",
+        "jms/di-extra-bundle": "~1.4",
+
+        "knplabs/gaufrette": "0.1.4",
+        "knplabs/knp-menu-bundle": "1.1.x-dev",
+        "knplabs/knp-markdown-bundle": "1.2.*@dev",
+         
+        "sonata-project/core-bundle": "~2.2",
+        "sonata-project/easy-extends-bundle": "~2.1",
+        "sonata-project/doctrine-extensions": "~1",
+        "sonata-project/intl-bundle": "~2.1",
+        "sonata-project/admin-bundle": "~2.2",
+        "sonata-project/doctrine-orm-admin-bundle": "~2.2",
+        "sonata-project/notification-bundle": "~2.2",
+        "sonata-project/block-bundle": "~2.2",
+        "sonata-project/media-bundle": "~2.2",
+        "sonata-project/user-bundle": "~2.2",
+        "sonata-project/formatter-bundle": "~2.3",
+
+        "sonata-project/news-bundle" : "~2.3",
+	"sonata-project/classification-bundle" : "~2.2",
+
+        "willdurand/faker-bundle": "~1.0"
     },
+
     "require-dev": {
-        "liip/functional-test-bundle": "1.0.*",
-        "symfony-cmf/testing": "1.0.*"
+        "phpunit/phpunit": "~3.7",
+        "guzzle/guzzle": "~3.0"
     },
+
     "scripts": {
         "post-install-cmd": [
-            "WillemJan\\CheckBundles\\Composer\\CheckBundles::postPackageUpdate",
-            "Symfony\\Cmf\\Bundle\\CreateBundle\\Composer\\ScriptHandler::downloadCreateAndCkeditor",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
         "post-update-cmd": [
-            "WillemJan\\CheckBundles\\Composer\\CheckBundles::postPackageUpdate",
-            "Symfony\\Cmf\\Bundle\\CreateBundle\\Composer\\ScriptHandler::downloadCreateAndCkeditor",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ]
     },
+
     "config": {
         "bin-dir": "bin"
     },
+
     "extra": {
-        "checkbundles-ignore": [
-            "Liip\\FunctionalTestBundle\\LiipFunctionalTestBundle",
-            "Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle"
-        ],
         "symfony-app-dir": "app",
-        "symfony-web-dir": "web",
-        "symfony-assets-install": "symlink"
+        "symfony-web-dir": "web"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.3.x-dev"
+        }
     }
 }
