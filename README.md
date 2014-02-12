@@ -14,7 +14,7 @@ Installation
 
     git clone https://github.com/kadala/symfony2-distribution.git
     make deploy-configure
-    make deploy-configure install
+    make install
 
 
 
