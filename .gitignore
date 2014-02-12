@@ -10,7 +10,9 @@ vendor/*
 */cache/*
 web/uploads/*
 web/bundles/*
-
+web/assetic/*
+web/css/*
+web/js/*
 # Configuration files
 app/config/parameters.yml
 
