@@ -1,0 +1,43 @@
+# Assetic Configuration
+assetic:
+    debug:          "%kernel.debug%"
+    use_controller: false
+    filters:
+        cssrewrite: ~
+        # closure:
+        #     jar: %kernel.root_dir%/java/compiler.jar
+        # yui_css:
+        #     jar: %kernel.root_dir%/java/yuicompressor-2.4.2.jar
+        #
+    assets:
+        stylesheets:
+            inputs:
+            #CSS Global Compulsory
+                - %kernel.root_dir%/../web/assets/bootstrap/css/bootstrap.min.css
+                - %kernel.root_dir%/../web/assets/bootstrap/css/bootstrap-responsive.min.css
+                - bundles/stcsite/css/style.css
+                - bundles/stcsite/css/header1.css
+                - bundles/stcsite/css/style_responsive.css
+                #CSS Implementing Plugins
+                - %kernel.root_dir%/../web/assets/font-awesome/css/font-awesome.css
+                - %kernel.root_dir%/../web/assets/flexslider/flexslider.css
+                - %kernel.root_dir%/../web/assets/parallax-slider/css/parallax-slider.css
+                #CSS Theme
+                - bundles/stcsite/css/themes/default.css
+            filters: [?yui_css, cssrewrite]
+
+        javascripts_header:
+            inputs:
+            #JS Global Compulsory
+                - bundles/stcsite/js/jquery-1.8.2.min.js
+                - bundles/stcsite/js/modernizr.custom.js
+                - %kernel.root_dir%/../web/assets/bootstrap/js/bootstrap.min.js
+                #JS Implementing Plugins
+                - %kernel.root_dir%/../web/assets/flexslider/jquery.flexslider-min.js
+                - %kernel.root_dir%/../web/assets/parallax-slider/js/modernizr.js
+                - %kernel.root_dir%/../web/assets/parallax-slider/js/jquery.cslider.js
+                - %kernel.root_dir%/../web/assets/back-to-top.js
+                #JS Page Level
+                - bundles/stcsite/js/app.js
+                - bundles/stcsite/js/pages/index.js
+            filters: [?yui_js, cssrewrite]

@@ -1,0 +1,7 @@
+parameters:
+#    stc_site.example.class: STC\SiteBundle\Example
+
+services:
+#    stc_site.example:
+#        class: %stc_site.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
