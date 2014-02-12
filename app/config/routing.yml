@@ -1,3 +1,7 @@
+stc_event:
+    resource: "@STCEventBundle/Resources/config/routing.yml"
+    prefix:   /
+
 stc_site:
     resource: "@STCSiteBundle/Resources/config/routing.yml"
     prefix:   /

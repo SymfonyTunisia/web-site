@@ -69,6 +69,7 @@ class AppKernel extends Kernel
             new Sonata\FormatterBundle\SonataFormatterBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
             new STC\SiteBundle\STCSiteBundle(),
+            new STC\EventBundle\STCEventBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
