@@ -1,0 +1,3 @@
+stc_banner_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: STCBannerBundle:Default:index }

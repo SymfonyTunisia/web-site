@@ -1,3 +1,7 @@
+stc_banner:
+    resource: "@STCBannerBundle/Resources/config/routing.yml"
+    prefix:   /banner/
+
 stc_event:
     resource: "@STCEventBundle/Resources/config/routing.yml"
     prefix:   /event/
