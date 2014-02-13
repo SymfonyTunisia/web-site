@@ -16,6 +16,22 @@ class BannerAdmin extends BaseAdmin
 		->add('name', NULL, array('label'=> 'Banner Name'))
 		;
 	}
+	protected function configureFormFields(FormMapper $formMapper)
+	{
+		$formMapper
+		->add('name')
+		->add('client')
+		->add('duration')
+		->add('url','url')
+		->add('start_date','date')
+		->add('status')
+		->add('banner_type')
+		->add('media', 'sonata_media_type', array(
+				'provider' => 'sonata.media.provider.image',
+				'context'  => 'default'
+		))
+		->add('enabled');
+	}
 
 	/**
 	 * @param \Sonata\AdminBundle\Datagrid\ListMapper $listMapper
@@ -26,7 +42,9 @@ class BannerAdmin extends BaseAdmin
 	{
 		$listMapper
 		->add('name',NULL,array('label'=>'Banner Name'))
+		->add('client',NULL,array('label'=>'Client Name'))
 		->add('created',NULL,array('label'=>'Created'))
+		->add('media',null,array('label'=>'image','template'=>'STCBannerBundle:Admin:image_field.html.twig'))
 				;
 
 		$listMapper->add('_action', 'actions',array('actions' => array('edit' => array(), 'delete' => array(),)));
