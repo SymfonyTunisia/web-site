@@ -1,0 +1,30 @@
+STC\EventBundle\Entity\Event:
+    type: entity
+    table: event
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        description:
+            type: text
+        slug:
+            type: string
+            length: 255
+            gedmo:
+              slug:
+                separator: _
+                style: camel
+                fields:
+                  - title
+                  - id
+    manyToOne:
+        category:
+          targetEntity: STC\EventBundle\Entity\EventCategory
+          inversedBy: products
+    lifecycleCallbacks: {  }
