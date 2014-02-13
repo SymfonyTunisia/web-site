@@ -27,4 +27,4 @@ STC\EventBundle\Entity\EventCategory:
         products:
           targetEntity: STC\EventBundle\Entity\Event
           mappedBy: category
-    lifecycleCallbacks: {  }
+    lifecycleCallbacks: { }

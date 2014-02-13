@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Created by JetBrains PhpStorm.
+ * User: gbahmed
+ * Date: 13/02/14
+ * Time: 17:15
+ * To change this template use File | Settings | File Templates.
+ */
 namespace STC\EventBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
