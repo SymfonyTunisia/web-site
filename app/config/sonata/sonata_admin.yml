@@ -31,3 +31,15 @@ sonata_admin:
             - { position: right, type: sonata.news.block.recent_posts, settings: { title: Recent Posts, number: 7, mode: admin }}
             - { position: right, type: sonata.news.block.recent_comments, settings: { title: Recent Comments, number: 7, mode: admin }}
             - { position: right, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: http://sonata-project.org/blog/archive.rss }}
+services:
+   stc.banner.admin.BannerType:
+      class: STC\BannerBundle\Admin\BannerTypeAdmin
+      tags:
+        - { name: sonata.admin, manager_type: orm, group: Manage Banner, label: Banner Type }
+      arguments: [null, STC\BannerBundle\Entity\BannerType, STCBannerBundle:BannerTypeAdmin]
+
+   stc.banner.admin.Banner:
+      class: STC\BannerBundle\Admin\BannerAdmin
+      tags:
+        - { name: sonata.admin, manager_type: orm, group: Manage Banner, label: Banners }
+      arguments: [null, STC\BannerBundle\Entity\Banner, STCBannerBundle:BannerAdmin]

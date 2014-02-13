@@ -1,0 +1,28 @@
+STC\BannerBundle\Entity\BannerType:
+  type: entity
+  table: banner_types
+  repositoryClass:  STC\BannerBundle\Repository\BannerTypeRepository
+  id:
+    id:
+      type: integer
+      generator: { strategy: auto }
+  fields:
+    name:
+      type: string
+    # Positions: 1 - first_postion,
+    position:   
+      type: integer
+    enabled:
+      type: boolean
+  oneToOne:
+    default_media:
+      targetEntity: Application\Sonata\MediaBundle\Entity\Media
+      cascade: ["persist"]
+      joinColumn:
+        name: default_media_id
+        referencedColumnName: id
+        nullable: false
+  oneToMany:
+    banners:
+      targetEntity: Banner
+      mappedBy: banner_type

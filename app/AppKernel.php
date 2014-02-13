@@ -70,6 +70,7 @@ class AppKernel extends Kernel
             new Sonata\BlockBundle\SonataBlockBundle(),
             new STC\SiteBundle\STCSiteBundle(),
             new STC\EventBundle\STCEventBundle(),
+            new STC\BannerBundle\STCBannerBundle(),	
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
