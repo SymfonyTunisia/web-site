@@ -69,7 +69,12 @@ class Banner {
      * @var \STC\BannerBundle\Entity\BannerType
      */
     private $banner_type;
-
+    
+    const ENABLED_NO = 0;
+    const ENABLED_YES = 1;
+    const STATUS_TO_VALIDATE = 0;
+    const STATUS_ONLINE = 1;
+    const STATUS_OFFLINE = 2;
 
     /**
      * Get id

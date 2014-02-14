@@ -2,6 +2,8 @@
 
 namespace STC\BannerBundle\Repository;
 
+use STC\BannerBundle\Entity\Banner;
+
 use Doctrine\ORM\EntityRepository;
 
 /**
@@ -12,4 +14,14 @@ use Doctrine\ORM\EntityRepository;
  */
 class BannerTypeRepository extends EntityRepository
 {
+	public function findEnabledByType($position)
+	{
+		$query = $this->createQueryBuilder('bt')
+		->andWhere('bt.position =:position')
+		->andWhere('bt.enabled =:enabled')
+		->setParameter('position', $position)
+		->setParameter('enabled', Banner::ENABLED_YES);
+		return $query->getQuery()->getResult();
+
+	}
 }

@@ -43,7 +43,7 @@ STC\BannerBundle\Entity\Banner:
       gedmo:
         timestampable:
           on: update
-    status: # 0 - To validate,1 - Online, 3 - Offline
+    status: # 0 - To validate,1 - Online, 2 - Offline
       type: integer
       nullable: true   
     last_version: 
