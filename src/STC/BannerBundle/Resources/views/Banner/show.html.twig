@@ -1,0 +1,31 @@
+
+            <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    {% if banners %}
+                    {% set i = 0 %}
+                    {% for banner in banners %}
+                    <div class="item {% if i==0 %} active{% endif %}">
+                        {% media banner.media, 'banner1' %}
+                        <div class="carousel-caption">
+                            <p>{{ banner.client }}</p>
+                        </div>
+                    </div>
+                    {% set i=i+1 %}
+                    {% endfor %}
+                    {% elseif bannerType|length %}
+                     <div class="item active">
+                        {% media bannerType[0].defaultMedia, 'banner1' %}
+                        <div class="carousel-caption">
+                            <p>symfony Tunisia</p>
+                        </div>
+                    </div>
+
+					{% endif %}
+					
+                </div>
+
+                <div class="carousel-arrow">
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="icon-angle-left"></i></a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="icon-angle-right"></i></a>
+                </div>
+            </div>
