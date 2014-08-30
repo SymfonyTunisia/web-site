@@ -1,269 +1,273 @@
-{% extends 'STCSiteBundle::layout.html.twig' %}
-{% block content %}
+<div style="opacity: 0; display: none;" class="spinner"></div>
+<!--============================== header =================================-->
+<header>
+    <div class="container clearfix">
+        <div class="row">
+            <div class="span12">
+                <div class="navbar navbar_">
+                    <div class="container">
+                        <h1 class="brand brand_"><a href="index.html"><img alt="" src="{{ asset('bundles/stcsite/img/logo.gif') }}"> </a></h1>
+                        <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">Menu
+                            <span class="icon-bar"></span> </a>
 
-    <!--=== Slider ===-->
-    <div class="slider-inner">
-        <div id="da-slider" class="da-slider">
-            <div class="da-slide">
-                <h2><i>CLEAN &amp; FRESH</i> <br /> <i>FULLY RESPONSIVE</i> <br /> <i>DESIGN</i></h2>
-                <p><i>Lorem ipsum dolor amet</i> <br /> <i>tempor incididunt ut</i> <br /> <i>veniam omnis </i></p>
-                <div class="da-img"><img src="{{ asset('assets/parallax-slider/img/1.png')}}" alt="" /></div>
-            </div>
-            <div class="da-slide">
-                <h2><i>RESPONSIVE VIDEO</i> <br /> <i>SUPPORT AND</i> <br /> <i>MANY MORE</i></h2>
-                <p><i>Lorem ipsum dolor amet</i> <br /> <i>tempor incididunt ut</i></p>
-                <div class="da-img span6">
-                    <div class="span6">
-                        <iframe src="http://player.vimeo.com/video/47911018" width="100%" height="320" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                        <div class="nav-collapse nav-collapse_  collapse">
+                            <ul class="nav sf-menu sf-js-enabled">
+                                <li class="active"><a href="index.html">About</a></li>
+                                <li class="sub-menu"><a class="sf-with-ul" href="index-1.html">Services<b
+                                                class="sf-sub-indicator"></b></a>
+                                    <ul style="display: none;">
+                                        <li><a href="#">Dolore </a></li>
+                                        <li><a href="#">Consecte</a></li>
+                                        <li><a href="#">Conseq</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="index-2.html">Folio</a></li>
+                                <li><a href="index-3.html">Blog</a></li>
+                                <li><a href="index-4.html">Contact</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="da-slide">
-                <h2><i>USING BEST WEB</i> <br /> <i>SOLUTIONS WITH</i> <br /> <i>HTML5/CSS3</i></h2>
-                <p><i>Lorem ipsum dolor amet</i> <br /> <i>tempor incididunt ut</i> <br /> <i>veniam omnis </i></p>
-                <div class="da-img"><img src="{{ asset('assets/parallax-slider/img/html5andcss3.png')}}" alt="image01" /></div>
-            </div>
-            <nav class="da-arrows">
-                <span class="da-arrows-prev"></span>
-                <span class="da-arrows-next"></span>
-            </nav>
-        </div><!--/da-slider-->
-    </div><!--/slider-->
-    <!--=== End Slider ===-->
-
-    <!--=== Purchase Block ===-->
-    <div class="row-fluid purchase margin-bottom-30">
-        <div class="container">
-            <div class="span9">
-                <span>Unify is a clean and fully responsive incredible Template.</span>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi  vehicula sem ut volutpat. Ut non libero magna fusce condimentum eleifend enim a feugiat.</p>
-            </div>
-            <a href="https://wrapbootstrap.com/theme/unify-responsive-website-template-WB0412697" class="btn-buy hover-effect">Purchase Now</a>
         </div>
-    </div><!--/row-fluid-->
-    <!-- End Purchase Block -->
-
-    <!--=== Content Part ===-->
+    </div>
+</header>
+<div class="bg-content">
     <div class="container">
-    <!-- Service Blocks -->
-    <div class="row-fluid">
-        <div class="span4">
-            <div class="service clearfix">
-                <i class="icon-resize-small"></i>
-                <div class="desc">
-                    <h4>Fully Responsive</h4>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+        <div class="row">
+            <div class="span12">
+                <!--============================== slider =================================-->
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li class="flex-active-slide"
+                            style="width: 100%; float: left; margin-right: -100%; position: relative; display: list-item;">
+                            <img src="{{ asset('bundles/stcsite/img/slide-1.jpg') }}" alt=""></li>
+                        <li class=""
+                            style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
+                            <img src="{{ asset('bundles/stcsite/img/slide-2.jpg') }}" alt=""></li>
+                        <li class=""
+                            style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
+                            <img src="{{ asset('bundles/stcsite/img/slide-3.jpg') }}" alt=""></li>
+                        <li class=""
+                            style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
+                            <img src="{{ asset('bundles/stcsite/img/slide-4.jpg') }}" alt=""></li>
+                        <li class=""
+                            style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
+                            <img src="{{ asset('bundles/stcsite/img/slide-5.jpg') }}" alt=""></li>
+                    </ul>
+                    <ol class="flex-control-nav flex-control-paging">
+                        <li><a class="flex-active">1</a></li>
+                        <li><a class="">2</a></li>
+                        <li><a class="">3</a></li>
+                        <li><a class="">4</a></li>
+                        <li><a class="">5</a></li>
+                    </ol>
+                    <ul class="flex-direction-nav">
+                        <li><a class="flex-prev" href="#"></a></li>
+                        <li><a class="flex-next" href="#"></a></li>
+                    </ul>
+                </div>
+                <span id="responsiveFlag"></span>
+
+                <div class="block-slogan">
+                    <h2>Welcome!</h2>
+
+                    <div>
+                        <p><a href="http://blog.templatemonster.com/free-website-templates/ " target="_blank"
+                              class="link-1">Click here</a> for more info about this free website template created by
+                            TemplateMonster.com. This is a Bootstrap template that goes with several layout options (for
+                            desktop, tablet, smartphone landscape and portrait) to fit all popular screen resolutions.
+                            The PSD source files of this template are available for free for the registered members of
+                            TemplateMonster.com. Feel free to get them!</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="span4">
-            <div class="service clearfix">
-                <i class="icon-cogs"></i>
-                <div class="desc">
-                    <h4>HTML5 + CSS3</h4>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
+    </div>
+
+    <!--============================== content =================================-->
+
+    <div id="content" class="content-extra">
+        <div class="ic">More Website Templates @ TemplateMonster.com. November19, 2012!</div>
+        <div class="row-1">
+            <div class="container">
+                <div class="row">
+                    <ul class="thumbnails thumbnails-1">
+                        <li class="span3">
+                            <div class="thumbnail thumbnail-1">
+                                <h3>Fashion</h3>
+
+                                <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img1.jpg') }}"
+                                                   alt=""></div>
+                                <section><strong>At vero eos et accusamus et iusto </strong>
+
+                                    <p>Odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+                                    <a href="#" class="btn btn-1">Read More</a></section>
+                            </div>
+                        </li>
+                        <li class="span3">
+                            <div class="thumbnail thumbnail-1">
+                                <h3>Nature</h3>
+
+                                <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img2.jpg') }}"
+                                                   alt=""></div>
+                                <section><strong>Deleniti atque corrupti quos</strong>
+
+                                    <p>Dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+                                    <a href="#" class="btn btn-1">Read More</a></section>
+                            </div>
+                        </li>
+                        <li class="span3">
+                            <div class="thumbnail thumbnail-1">
+                                <h3>Love story</h3>
+
+                                <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img3.jpg') }}"
+                                                   alt=""></div>
+                                <section><strong>Similique sunt in culpa qui officia </strong>
+
+                                    <p>Deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                                    <a href="#" class="btn btn-1">Read More</a></section>
+                            </div>
+                        </li>
+                        <li class="span3">
+                            <div class="thumbnail thumbnail-1">
+                                <h3 class="title-1 extra">Fine art</h3>
+
+                                <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img4.jpg') }}"
+                                                   alt=""></div>
+                                <section><strong>Similique sunt in culpa qui officia</strong>
+
+                                    <p>Deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                                    <a href="#" class="btn btn-1">Read More</a></section>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="span4">
-            <div class="service clearfix">
-                <i class="icon-plane"></i>
-                <div class="desc">
-                    <h4>Launch Ready</h4>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus etiam sem...</p>
-                </div>
+        <div class="container">
+            <div class="row">
+                <article class="span6">
+                    <h3>Shortly about me</h3>
+
+                    <div class="wrapper">
+                        <figure class="img-indent">
+                            <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img5.jpg') }}"
+                                               alt=""></div>
+                        </figure>
+                        <div class="inner-1 overflow extra">
+                            <div class="txt-1">Sed ut perspictis unde omnis natus error volupatem accusantium doloue
+                                laudantium, totam rem.
+                            </div>
+                            Aperiam, eaque ipsa quae ab illo veritatis et beatae vitae dicta sunt explicabo nemo enim
+                            ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed
+                            <div class="border-horiz"></div>
+                            <div class="overflow">
+                                <ul class="list list-pad">
+                                    <li><a href="#">Campaigns</a></li>
+                                    <li><a href="#">Portraits</a></li>
+                                    <li><a href="#">Fashion</a></li>
+                                    <li><a href="#">Fine Art</a></li>
+                                </ul>
+                                <ul class="list">
+                                    <li><a href="#">Advertising</a></li>
+                                    <li><a href="#">Lifestyle</a></li>
+                                    <li><a href="#">Love story</a></li>
+                                    <li><a href="#">Landscapes</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="span6">
+                    <h3>Latest photoshoots</h3>
+                    <ul class="list-photo">
+                        <li><a href="img/image-blank.png" class="magnifier">
+                                <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img6.jpg') }} "
+                                                   alt=""></div>
+                            </a></li>
+                        <li><a href="img/image-blank.png" class="magnifier">
+                                <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img7.jpg') }} "
+                                                   alt=""></div>
+                            </a></li>
+                        <li><a href="img/image-blank.png" class="magnifier">
+                                <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img8.jpg') }} "
+                                                   alt=""></div>
+                            </a></li>
+                        <li class="last"><a href="img/image-blank.png" class="magnifier">
+                                <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img9.jpg') }} "
+                                                   alt=""></div>
+                            </a></li>
+                        <li><a href="img/image-blank.png" class="magnifier">
+                                <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img10.jpg') }} "
+                                                   alt=""></div>
+                            </a></li>
+                        <li><a href="img/image-blank.png" class="magnifier">
+                                <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img11.jpg') }} "
+                                                   alt=""></div>
+                            </a></li>
+                        <li><a href="img/image-blank.png" class="magnifier">
+                                <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img12.jpg') }} "
+                                                   alt=""></div>
+                            </a></li>
+                        <li class="last"><a href="img/image-blank.png" class="magnifier">
+                                <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img13.jpg') }} "
+                                                   alt=""></div>
+                            </a></li>
+                        <li><a href="img/image-blank.png" class="magnifier">
+                                <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img14.jpg') }} "
+                                                   alt=""></div>
+                            </a></li>
+                        <li><a href="img/image-blank.png" class="magnifier">
+                                <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img15.jpg') }} "
+                                                   alt=""></div>
+                            </a></li>
+                        <li><a href="img/image-blank.png" class="magnifier">
+                                <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img16.jpg') }} "
+                                                   alt=""></div>
+                            </a></li>
+                        <li class="last"><a href="img/image-blank.png" class="magnifier">
+                                <div class=""><img style="visibility: visible; opacity: 1;" src="{{ asset('bundles/stcsite/img/page1-img17.jpg') }} "
+                                                   alt=""></div>
+                            </a></li>
+                    </ul>
+                </article>
             </div>
         </div>
-    </div><!--/row-fluid-->
-    <!-- //End Service Blokcs -->
+    </div>
+</div>
 
-    <!-- Recent Works -->
-    <div class="headline"><h3>Recent Works</h3></div>
-    <ul class="thumbnails">
-        <li class="span3">
-            <div class="thumbnail-style thumbnail-kenburn">
-                <div class="thumbnail-img">
-                    <div class="overflow-hidden"><img src="{{ asset('bundles/stcsite/images/carousel/2.jpg')}}" alt="" /></div>
-                    <a class="btn-more hover-effect" href="#">read more +</a>
-                </div>
-                <h3><a class="hover-effect" href="#">Our Work</a></h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-            </div>
-        </li>
-        <li class="span3">
-            <div class="thumbnail-style thumbnail-kenburn">
-                <div class="thumbnail-img">
-                    <div class="overflow-hidden"><img src="{{ asset('bundles/stcsite/images/carousel/3.jpg')}}" alt="" /></div>
-                    <a class="btn-more hover-effect" href="#">read more +</a>
-                </div>
-                <h3><a class="hover-effect" href="#">One More Work</a></h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-            </div>
-        </li>
-        <li class="span3">
-            <div class="thumbnail-style thumbnail-kenburn">
-                <div class="thumbnail-img">
-                    <div class="overflow-hidden"><img src="{{ asset('bundles/stcsite/images/carousel/9.jpg')}}" alt="" /></div>
-                    <a class="btn-more hover-effect" href="#">read more +</a>
-                </div>
-                <h3><a class="hover-effect" href="#">Another Work</a></h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-            </div>
-        </li>
-        <li class="span3">
-            <div class="thumbnail-style thumbnail-kenburn">
-                <div class="thumbnail-img">
-                    <div class="overflow-hidden"><img src="{{ asset('bundles/stcsite/images/carousel/10.jpg')}}" alt="" /></div>
-                    <a class="btn-more hover-effect" href="#">read more +</a>
-                </div>
-                <h3><a class="hover-effect" href="#">Huge Work</a></h3>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-            </div>
-        </li>
-    </ul><!--/thumbnails-->
-    <!-- //End Recent Works -->
-
-    <!-- Information Blokcs -->
-    <div class="row-fluid margin-bottom-20">
-        <!-- Who We Are -->
-        <div class="span8">
-            <div class="headline"><h3>Welcome To UNIFY Template</h3></div>
-            <p><img class="pull-left lft-img-margin img-width-200" src="{{ asset('bundles/stcsite/images/carousel/6.jpg')}}" alt="" />Unify is an incredibly beautiful responsive Bootstrap Template for corporate and creative professionals. It works on all major web browsers, tablets and phone.</p>
-            <ul class="unstyled">
-                <li><i class="icon-ok color-green"></i> Donec id elit non mi porta gravida</li>
-                <li><i class="icon-ok color-green"></i> Corporate and Creative</li>
-                <li><i class="icon-ok color-green"></i> Responsive Bootstrap Template</li>
-                <li><i class="icon-ok color-green"></i> Corporate and Creative</li>
-            </ul><br />
-
-            <blockquote class="hero-unify">
-                <p>Award winning digital agency. We bring a personal and effective approach to every project we work on, which is why. Unify is an incredibly beautiful responsive Bootstrap Template for corporate professionals.</p>
-                <small>CEO, Jack Bour</small>
-            </blockquote>
-        </div><!--/span8-->
-
-        <!-- Latest Shots -->
-        <div class="span4">
-            <div class="headline"><h3>Publicité</h3></div>
-            {% block banner %}
-            {% render (controller('STCBannerBundle:Banner:show' ,{ 'position':1 })) %}
-      		{% endblock %}
-
-            </div>
-        </div><!--/span4-->
-    </div><!--/row-fluid-->
-    <!-- //End Information Blokcs -->
-
-    <!-- Our Clients -->
-    <div id="clients-flexslider" class="flexslider home clients">
-        <div class="headline"><h3>Our Clients</h3></div>
-        <ul class="slides">
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/hp_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/hp.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/igneus_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/igneus.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/vadafone_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/vadafone.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/walmart_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/walmart.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/shell_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/shell.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/natural_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/natural.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/aztec_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/aztec.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/gamescast_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/gamescast.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/cisco_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/cisco.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/everyday_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/everyday.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/cocacola_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/cocacola.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/spinworkx_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/spinworkx.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/shell_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/shell.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/natural_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/natural.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/gamescast_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/gamescast.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/everyday_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/everyday.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="{{ asset('bundles/stcsite/images/clients/spinworkx_grey.png')}}" alt="" />
-                    <img src="{{ asset('bundles/stcsite/images/clients/spinworkx.png')}}" class="color-img" alt="" />
-                </a>
-            </li>
+<!--============================== footer =================================-->
+<footer>
+    <div class="container clearfix">
+        <ul class="list-social pull-right">
+            <li><a class="icon-1" href="#"></a></li>
+            <li><a class="icon-2" href="#"></a></li>
+            <li><a class="icon-3" href="#"></a></li>
+            <li><a class="icon-4" href="#"></a></li>
         </ul>
-    </div><!--/flexslider-->
-    <!-- //End Our Clients -->
-    </div><!--/container-->
-    <!-- End Content Part -->
- 
-{% endblock %}
+        <div class="privacy pull-left">Website Template designed by <a href="http://www.templatemonster.com/"
+                                                                       target="_blank" rel="nofollow">TemplateMonster.com</a>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+
+<div id="__yael_once"></div>
+<div style="display: none;" id="galleryOverlay">
+    <div id="gallerySlider">
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+    </div>
+    <a id="prevArrow"></a><a id="nextArrow"></a></div>
