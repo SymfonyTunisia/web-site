@@ -17,7 +17,7 @@ Inside the VM
 
     cd /var/www/stc
     composer update
-    php load_data.php
+    make install
 
 
 Edit your hosts file (/etc/hosts) and add :

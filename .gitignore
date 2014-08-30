@@ -23,4 +23,5 @@ composer.phar
 # eclipse
 .project
 .settings/
+.vagrant
 
