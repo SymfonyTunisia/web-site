@@ -1,40 +1,14 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
-      {# META TAGS #}
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <title>{% block meta_title_content %}SymfonyBricks.com{% endblock %}</title>
-      {# END META TAGS #} 
-      {# load header javascripts #}
-      {% javascripts '@javascripts_header' %}
-		<script type="text/javascript" src="{{ asset_url }}"></script>
-      {% endjavascripts %} 
-      {# load stylesheets #} 
-      {% stylesheets "@stylesheets" %}
-     	 <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
-      {% endstylesheets %}
-	<script type="text/javascript">
-	    jQuery(document).ready(function() {
-	      	App.init();
-	        App.initSliders();
-	        Index.initParallaxSlider();
-	    });
-	</script>
-      {# google analytics code #}
-      <script type="text/javascript">
-         var _gaq = _gaq || [];
-         _gaq.push(['_setAccount', 'UA-35256283-1']);
-         _gaq.push(['_setDomainName', 'symfony-tunisia.com']);
-         _gaq.push(['_trackPageview']);
-         (function() {
-             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-         })();
-      </script>
-   </head>
-   <body lang="{{app.request.locale}}" class="route-{{ app.request.get('_route') }} {% block body_class '' %}">
-      {% block body %}{% endblock %}
-   </body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block content %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
 </html>

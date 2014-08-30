@@ -1,39 +1,67 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
-    - { resource: assetic.yml }
-    
-    # Sonata Bundles
-    - { resource: sonata/sonata_admin.yml }
+
+    # Mopa Bootstrap
+    - { resource: mopa/mopa_bootstrap.yml }
+
+    # FriendOfSymfony Bundles
+    - { resource: fos/fos_rest.yml }
+    - { resource: fos/fos_user.yml }
+
+    # Sonata Core Bundles
     - { resource: sonata/sonata_block.yml }
-    - { resource: sonata/sonata_media.yml }
     - { resource: sonata/sonata_formatter.yml }
-    - { resource: sonata/sonata_user.yml }
+    - { resource: sonata/sonata_cache.yml }
+    - { resource: sonata/sonata_seo.yml }
+    - { resource: sonata/sonata_timeline.yml }
+    - { resource: sonata/sonata_intl.yml }
+
+    # Sonata Feature Bundles
+    - { resource: sonata/sonata_admin.yml }
+    - { resource: sonata/sonata_page.yml }
+    - { resource: sonata/sonata_media.yml }
     - { resource: sonata/sonata_news.yml }
+    - { resource: sonata/sonata_user.yml }
     - { resource: sonata/sonata_notification.yml }
 
 framework:
-    #esi:             ~
-    translator: { fallback: en }
-    secret:          %secret%
-    router:          { resource: "%kernel.root_dir%/config/routing.yml" }
-    form:            true
-    csrf_protection: true
-    validation:      { enable_annotations: true }
-    templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
-    default_locale:  %locale%
-    session: ~
+    #esi:                   ~
+    translator:
+        fallback:           en
+    secret:                 %secret%
+    router:
+        resource:           "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:                    true
+    csrf_protection:         true
+    validation:
+        enable_annotations:  true
+    templating:
+        engines:             ['twig']
+        #assets_version:      SomeVersionScheme
+
+    default_locale:          %locale%
+    session:
+        save_path:           %kernel.root_dir%/cache/sessions
+
+    fragments:               ~
+    trusted_proxies:         ~
+    http_method_override:    true
 
 # Twig Configuration
 twig:
-    debug:            "%kernel.debug%"
-    strict_variables: "%kernel.debug%"
+    debug:            %kernel.debug%
+    strict_variables: %kernel.debug%
+
+    base_template_class: Sonata\CacheBundle\Twig\TwigTemplate14
 
     form:
         resources:
-            - 'SonataAdminBundle:Form:silex_form_div_layout.html.twig'
             - 'SonataFormatterBundle:Form:formatter.html.twig'
             - 'SonataMediaBundle:Form:media_widgets.html.twig'
+
+    exception_controller: 'FOS\RestBundle\Controller\ExceptionController::showAction'
 
 # Doctrine Configuration
 doctrine:
@@ -42,56 +70,59 @@ doctrine:
 
         connections:
             default:
-                driver:   "%database_driver%"
-                dbname:   "%database_name%"
-                user:     "%database_user%"
-                host:     "%database_host%"
-                password: "%database_password%"
+                driver:   %database_driver%
+                dbname:   %database_name%
+                user:     %database_user%
+                host:     %database_host%
+                password: %database_password%
 
         types:
-            json: Sonata\Doctrine\Types\JsonType
+            json:     Sonata\Doctrine\Types\JsonType
 
     orm:
-        auto_generate_proxy_classes: "%kernel.debug%"
+        auto_generate_proxy_classes: %kernel.debug%
         default_entity_manager: default
 
         entity_managers:
             default:
                 auto_mapping: true
-                mappings:
-                    gedmo_translatable:
-                        type: annotation
-                        prefix: Gedmo\Translatable\Entity
-                        dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Translatable/Entity"
-                        alias: GedmoTranslatable # this one is optional and will default to the name set for the mapping
-                        is_bundle: false
-                    gedmo_loggable:
-                        type: annotation
-                        prefix: Gedmo\Loggable\Entity
-                        dir: "%kernel.root_dir%/../vendor/gedmo/doctrine-extensions/lib/Gedmo/Loggable/Entity"
-                        alias: GedmoLoggable # this one is optional and will default to the name set for the mapping
-                        is_bundle: false 
+                mappings: ~
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: "%mailer_transport%"
-    host:      "%mailer_host%"
-    username:  "%mailer_user%"
-    password: "%mailer_password%"
-    
-services:
-    twig.text_extension:
-        class: Twig_Extensions_Extension_Text
-        tags:
-            - name: twig.extension 
-            
+    transport: %mailer_transport%
+    host:      %mailer_host%
+    username:  %mailer_user%
+    password:  %mailer_password%
+
 jms_security_extra:
     secure_all_services: false
-    
-stof_doctrine_extensions:
-    default_locale: "%locale%"
-    orm:
-        default:
-            timestampable: true
-            loggable: true
-            translatable: true
+
+jms_serializer:
+    metadata:
+        directories:
+            - { path: %kernel.root_dir%/../vendor/sonata-project/user-bundle/Sonata/UserBundle/Resources/config/serializer/FOSUserBundle, namespace_prefix: 'FOS\UserBundle' }
+
+# Assetic Configuration
+#assetic:
+#    debug:          %kernel.debug%
+#    use_controller: false
+#    filters:
+#        cssrewrite: ~
+#        # closure:
+#        #     jar: %kernel.root_dir%/java/compiler.jar
+#        # yui_css:
+#        #     jar: %kernel.root_dir%/java/yuicompressor-2.4.2.jar
+#
+#        # Comment out those lines if you wish to use the less version of bootstrap
+#        less:
+#            node: /usr/local/bin/node
+#            node_paths: [/usr/local/node/node-v0.10.22/lib/node_modules]
+#            apply_to: "\.less$"
+
+nelmio_api_doc: ~
+
+sensio_framework_extra:
+    view:    { annotations: false }
+    router:  { annotations: true }
+    request: { converters:  true }
