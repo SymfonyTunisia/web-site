@@ -2,6 +2,7 @@ install:
 	php app/console doctrine:database:drop --force
 	php app/console doctrine:database:create
 	php app/console doctrine:schema:create
+	php app/console doctrine:fixture:load --no-interaction
 	rm -rf app/cache/*
 	php -d memory_limit=-1 app/console sonata:page:update-core-routes --site=all --no-debug --env=prod
 	php -d memory_limit=-1 app/console sonata:page:create-snapshots --site=all --no-debug --env=prod
