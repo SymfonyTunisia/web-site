@@ -16,9 +16,9 @@ if [[ ! -d '/.puphpet-stuff' ]]; then
     echo 'Created directory /.puphpet-stuff'
 fi
 
-if [[ ! -d '/dev/shm/tdf/' ]]; then
-    mkdir '//dev/shm/tdf/'
-    echo 'Created directory /dev/shm/tdf/'
+if [[ ! -d '/dev/shm/stc/' ]]; then
+    mkdir '//dev/shm/stc/'
+    echo 'Created directory /dev/shm/stc/'
 fi
 
 touch '/.puphpet-stuff/vagrant-core-folder.txt'
