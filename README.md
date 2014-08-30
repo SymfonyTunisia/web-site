@@ -1,72 +1,35 @@
-Sonata Standard Edition
+Terres de fenêtre
+
 =======================
 
-What's inside?
---------------
+Install using Vagrant
+---------------------
 
-Sonata Standard Edition comes pre-configured with the following bundles:
+From the host
 
-* Bundles from Symfony Standard distribution
-* Sonata Admin Bundles: Admin and Doctrine ORM Admin
-* Sonata Ecommerce Bundles: Payment, Customer, Invoice, Order and Product
-* Sonata Foundation Bundles: Core, Notification, Formatter, Intl, Cache, Seo and Easy Extends
-* Sonata Feature Bundles: Page, Media, News, User, Block, Timeline
-* Api Bundles: FOSRestBundle, BazingaHateoasBundle, NelmioApiDocBundle and JMSSerializerBundle
-
-Installation
-------------
-
-Get composer:
-
-    curl -s http://getcomposer.org/installer | php
-
-Run the following command for the 2.3 branch:
-
-    php composer.phar create-project sonata-project/sandbox:2.3.x-dev
-    
-Or to get the 2.3 develop branch:
-
-    php composer.phar create-project sonata-project/sandbox:dev-2.3-develop
-
-The installation process used Incenteev's ParameterHandler to handle parameters.yml configuration. With the current
-installation, it is possible to use environment variables to configure this file:
-
-    DATABASE_NAME=sonata DATABASE_USER=root DATABASE_PASSWORD="" php composer.phar create-project sonata-project/sandbox:dev-2.3-develop
-
-Run
----
-
-If you are running PHP5.4, you can use the built in server to start the demo:
-
-    php -S localhost:9090 -t web/app
-
-Now open your browser and go to http://localhost:9090/
-
-Tests
------
-
-### Functional testing
-
-To run the Behat tests, copy the default configuration file and adjust the base_url to your needs
-
-    # behat.yml
-    imports:
-        - behat.yml.dist
-
-    # Overwrite only the config you want to change here
-
-You can now run the tests suite using the following command
-
-    php bin/behat
-
-To get more informations about Behat, feel free to check `the official documentation
-<http://docs.behat.org/>`_.
+    git clone https://github.com/SymfonyTunisia/web-site.git
+    cd web-site
+    vagrant up
+    vagrant ssh
 
 
-### Unit testing
+Inside the VM
 
-To run the Sonata test suites, you can run the command:
+    cd /var/www/stc
+    composer update
+    php load_data.php
 
-    bin/qa_client_ci.sh
 
-Enjoy!
+Edit your hosts file (/etc/hosts) and add :
+
+    192.168.56.103  stc.dev www.stc.dev
+
+You can now access project page at
+
+[https://stc.dev/](https://stc.dev/) (prod env)
+
+[https://stc.dev/app_dev.php](https://stc.dev/app_dev.php) (dev env)
+
+[http://www.stc.dev:1080/](http://www.stc.dev:1080/) (mailcatcher)
+
+Admin Mysql : [adminer](http://192.168.56.102/adminer/)
