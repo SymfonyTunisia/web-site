@@ -1,3 +1,15 @@
-stc_site_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: STCSiteBundle:Default:index }
+home:
+    pattern:  /
+    defaults: { _controller: STCSiteBundle:Site:home }
+
+whoWeAre:
+    pattern:  /who-we-are
+    defaults: { _controller: STCSiteBundle:Site:whoWeAre }
+
+copyright:
+    pattern:  /copyright
+    defaults: { _controller: STCSiteBundle:Site:copyright }
+
+allRightsReserved:
+    pattern:  /all-rights-reserved
+    defaults: { _controller: STCSiteBundle:Site:allRightsReserved }

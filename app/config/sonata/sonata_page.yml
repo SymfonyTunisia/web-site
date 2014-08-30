@@ -39,6 +39,24 @@ sonata_page:
         classes:
             "Application\Sonata\PageBundle\Entity\Block": getId
 
+    assets:
+        stylesheets:
+            - bundles/stcsite/css/bootstrap.css
+            - bundles/stcsite/css/responsive.css
+            - bundles/stcsite/css/style.css
+            - bundles/stcsite/css/touchTouch.css
+            - bundles/stcsite/css/kwicks-slider.css
+            - bundles/stcsite/css/kwicks-slider.css
+            - //fonts.googleapis.com/css?family=Open+Sans:400,300
+
+        javascripts:
+            - bundles/stcsite/js/jquery.js
+            - bundles/stcsite/js/superfish.js
+            - bundles/stcsite/js/jquery.flexslider-min.js
+            - bundles/stcsite/js/jquery.kwicks-1.5.1.js
+            - bundles/stcsite/js/jquery.easing.1.3.js
+            - bundles/stcsite/js/touchTouch.jquery.js
+
     default_template: default
     templates:
         default:  { path: 'ApplicationSonataPageBundle::demo_layout.html.twig',     name: 'default' }

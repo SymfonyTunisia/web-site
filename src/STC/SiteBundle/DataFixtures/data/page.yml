@@ -1,0 +1,34 @@
+pages:
+    whoWeAre:
+        name: 'Qui sommes-nous'
+        title: 'Qui sommes-nous'
+        template: 'default'
+        slug: 'who-we-are'
+        url: 'who-we-are'
+        route: 'whoWeAre'
+        reference: 'page-homepage'
+        meta:
+            keywords: "Symfony Tunisia Community"
+            description: "Symfony Tunisia Community - Qui sommes-nous"
+    copyright:
+        name: 'Copyright'
+        title: 'Copyright'
+        template: 'default'
+        slug: 'copyright'
+        url: 'copyright'
+        route: 'copyright'
+        reference: 'page-homepage'
+        meta:
+            keywords: "Symfony Tunisia Community"
+            description: "Symfony Tunisia Community - Copyright"
+    allRightsReserved:
+        name: 'Tous droits réservés, reproduction interdite'
+        title: 'Tous droits réservés, reproduction interdite'
+        template: 'default'
+        slug: 'all-rights-reserved'
+        url: 'all-rights-reserved'
+        route: 'allRightsReserved'
+        reference: 'page-homepage'
+        meta:
+            keywords: "Symfony Tunisia Community"
+            description: "Symfony Tunisia Community - Tous droits réservés, reproduction interdite"
