@@ -1,0 +1,12 @@
+pages:
+    home:
+        name: 'Accueil'
+        title: 'Accueil'
+        template: 'default'
+        reference: 'page-homepage'
+        slug: '/'
+        url: '/'
+        route: 'home'
+        meta:
+            keywords: "Symfony Tunisia Community"
+            description: "Symfony Tunisia Community - Bienvenue"
