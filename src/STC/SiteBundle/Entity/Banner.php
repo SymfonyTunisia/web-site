@@ -2,6 +2,8 @@
 namespace STC\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
 
 class Banner
 {
@@ -41,14 +43,10 @@ class Banner
     private $url;
 
     /**
-     * @var \DateTime
+     * Hook timestampable behavior
+     * updates createdAt, updatedAt fields
      */
-    private $created;
-
-    /**
-     * @var \DateTime
-     */
-    private $updated;
+    use TimestampableEntity;
 
     /**
      * @var integer
@@ -220,52 +218,6 @@ class Banner
     public function getUrl()
     {
         return $this->url;
-    }
-
-    /**
-     * Set created
-     *
-     * @param \DateTime $created
-     * @return Banner
-     */
-    public function setCreated($created)
-    {
-        $this->created = $created;
-
-        return $this;
-    }
-
-    /**
-     * Get created
-     *
-     * @return \DateTime 
-     */
-    public function getCreated()
-    {
-        return $this->created;
-    }
-
-    /**
-     * Set updated
-     *
-     * @param \DateTime $updated
-     * @return Banner
-     */
-    public function setUpdated($updated)
-    {
-        $this->updated = $updated;
-
-        return $this;
-    }
-
-    /**
-     * Get updated
-     *
-     * @return \DateTime 
-     */
-    public function getUpdated()
-    {
-        return $this->updated;
     }
 
     /**

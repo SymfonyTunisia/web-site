@@ -1,6 +1,6 @@
 STC\EventBundle\Entity\EventCategory:
     type: entity
-    table: event_category
+    table: stc_event_category
     id:
         id:
             type: integer
@@ -15,16 +15,24 @@ STC\EventBundle\Entity\EventCategory:
             type: text
         slug:
             type: string
-            length: 255
+            length: 128
             gedmo:
-              slug:
-                separator: _
-                style: camel
-                fields:
-                  - title
-                  - id
+                slug:
+                    separator: _
+                    fields:
+                        - title
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
     oneToMany:
-        products:
+        events:
           targetEntity: STC\EventBundle\Entity\Event
           mappedBy: category
     lifecycleCallbacks: { }

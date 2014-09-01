@@ -1,6 +1,10 @@
 stc_site:
     resource: "@STCSiteBundle/Resources/config/routing.yml"
 
+stc_event_event:
+    resource: "@STCEventBundle/Resources/config/routing/event.yml"
+    prefix:   /event
+
 sonata_user_security:
     resource: "@SonataUserBundle/Resources/config/routing/sonata_security_1.xml"
 
