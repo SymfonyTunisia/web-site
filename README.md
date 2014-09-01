@@ -1,5 +1,7 @@
 Terres de fenêtre
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/SymfonyTunisia/web-site/)
+
 =======================
 
 Install using Vagrant
