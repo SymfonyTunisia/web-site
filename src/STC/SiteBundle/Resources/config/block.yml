@@ -1,0 +1,16 @@
+parameters:
+    sonata.page.block.header.class: STC\SiteBundle\Block\HeaderBlockService
+    sonata.page.block.footer.class: STC\SiteBundle\Block\FooterBlockService
+
+services:
+    sonata.page.block.header:
+        class: %sonata.page.block.header.class%
+        tags:
+            - { name: sonata.block}
+        arguments: ["sonata.page.block.header","@templating"]
+
+    sonata.page.block.footer:
+        class: %sonata.page.block.footer.class%
+        tags:
+            - { name: sonata.block}
+        arguments: ["sonata.page.block.footer","@templating"]
