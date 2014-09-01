@@ -61,7 +61,7 @@ class MenuBuilder
 
         $menu->addChild(
             $this->translator->trans('label.event', array(), 'messages'),
-            array('route' => 'whoWeAre')
+            array('route' => 'event')
         );
 
         $menu->addChild(
