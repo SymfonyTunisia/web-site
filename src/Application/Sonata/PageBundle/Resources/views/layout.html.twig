@@ -1,0 +1,24 @@
+{% extends 'SonataPageBundle::base_layout.html.twig' %}
+
+{% block sonata_page_container %}
+    <!--============================== header =================================-->
+    {{ sonata_block_render({ 'type':'sonata.page.block.header'}) }}
+    <div class="bg-content">
+        <div class="container">
+            {% block page_content %}
+                {% if content is defined %}
+                    {{ content|raw }}
+                {% else %}
+                    {% set content = block('content') %}
+                    {% if content|length > 0 %}
+                        {{ content|raw }}
+                    {% elseif page is defined %}
+                        {{ sonata_page_render_container('content', page) }}
+                    {% endif %}
+                {% endif %}
+            {% endblock %}
+        </div>
+    </div>
+    <!--============================== footer =================================-->
+    {{ sonata_block_render({ 'type':'sonata.page.block.footer'}) }}
+{% endblock %}
