@@ -1,0 +1,12 @@
+services:
+    sonata.event.admin.event:
+        class: STC\EventBundle\Admin\EventAdmin
+        arguments: [~, STC\EventBundle\Entity\Event, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Event}
+
+    sonata.event.admin.event_category:
+        class: STC\EventBundle\Admin\EventCategoryAdmin
+        arguments: [~, STC\EventBundle\Entity\EventCategory, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: EventCategory}

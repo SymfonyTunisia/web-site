@@ -9,6 +9,8 @@
 namespace STC\EventBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
 
 /**
  * Event
@@ -26,10 +28,74 @@ class Event
     private $title;
 
     /**
+     * @var \DateTime
+     */
+    private $date;
+
+    /**
+     * @var string
+     */
+    private $location;
+
+    /**
      * @var string
      */
     private $description;
 
+    /**
+     * @var string
+     */
+    private $content;
+
+    /**
+     * @var string
+     */
+    private $rawContent;
+
+    /**
+     * @var string
+     */
+    private $contentFormatter;
+
+    /**
+     * @var boolean
+     */
+    private $enabled;
+
+    /**
+     * @var string
+     */
+    private $slug;
+
+    /**
+     * Hook timestampable behavior
+     * updates createdAt, updatedAt fields
+     */
+    use TimestampableEntity;
+
+    /**
+     * @var \Application\Sonata\MediaBundle\Entity\Gallery
+     */
+    private $images;
+
+    /**
+     * @var \Application\Sonata\MediaBundle\Entity\Media
+     */
+    private $image;
+
+    /**
+     * @var \STC\EventBundle\Entity\EventCategory
+     */
+    private $category;
+
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return (string) $this->getTitle();
+    }
 
     /**
      * Get id
@@ -65,6 +131,52 @@ class Event
     }
 
     /**
+     * Set date
+     *
+     * @param \DateTime $date
+     * @return Event
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime 
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set location
+     *
+     * @param string $location
+     * @return Event
+     */
+    public function setLocation($location)
+    {
+        $this->location = $location;
+
+        return $this;
+    }
+
+    /**
+     * Get location
+     *
+     * @return string 
+     */
+    public function getLocation()
+    {
+        return $this->location;
+    }
+
+    /**
      * Set description
      *
      * @param string $description
@@ -86,16 +198,98 @@ class Event
     {
         return $this->description;
     }
-    /**
-     * @var string
-     */
-    private $slug;
 
     /**
-     * @var \STC\EventBundle\Entity\EventCategory
+     * Set content
+     *
+     * @param string $content
+     * @return Event
      */
-    private $category;
+    public function setContent($content)
+    {
+        $this->content = $content;
 
+        return $this;
+    }
+
+    /**
+     * Get content
+     *
+     * @return string 
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * Set rawContent
+     *
+     * @param string $rawContent
+     * @return Event
+     */
+    public function setRawContent($rawContent)
+    {
+        $this->rawContent = $rawContent;
+
+        return $this;
+    }
+
+    /**
+     * Get rawContent
+     *
+     * @return string 
+     */
+    public function getRawContent()
+    {
+        return $this->rawContent;
+    }
+
+    /**
+     * Set contentFormatter
+     *
+     * @param string $contentFormatter
+     * @return Event
+     */
+    public function setContentFormatter($contentFormatter)
+    {
+        $this->contentFormatter = $contentFormatter;
+
+        return $this;
+    }
+
+    /**
+     * Get contentFormatter
+     *
+     * @return string 
+     */
+    public function getContentFormatter()
+    {
+        return $this->contentFormatter;
+    }
+
+    /**
+     * Set enabled
+     *
+     * @param boolean $enabled
+     * @return Event
+     */
+    public function setEnabled($enabled)
+    {
+        $this->enabled = $enabled;
+
+        return $this;
+    }
+
+    /**
+     * Get enabled
+     *
+     * @return boolean 
+     */
+    public function getEnabled()
+    {
+        return $this->enabled;
+    }
 
     /**
      * Set slug
@@ -118,6 +312,52 @@ class Event
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Set images
+     *
+     * @param \Application\Sonata\MediaBundle\Entity\Gallery $images
+     * @return Event
+     */
+    public function setImages(\Application\Sonata\MediaBundle\Entity\Gallery $images = null)
+    {
+        $this->images = $images;
+
+        return $this;
+    }
+
+    /**
+     * Get images
+     *
+     * @return \Application\Sonata\MediaBundle\Entity\Gallery 
+     */
+    public function getImages()
+    {
+        return $this->images;
+    }
+
+    /**
+     * Set image
+     *
+     * @param \Application\Sonata\MediaBundle\Entity\Media $image
+     * @return Event
+     */
+    public function setImage(\Application\Sonata\MediaBundle\Entity\Media $image = null)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return \Application\Sonata\MediaBundle\Entity\Media 
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 
     /**

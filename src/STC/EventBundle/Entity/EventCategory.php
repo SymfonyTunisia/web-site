@@ -9,6 +9,8 @@
 namespace STC\EventBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
 
 /**
  * EventCategory
@@ -20,6 +22,7 @@ class EventCategory
      */
     private $id;
 
+
     /**
      * @var string
      */
@@ -30,6 +33,37 @@ class EventCategory
      */
     private $description;
 
+    /**
+     * @var string
+     */
+    private $slug;
+
+    /**
+     * Hook timestampable behavior
+     * updates createdAt, updatedAt fields
+     */
+    use TimestampableEntity;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $events;
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return (string) $this->getTitle();
+    }
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->events = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -86,23 +120,6 @@ class EventCategory
     {
         return $this->description;
     }
-    /**
-     * @var string
-     */
-    private $slug;
-
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $products;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->products = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Set slug
@@ -128,35 +145,35 @@ class EventCategory
     }
 
     /**
-     * Add products
+     * Add events
      *
-     * @param \STC\EventBundle\Entity\Event $products
+     * @param \STC\EventBundle\Entity\Event $events
      * @return EventCategory
      */
-    public function addProduct(\STC\EventBundle\Entity\Event $products)
+    public function addEvent(\STC\EventBundle\Entity\Event $events)
     {
-        $this->products[] = $products;
+        $this->events[] = $events;
 
         return $this;
     }
 
     /**
-     * Remove products
+     * Remove events
      *
-     * @param \STC\EventBundle\Entity\Event $products
+     * @param \STC\EventBundle\Entity\Event $events
      */
-    public function removeProduct(\STC\EventBundle\Entity\Event $products)
+    public function removeEvent(\STC\EventBundle\Entity\Event $events)
     {
-        $this->products->removeElement($products);
+        $this->events->removeElement($events);
     }
 
     /**
-     * Get products
+     * Get events
      *
      * @return \Doctrine\Common\Collections\Collection 
      */
-    public function getProducts()
+    public function getEvents()
     {
-        return $this->products;
+        return $this->events;
     }
 }

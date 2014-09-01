@@ -1,6 +1,6 @@
 STC\EventBundle\Entity\Event:
     type: entity
-    table: event
+    table: stc_event
     id:
         id:
             type: integer
@@ -8,23 +8,63 @@ STC\EventBundle\Entity\Event:
             generator:
                 strategy: AUTO
     fields:
+    fields:
         title:
-            type: string
-            length: 255
+            type: text
+        date:
+            type: date
+        location:
+            type: text
         description:
             type: text
+        content:
+            type: text
+        rawContent:
+            type: text
+            column: raw_content
+            nullable: true
+        contentFormatter:
+            type: string
+            column: content_formatter
+            nullable: true
+        enabled:
+            type: boolean
+            default: true
         slug:
             type: string
-            length: 255
+            length: 128
             gedmo:
-              slug:
-                separator: _
-                style: camel
-                fields:
-                  - title
-                  - id
+                slug:
+                    separator: _
+                    fields:
+                        - title
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+    oneToOne:
+        images:
+            targetEntity: Application\Sonata\MediaBundle\Entity\Gallery
+            cascade: ["all"]
+            joinColumn:
+                name: images_id
+                referencedColumnName: id
+            fetch: EAGER
+        image:
+            targetEntity: Application\Sonata\MediaBundle\Entity\Media
+            cascade: ["all"]
+            joinColumn:
+                name: image_id
+                eferencedColumnName: id
+            fetch: EAGER
     manyToOne:
         category:
           targetEntity: STC\EventBundle\Entity\EventCategory
-          inversedBy: products
+          inversedBy: events
     lifecycleCallbacks: { }

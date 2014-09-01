@@ -1,3 +1,0 @@
-stc_event_show:
-    pattern:  /show/{slug}
-    defaults: { _controller: STCEventBundle:Event:show }

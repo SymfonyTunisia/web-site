@@ -5,18 +5,81 @@
     {{ sonata_block_render({ 'type':'sonata.page.block.header'}) }}
     <div class="bg-content">
         <div class="container">
-            {% block page_content %}
-                {% if content is defined %}
-                    {{ content|raw }}
-                {% else %}
-                    {% set content = block('content') %}
-                    {% if content|length > 0 %}
-                        {{ content|raw }}
-                    {% elseif page is defined %}
-                        {{ sonata_page_render_container('content', page) }}
-                    {% endif %}
-                {% endif %}
-            {% endblock %}
+            <div class="bg-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <!--============================== slider =================================-->
+                            <div class="flexslider">
+                                <ul class="slides">
+                                    <li class="flex-active-slide"
+                                        style="width: 100%; float: left; margin-right: -100%; position: relative; display: list-item;">
+                                        <img src="{{ asset('bundles/stcsite/img/slide-1.jpg') }}" alt=""></li>
+                                    <li class=""
+                                        style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
+                                        <img src="{{ asset('bundles/stcsite/img/slide-2.jpg') }}" alt=""></li>
+                                    <li class=""
+                                        style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
+                                        <img src="{{ asset('bundles/stcsite/img/slide-3.jpg') }}" alt=""></li>
+                                    <li class=""
+                                        style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
+                                        <img src="{{ asset('bundles/stcsite/img/slide-4.jpg') }}" alt=""></li>
+                                    <li class=""
+                                        style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
+                                        <img src="{{ asset('bundles/stcsite/img/slide-5.jpg') }}" alt=""></li>
+                                </ul>
+                                <ol class="flex-control-nav flex-control-paging">
+                                    <li><a class="flex-active">1</a></li>
+                                    <li><a class="">2</a></li>
+                                    <li><a class="">3</a></li>
+                                    <li><a class="">4</a></li>
+                                    <li><a class="">5</a></li>
+                                </ol>
+                                <ul class="flex-direction-nav">
+                                    <li><a class="flex-prev" href="#"></a></li>
+                                    <li><a class="flex-next" href="#"></a></li>
+                                </ul>
+                            </div>
+                            <span id="responsiveFlag"></span>
+
+                            <div class="block-slogan">
+                                <h2>Welcome!</h2>
+
+                                <div>
+                                    <p><a href="http://blog.templatemonster.com/free-website-templates/ "
+                                          target="_blank"
+                                          class="link-1">Click here</a> for more info about this free website template
+                                        created by
+                                        TemplateMonster.com. This is a Bootstrap template that goes with several layout
+                                        options (for
+                                        desktop, tablet, smartphone landscape and portrait) to fit all popular screen
+                                        resolutions.
+                                        The PSD source files of this template are available for free for the registered
+                                        members of
+                                        TemplateMonster.com. Feel free to get them!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--============================== content =================================-->
+
+                <div id="content" class="content-extra">
+                    {% block page_content %}
+                        {% if content is defined %}
+                            {{ content|raw }}
+                        {% else %}
+                            {% set content = block('content') %}
+                            {% if content|length > 0 %}
+                                {{ content|raw }}
+                            {% elseif page is defined %}
+                                {{ sonata_page_render_container('content', page) }}
+                            {% endif %}
+                        {% endif %}
+                    {% endblock %}
+                </div>
+            </div>
         </div>
     </div>
     <!--============================== footer =================================-->
