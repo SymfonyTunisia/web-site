@@ -1,0 +1,6 @@
+services:
+    sonata.site.admin.banner:
+        class: STC\SiteBundle\Admin\BannerAdmin
+        arguments: [~, STC\SiteBundle\Entity\Banner, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Banner}

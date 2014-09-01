@@ -1,7 +1,7 @@
-STC\BannerBundle\Entity\Banner:
+STC\SiteBundle\Entity\Banner:
   type: entity
-  repositoryClass:  STC\BannerBundle\Repository\BannerRepository
-  table: banners
+  repositoryClass:  STC\SiteBundle\Repository\BannerRepository
+  table: stc_banners
   gedmo:
     loggable: true
   id:
@@ -12,27 +12,17 @@ STC\BannerBundle\Entity\Banner:
     name: 
       type: string
       nullable: true
-      gedmo:
-        - versioned
     client:
       type: string
-      gedmo:
-        - versioned        
     start_date:
-    
       type: date
-      gedmo:
-        - versioned
     duration:
       type: integer
     enabled:
       type: boolean
     url:
       type: string
-      gedmo:
-        - versioned
       nullable: true
-
     created:
       type: datetime
       gedmo:
@@ -45,10 +35,7 @@ STC\BannerBundle\Entity\Banner:
           on: update
     status: # 0 - To validate,1 - Online, 2 - Offline
       type: integer
-      nullable: true   
-    last_version: 
-      type: integer
-      nullable: true              
+      nullable: true
   oneToOne:
     media:
       targetEntity: Application\Sonata\MediaBundle\Entity\Media
@@ -57,14 +44,4 @@ STC\BannerBundle\Entity\Banner:
         name: media_id
         referencedColumnName: id
         nullable: true
-      gedmo:
-        - versioned
-  manyToOne:   
-    banner_type:
-  
-      targetEntity: BannerType
-      inversedBy: banners
-      joinColumn:
-        name: banner_type_id
-        referencedColumnName: id
-        nullable: true
+

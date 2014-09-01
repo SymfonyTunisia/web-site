@@ -99,7 +99,6 @@ class AppKernel extends Kernel
             // STC Bundles
             new STC\SiteBundle\STCSiteBundle(),
             new STC\EventBundle\STCEventBundle(),
-            new STC\BannerBundle\STCBannerBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
