@@ -2,9 +2,21 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file source-language="en" datatype="plaintext" original="file.ext">
         <body>
-            <trans-unit id="1">
-                <source>Symfony2 is great</source>
-                <target>J'aime Symfony2</target>
+            <trans-unit id="label.home">
+                <source>label.home</source>
+                <target>About</target>
+            </trans-unit>
+            <trans-unit id="label.whoWeAre">
+                <source>label.whoWeAre</source>
+                <target>whoWeAre</target>
+            </trans-unit>
+            <trans-unit id="label.copyright">
+                <source>label.copyright</source>
+                <target>copyright</target>
+            </trans-unit>
+            <trans-unit id="label.event">
+                <source>label.event</source>
+                <target>event</target>
             </trans-unit>
         </body>
     </file>

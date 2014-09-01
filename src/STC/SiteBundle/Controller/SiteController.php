@@ -33,12 +33,4 @@ class SiteController extends Controller
     {
         return $this->render('STCSiteBundle:Site:copyright.html.twig');
     }
-
-    /**
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function allRightsReservedAction()
-    {
-        return $this->render('STCSiteBundle:Site:allRightsReserved.html.twig');
-    }
 }
