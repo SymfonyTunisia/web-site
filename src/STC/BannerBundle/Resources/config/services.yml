@@ -1,7 +1,0 @@
-parameters:
-#    stc_banner.example.class: STC\BannerBundle\Example
-
-services:
-#    stc_banner.example:
-#        class: %stc_banner.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]

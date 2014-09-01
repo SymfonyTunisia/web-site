@@ -1,7 +1,17 @@
 parameters:
-#    stc_site.example.class: STC\SiteBundle\Example
+    menu_builder.class: STC\SiteBundle\Menu\MenuBuilder
 
 services:
-#    stc_site.example:
-#        class: %stc_site.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    # the menu builder service. Can be used for several menus
+    main.menu_builder:
+        class: %menu_builder.class%
+        arguments: ["@knp_menu.factory","@translator","@service_container"]
+
+    stc.main.menu:
+        class: Knp\Menu\MenuItem # the service definition requires setting the class
+        factory_service: main.menu_builder
+        factory_method: createMainMenu
+        arguments: ["@request"]
+        scope: request # needed as we have the request as a dependency here
+        tags:
+            - { name: knp_menu.menu, alias: main } # The alias is what is used to retrieve the menu

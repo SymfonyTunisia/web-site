@@ -1,3 +1,0 @@
-stc_banner_show:
-    pattern:  /banner/show/{position}
-    defaults: { _controller: STCBannerBundle:Banner:show }

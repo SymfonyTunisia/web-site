@@ -1,15 +1,15 @@
 <?php
-namespace STC\BannerBundle\Entity;
+namespace STC\SiteBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-class Banner {
+class Banner
+{
 
     /**
      * @var integer
      */
     private $id;
-
     /**
      * @var string
      */
@@ -56,25 +56,23 @@ class Banner {
     private $status;
 
     /**
-     * @var integer
-     */
-    private $last_version;
-
-    /**
      * @var \Application\Sonata\MediaBundle\Entity\Media
      */
     private $media;
 
-    /**
-     * @var \STC\BannerBundle\Entity\BannerType
-     */
-    private $banner_type;
-    
     const ENABLED_NO = 0;
     const ENABLED_YES = 1;
     const STATUS_TO_VALIDATE = 0;
     const STATUS_ONLINE = 1;
     const STATUS_OFFLINE = 2;
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return (string) $this->getName();
+    }
 
     /**
      * Get id
@@ -294,29 +292,6 @@ class Banner {
     }
 
     /**
-     * Set last_version
-     *
-     * @param integer $lastVersion
-     * @return Banner
-     */
-    public function setLastVersion($lastVersion)
-    {
-        $this->last_version = $lastVersion;
-
-        return $this;
-    }
-
-    /**
-     * Get last_version
-     *
-     * @return integer 
-     */
-    public function getLastVersion()
-    {
-        return $this->last_version;
-    }
-
-    /**
      * Set media
      *
      * @param \Application\Sonata\MediaBundle\Entity\Media $media
@@ -337,33 +312,5 @@ class Banner {
     public function getMedia()
     {
         return $this->media;
-    }
-
-    /**
-     * Set banner_type
-     *
-     * @param \STC\BannerBundle\Entity\BannerType $bannerType
-     * @return Banner
-     */
-    public function setBannerType(\STC\BannerBundle\Entity\BannerType $bannerType = null)
-    {
-        $this->banner_type = $bannerType;
-
-        return $this;
-    }
-
-    /**
-     * Get banner_type
-     *
-     * @return \STC\BannerBundle\Entity\BannerType 
-     */
-    public function getBannerType()
-    {
-        return $this->banner_type;
-    }
-    
-    public function __toString()
-    {
-    	return (string) $this->getName();
     }
 }

@@ -9,7 +9,3 @@ whoWeAre:
 copyright:
     pattern:  /copyright
     defaults: { _controller: STCSiteBundle:Site:copyright }
-
-allRightsReserved:
-    pattern:  /all-rights-reserved
-    defaults: { _controller: STCSiteBundle:Site:allRightsReserved }
