@@ -1,47 +1,47 @@
 STC\SiteBundle\Entity\Banner:
-  type: entity
-  repositoryClass:  STC\SiteBundle\Repository\BannerRepository
-  table: stc_banners
-  gedmo:
-    loggable: true
-  id:
+    type: entity
+    repositoryClass:  STC\SiteBundle\Repository\BannerRepository
+    table: stc_banners
     id:
-      type: integer
-      generator: { strategy: auto }
-  fields:
-    name: 
-      type: string
-      nullable: true
-    client:
-      type: string
-    start_date:
-      type: date
-    duration:
-      type: integer
-    enabled:
-      type: boolean
-    url:
-      type: string
-      nullable: true
-    created:
-      type: datetime
-      gedmo:
-        timestampable:
-          on: create
-    updated:
-      type: datetime
-      gedmo:
-        timestampable:
-          on: update
-    status: # 0 - To validate,1 - Online, 2 - Offline
-      type: integer
-      nullable: true
-  oneToOne:
-    media:
-      targetEntity: Application\Sonata\MediaBundle\Entity\Media
-      cascade: ["persist"]
-      joinColumn:
-        name: media_id
-        referencedColumnName: id
-        nullable: true
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            nullable: true
+        client:
+            type: string
+        start_date:
+            type: date
+        duration:
+            type: integer
+        enabled:
+            type: boolean
+        url:
+            type: string
+            nullable: true
+        status: # 0 - To validate,1 - Online, 2 - Offline
+            type: integer
+            nullable: true
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+    oneToOne:
+        media:
+            targetEntity: Application\Sonata\MediaBundle\Entity\Media
+            cascade: ["all"]
+            joinColumn:
+                name: media_id
+                eferencedColumnName: id
+            fetch: EAGER
 

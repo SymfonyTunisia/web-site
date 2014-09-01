@@ -8,7 +8,6 @@ STC\EventBundle\Entity\Event:
             generator:
                 strategy: AUTO
     fields:
-    fields:
         title:
             type: text
         date:
