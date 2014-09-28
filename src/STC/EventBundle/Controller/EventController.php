@@ -4,7 +4,6 @@ namespace STC\EventBundle\Controller;
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
 use STC\EventBundle\Entity\Event;
 
 /**
