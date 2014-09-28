@@ -29,8 +29,8 @@ class SiteController extends Controller
     /**
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function copyrightAction()
+    public function sliderAction()
     {
-        return $this->render('STCSiteBundle:Site:copyright.html.twig');
+        return $this->render('STCSiteBundle:Site:slider.html.twig');
     }
 }

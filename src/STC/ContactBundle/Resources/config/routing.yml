@@ -1,0 +1,7 @@
+contact:
+    path:   /contact-us
+    defaults:  { _controller: STCContactBundle:Contact:create }
+
+contactConfirm:
+    path:   /contact-us/{id}/validation
+    defaults:  { _controller: STCContactBundle:Contact:confirm}

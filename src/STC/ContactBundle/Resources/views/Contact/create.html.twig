@@ -1,0 +1,48 @@
+<div class="row container-form">
+    <div class="col-md-12">
+        {{ form_start(form, {'attr': {'class': 'contact_form' }}) }}
+        {{ form_errors(form) }}
+        <ul>
+            <li class="form-group {% if form.civility.vars.errors |length > 0 %}has-error{% endif %}">
+                {{ form_label(form.civility, null, {'label_attr': {'class': 'custom-select' }}) }}
+                {{ form_widget(form.civility) }}
+            </li>
+            <li class="form-group {% if form.lastName.vars.errors |length > 0 %}has-error{% endif %}">
+                {{ form_label(form.lastName) }}
+                {{ form_widget(form.lastName) }}
+            </li>
+            <li class="form-group {% if form.firstName.vars.errors |length > 0 %}has-error{% endif %}">
+                {{ form_label(form.firstName) }}
+                {{ form_widget(form.firstName) }}
+            </li>
+            <li class="form-group {% if form.email.vars.errors |length > 0 %}has-error{% endif %}">
+                {{ form_label(form.email) }}
+                {{ form_widget(form.email) }}
+            </li>
+            <li class="form-group {% if form.phone.vars.errors |length > 0 %}has-error{% endif %}">
+                {{ form_label(form.phone) }}
+                {{ form_widget(form.phone) }}
+            </li>
+            <li class="form-group {% if form.address.vars.errors |length > 0 %}has-error{% endif %}">
+                {{ form_label(form.address) }}
+                {{ form_widget(form.address) }}
+            </li>
+            <li class="form-group {% if form.zipCode.vars.errors |length > 0 %}has-error{% endif %}">
+                {{ form_label(form.zipCode) }}
+                {{ form_widget(form.zipCode) }}
+            </li>
+            <li class="form-group {% if form.message.vars.errors |length > 0 %}has-error{% endif %}">
+                {{ form_label(form.message) }}
+                {{ form_widget(form.message) }}
+            </li>
+            {{ form_rest(form) }}
+            <li>
+                <button class="submit" type="submit">
+                    {{ 'contact.submit'|trans({}, 'ContactBundle') }}
+                </button>
+            </li>
+
+        </ul>
+        {{ form_end(form) }}
+    </div>
+</div>

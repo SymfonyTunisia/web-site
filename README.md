@@ -1,11 +1,16 @@
 Terres de fenêtre
 
+<<<<<<< HEAD
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/SymfonyTunisia/web-site/)
 
 =======
 https://insight.sensiolabs.com/projects/b942e021-0577-42e7-846e-d21b46b3ee48/big.png
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/b942e021-0577-42e7-846e-d21b46b3ee48/big.png)](https://insight.sensiolabs.com/projects/b942e021-0577-42e7-846e-d21b46b3ee48)
 
+=======
+https://insight.sensiolabs.com/projects/b942e021-0577-42e7-846e-d21b46b3ee48/big.png
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/b942e021-0577-42e7-846e-d21b46b3ee48/big.png)](https://insight.sensiolabs.com/projects/b942e021-0577-42e7-846e-d21b46b3ee48)
+>>>>>>> c053c924d3664319181d8e1fe1cb500489b24b1f
 =======================
 
 Install using Vagrant

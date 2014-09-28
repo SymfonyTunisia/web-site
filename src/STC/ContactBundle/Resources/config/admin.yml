@@ -1,0 +1,8 @@
+services:
+    sonata.contact.admin.contact:
+        class: STC\ContactBundle\Admin\ContactAdmin
+        arguments: [~, STC\ContactBundle\Entity\Contact, SonataAdminBundle:CRUD]
+        calls:
+            - [setTranslationDomain,  [ContactBundle] ]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: label.contact, label_catalogue: "ContactBundle", label_translator_strategy: "sonata.admin.label.strategy.underscore"}

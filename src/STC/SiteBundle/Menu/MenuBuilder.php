@@ -46,13 +46,8 @@ class MenuBuilder
     public function createMainMenu(Request $request)
     {
         $menu = $this->factory->createItem('menu');
-
+        $route = $this->getRequest()->get('_route');
         $menu->setChildrenAttributes(array('class' => 'nav sf-menu sf-js-enabled'));
-
-        $menu->addChild(
-            $this->translator->trans('label.home', array(), 'messages'),
-            array('route' => 'home')
-        );
 
         $menu->addChild(
             $this->translator->trans('label.whoWeAre', array(), 'messages'),
@@ -65,11 +60,35 @@ class MenuBuilder
         );
 
         $menu->addChild(
-            $this->translator->trans('label.copyright', array(), 'messages'),
-            array('route' => 'copyright')
+            $this->translator->trans('label.workshop', array(), 'messages'),
+            array('route' => 'event')
         );
 
+        $menu->addChild(
+            $this->translator->trans('label.workshop', array(), 'messages'),
+            array('route' => 'event')
+        );
+
+        $news = $menu->addChild(
+            $this->translator->trans('label.news', array(), 'messages'),
+            array('route' => 'sonata_news_archive')
+        );
+
+        $menu->addChild(
+            $this->translator->trans('label.contact', array(), 'messages'),
+            array('route' => 'contact')
+        );
+
+        if ($route == "sonata_news_archive" || $route == "sonata_news_view") {
+            $news->setCurrent(true);
+        }
 
         return $menu;
+    }
+
+
+    public function getRequest()
+    {
+        return $this->container->get('request');
     }
 }

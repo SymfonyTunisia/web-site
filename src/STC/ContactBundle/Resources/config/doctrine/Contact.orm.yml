@@ -1,0 +1,49 @@
+STC\ContactBundle\Entity\Contact:
+    type: entity
+    table: stc_contact
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        civility:
+            type: string
+            length: 48
+        lastName:
+            type: string
+            length: 48
+            column: last_name
+        firstName:
+            type: string
+            length: 48
+            column: first_name
+        email:
+            type: string
+            length: 64
+        phone:
+             type: string
+             length: 25
+        address:
+            type: string
+            nullable: true
+            length: 128
+        zipCode:
+            type: string
+            length: 5
+            column: zip_code
+        message:
+            type: text
+            nullable: true
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
+    lifecycleCallbacks: {  }
