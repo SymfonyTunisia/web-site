@@ -5,6 +5,10 @@ stc_event_event:
     resource: "@STCEventBundle/Resources/config/routing/event.yml"
     prefix:   /event
 
+stc_contact:
+    resource: "@STCContactBundle/Resources/config/routing.yml"
+    prefix:   /contact
+
 sonata_user_security:
     resource: "@SonataUserBundle/Resources/config/routing/sonata_security_1.xml"
 

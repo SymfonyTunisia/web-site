@@ -97,6 +97,7 @@ class AppKernel extends Kernel
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
 
             // STC Bundles
+            new STC\ContactBundle\STCContactBundle(),
             new STC\SiteBundle\STCSiteBundle(),
             new STC\EventBundle\STCEventBundle(),
         );
