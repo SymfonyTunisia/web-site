@@ -4,3 +4,9 @@ services:
         arguments: [~, STC\SiteBundle\Entity\Banner, SonataAdminBundle:CRUD]
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: Banner}
+
+    sonata.site.admin.sponsor:
+        class: STC\SiteBundle\Admin\SponsorAdmin
+        arguments: [~, STC\SiteBundle\Entity\Sponsor, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Sponsor}

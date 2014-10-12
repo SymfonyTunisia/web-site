@@ -1,29 +1,12 @@
 <!--============================== slider =================================-->
 <div class="flexslider">
     <ul class="slides">
-        <li class="flex-active-slide"
-            style="width: 100%; float: left; margin-right: -100%; position: relative; display: list-item;">
-            <img src="{{ asset('bundles/stcsite/img/slide-1.jpg') }}" alt=""></li>
-        <li class=""
-            style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
-            <img src="{{ asset('bundles/stcsite/img/slide-2.jpg') }}" alt=""></li>
-        <li class=""
-            style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
-            <img src="{{ asset('bundles/stcsite/img/slide-3.jpg') }}" alt=""></li>
-        <li class=""
-            style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
-            <img src="{{ asset('bundles/stcsite/img/slide-4.jpg') }}" alt=""></li>
-        <li class=""
-            style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
-            <img src="{{ asset('bundles/stcsite/img/slide-5.jpg') }}" alt=""></li>
+        {% for entity in entities %}
+            <li class=""
+                style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
+                <img src="{{ asset('bundles/stcsite/img/slide-5.jpg') }}" alt=""></li>
+        {% endfor %}
     </ul>
-    <ol class="flex-control-nav flex-control-paging">
-        <li><a class="flex-active">1</a></li>
-        <li><a class="">2</a></li>
-        <li><a class="">3</a></li>
-        <li><a class="">4</a></li>
-        <li><a class="">5</a></li>
-    </ol>
     <ul class="flex-direction-nav">
         <li><a class="flex-prev" href="#"></a></li>
         <li><a class="flex-next" href="#"></a></li>

@@ -1,0 +1,13 @@
+<article class="span6">
+    <h3>Latest photoshoots</h3>
+    <ul class="list-photo">
+        {% for key,entity in entities %}
+            <a href="{{ entity.url }}" {% if key % 3 %}class="magnifier" {% endif %}>
+                <div class="">
+                    <img style="visibility: visible; opacity: 1;"
+                         src="{{ asset('bundles//stcsite/img/page1-img6.jpg') }}" alt="{{ entity.name }}">
+                </div>
+            </a>
+        {% endfor %}
+    </ul>
+</article>

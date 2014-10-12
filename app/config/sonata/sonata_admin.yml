@@ -57,6 +57,7 @@ sonata_admin:
                     - sonata.media.admin.gallery
                     - sonata.comment.admin.thread
                     - sonata.site.admin.banner
+                    - sonata.site.admin.sponsor
 
             sonata.admin.group.event:
                 label:           sonata_event
