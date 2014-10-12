@@ -1,0 +1,36 @@
+STC\SiteBundle\Entity\Sponsor:
+    type: entity
+    table: stc_sponsors
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            nullable: true
+        enabled:
+            type: boolean
+        url:
+            type: string
+            nullable: true
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+    oneToOne:
+        logo:
+            targetEntity: Application\Sonata\MediaBundle\Entity\Media
+            cascade: ["all"]
+            joinColumn:
+                name: logo_id
+                eferencedColumnName: id
+            fetch: EAGER
