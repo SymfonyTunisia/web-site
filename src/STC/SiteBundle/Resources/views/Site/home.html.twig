@@ -1,17 +1,21 @@
-<div class="bg-content">
-    <div class="container">
-        <div class="row">
-            <div class="span12">
-                {{ render(controller('STCSiteBundle:Site:slider')) }}
-                {% include "STCSiteBundle:Site:welcome.html.twig" %}
+<div class="container">
+    <div id="content" class="content-extra">
+        <div class="bg-content">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        {{ render(controller('STCSiteBundle:Site:slider')) }}
+                        {% include "STCSiteBundle:Site:welcome.html.twig" %}
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-{% include "STCEventBundle:Event:lastEvent.html.twig" %}
-<div class="container">
-    <div class="row">
-        {% include "STCSiteBundle:Site:aboutMe.html.twig" %}
-        {{ render(controller('STCSiteBundle:Site:sponsor')) }}
+        {% include "STCEventBundle:Event:lastEvent.html.twig" %}
+        <div class="container">
+            <div class="row">
+                {% include "STCSiteBundle:Site:aboutMe.html.twig" %}
+                {{ render(controller('STCSiteBundle:Site:sponsor')) }}
+            </div>
+        </div>
     </div>
 </div>

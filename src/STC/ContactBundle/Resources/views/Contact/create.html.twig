@@ -1,48 +1,86 @@
-<div class="row container-form">
-    <div class="col-md-12">
-        {{ form_start(form, {'attr': {'class': 'contact_form' }}) }}
-        {{ form_errors(form) }}
-        <ul>
-            <li class="form-group {% if form.civility.vars.errors |length > 0 %}has-error{% endif %}">
-                {{ form_label(form.civility, null, {'label_attr': {'class': 'custom-select' }}) }}
-                {{ form_widget(form.civility) }}
-            </li>
-            <li class="form-group {% if form.lastName.vars.errors |length > 0 %}has-error{% endif %}">
-                {{ form_label(form.lastName) }}
-                {{ form_widget(form.lastName) }}
-            </li>
-            <li class="form-group {% if form.firstName.vars.errors |length > 0 %}has-error{% endif %}">
-                {{ form_label(form.firstName) }}
-                {{ form_widget(form.firstName) }}
-            </li>
-            <li class="form-group {% if form.email.vars.errors |length > 0 %}has-error{% endif %}">
-                {{ form_label(form.email) }}
-                {{ form_widget(form.email) }}
-            </li>
-            <li class="form-group {% if form.phone.vars.errors |length > 0 %}has-error{% endif %}">
-                {{ form_label(form.phone) }}
-                {{ form_widget(form.phone) }}
-            </li>
-            <li class="form-group {% if form.address.vars.errors |length > 0 %}has-error{% endif %}">
-                {{ form_label(form.address) }}
-                {{ form_widget(form.address) }}
-            </li>
-            <li class="form-group {% if form.zipCode.vars.errors |length > 0 %}has-error{% endif %}">
-                {{ form_label(form.zipCode) }}
-                {{ form_widget(form.zipCode) }}
-            </li>
-            <li class="form-group {% if form.message.vars.errors |length > 0 %}has-error{% endif %}">
-                {{ form_label(form.message) }}
-                {{ form_widget(form.message) }}
-            </li>
-            {{ form_rest(form) }}
-            <li>
-                <button class="submit" type="submit">
-                    {{ 'contact.submit'|trans({}, 'ContactBundle') }}
-                </button>
-            </li>
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <article class="span8">
+                <h3>Contact us</h3>
 
-        </ul>
-        {{ form_end(form) }}
+                <div class="inner-1">
+                    {{ form_start(form, {'attr': {'class': 'contact_form' }}) }}
+                    {{ form_errors(form) }}
+                    <fieldset>
+                        <div class="form-group {% if form.civility.vars.errors |length > 0 %}has-error{% endif %}">
+                            <label class="civility">
+                                {{ form_widget(form.civility) }}
+                            </label>
+                        </div>
+
+                        <div class="form-group {% if form.lastName.vars.errors |length > 0 %}has-error{% endif %}">
+                            <label class="lastName">
+                                {{ form_widget(form.lastName) }}
+                            </label>
+                        </div>
+
+                        <div class="form-group {% if form.firstName.vars.errors |length > 0 %}has-error{% endif %}">
+                            <label class="firstName">
+                                {{ form_widget(form.firstName) }}
+                            </label>
+                        </div>
+
+                        <div class="form-group {% if form.email.vars.errors |length > 0 %}has-error{% endif %}">
+                            <label class="email">
+                                {{ form_widget(form.email) }}
+                            </label>
+                        </div>
+
+                        <div class="form-group {% if form.phone.vars.errors |length > 0 %}has-error{% endif %}">
+                            <label class="phone">
+                                {{ form_widget(form.phone) }}
+                            </label>
+                        </div>
+
+                        <div class="form-group {% if form.zipCode.vars.errors |length > 0 %}has-error{% endif %}">
+                            <label class="zipCode">
+                                {{ form_widget(form.zipCode) }}
+                            </label>
+                        </div>
+
+                        <div class="form-group {% if form.address.vars.errors |length > 0 %}has-error{% endif %}">
+                            <label class="address">
+                                {{ form_widget(form.address) }}
+                            </label>
+                        </div>
+
+                        <div class="form-group {% if form.message.vars.errors |length > 0 %}has-error{% endif %}">
+                            <label class="message">
+                                {{ form_widget(form.message) }}
+                            </label>
+                        </div>
+
+                        {{ form_rest(form) }}
+                        <div class="buttons-wrapper">
+                            <button class="submit" type="submit" class="btn btn-1">
+                                {{ 'contact.submit'|trans({}, 'ContactBundle') }}
+                            </button>
+                        </div>
+                    </fieldset>
+                    {{ form_end(form) }}
+                </div>
+            </article>
+            <article class="span4">
+                <h3>Contact info</h3>
+                <address class="address-1">
+                    <strong>Grewis<br>
+                        8901 Marmora Road<br>
+                        Glasgow, D04 89GR.</strong>
+
+                    <div class="overflow"><span>Freephone:</span>+1 800 559 6580<br>
+                        <span>Telephone:</span>+1 800 603 6035<br>
+                        <span>FAX:</span>+1 800 889 9898 <br>
+                        <span>E-mail:</span> <a class="mail-1" href="#">mail@demolink.org</a><br>
+                        <span>Skype:</span> <a class="mail-1" href="#">@skypename</a></div>
+                </address>
+            </article>
+        </div>
     </div>
 </div>
+

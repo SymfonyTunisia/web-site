@@ -29,6 +29,7 @@ class ContactController extends Controller
             array(
                 'action' => $this->generateUrl('contact'),
                 'method' => 'POST',
+                'attr' => array('id' => 'contact-form')
             )
         );
 
