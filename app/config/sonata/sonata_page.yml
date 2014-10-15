@@ -11,7 +11,7 @@ cmf_routing:
             router.default: 100
 
 sonata_page:
-    multisite:             host_with_path # host
+    multisite:             host # host
     use_streamed_response: false # set the value to false in debug mode or if the reverse proxy does not handle streamed response
 
     ignore_uri_patterns:
