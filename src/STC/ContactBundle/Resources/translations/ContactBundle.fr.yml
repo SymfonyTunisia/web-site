@@ -5,17 +5,9 @@ form.contact.email: Email
 form.contact.phone: Téléphone
 form.contact.address: Ville
 form.contact.zipCode: Code Postal
-form.contact.service: Service concerné
 form.contact.message: Message
-form.contact.newsletterType: Type de Newsletter
 form.contact.city: Ville
-form.contact.newsletterPro: Recevoir la newsletter PRO
-form.contact.newsletterParticular: Recevoir la newsletter PARTICULIER
-form.contact.partnerTDF: Partenaire TDF
-form.contact.letterWarranty: Saisissez 1 lettre
-form.contact.numberWarranty: Saisissez 5 chiffres
-form.contact.service_empty_value: Choisir
-form.contact.civility_empty_value: Choisir
+form.contact.civility_empty_value: Civilité
 form.contact.placeholder.firstName: Votre prénom*
 form.contact.placeholder.lastName: Votre nom*
 form.contact.placeholder.email: Email*
@@ -30,8 +22,6 @@ label.contact: Nous contacter
 filter.label_last_name: Nom
 filter.label_first_name: Prénom
 filter.label_email: Email
-filter.label_newsletter_pro: Recevoir la newsletter PRO
-filter.label_newsletter_particular: Recevoir la newsletter PARTICULIER
 list.label_email: Email
 list.label_civility: Civilité
 list.label_first_name: Prénom
@@ -48,16 +38,11 @@ show.label_phone: Téléphone
 show.label_address: Adresse
 show.label_zip_code: Code Postal
 show.label_message: Message
-show.label_newsletter_pro: Recevoir la newsletter PRO
-show.label_newsletter_particular: Recevoir la newsletter PARTICULIER
 show.label_created_at: Date de création
 show.label_updated_at: Date de modification
-breadcrumb.link_service_list: Service
 label.service: Service
 filter.label_name: Nom
 form.label_name: Nom
 list.label_name: Nom
 show.label_name: Nom
-filter.label_partner: Partenaire
-list.label_partner: Partenaire
 

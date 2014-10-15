@@ -94,6 +94,9 @@ class AppKernel extends Kernel
 
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
 
+            // StofDoctrineExtensions
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+
             // STC Bundles
             new STC\ContactBundle\STCContactBundle(),
             new STC\SiteBundle\STCSiteBundle(),
