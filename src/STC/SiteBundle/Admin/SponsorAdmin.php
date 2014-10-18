@@ -54,15 +54,10 @@ class SponsorAdmin extends Admin
             ->add(
                 'logo',
                 'sonata_type_model_list',
-                array(
-                    'required' => false,
-                    'btn_list' => false
-                ),
+                array('required' => false, 'btn_list' => false),
                 array(
                     'link_parameters' => array(
-                        'context' => 'sonata_sponsor',
-                        'filter' => array('context' => array('value' => 'sonata_sponsor')),
-                        'provider' => ''
+                        'context' => 'sonata_sponsor'
                     )
                 )
             );

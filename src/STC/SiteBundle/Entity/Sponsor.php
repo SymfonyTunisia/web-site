@@ -43,6 +43,14 @@ class Sponsor
 
 
     /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return (string) $this->getName();
+    }
+
+    /**
      * Get id
      *
      * @return integer 
