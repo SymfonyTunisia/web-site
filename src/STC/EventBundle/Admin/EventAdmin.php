@@ -83,9 +83,7 @@ class EventAdmin extends Admin
                 ),
                 array(
                     'link_parameters' => array(
-                        'context' => 'sonata_event',
-                        'filter' => array('context' => array('value' => 'sonata_event')),
-                        'provider' => ''
+                        'context' => 'sonata_event'
                     )
                 )
             )
@@ -98,9 +96,7 @@ class EventAdmin extends Admin
                 ),
                 array(
                     'link_parameters' => array(
-                        'context' => 'sonata_event',
-                        'filter' => array('context' => array('value' => 'sonata_event')),
-                        'provider' => ''
+                        'context' => 'sonata_event'
                     )
                 )
             );

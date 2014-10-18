@@ -1,15 +1,13 @@
-<div class="container">
-    <div id="content" class="content-extra">
-        <div class="bg-content">
-            <div class="container">
-                <div class="row">
-                    <div class="span12">
-                        {{ render(controller('STCSiteBundle:Site:slider')) }}
-                        {% include "STCSiteBundle:Site:welcome.html.twig" %}
-                    </div>
-                </div>
+<div class="bg-content">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                {{ render(controller('STCSiteBundle:Site:slider')) }}
+                {% include "STCSiteBundle:Site:welcome.html.twig" %}
             </div>
         </div>
+    </div>
+    <div id="content" class="content-extra">
         {{ render(controller('STCEventBundle:Event:lastEvent')) }}
         <div class="container">
             <div class="row">
