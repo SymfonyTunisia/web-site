@@ -2,12 +2,9 @@
     <div class="container">
         <div class="row">
             <article class="span12">
-
-                <h1>{{ 'title_archive'|trans({}, 'SonataNewsBundle') }}</h1>
+                <h1>Actualités</h1>
             </article>
             <div class="clear"></div>
-
-
             <div class="sonata-blog-post-list">
                 {% for post in pager.getResults() %}
                     <div class="sonata-blog-post-container">
