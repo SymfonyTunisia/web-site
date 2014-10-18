@@ -69,15 +69,10 @@ class BannerAdmin extends Admin
             ->add(
                 'media',
                 'sonata_type_model_list',
-                array(
-                    'required' => false,
-                    'btn_list' => false
-                ),
+                array('required' => false, 'btn_list' => false),
                 array(
                     'link_parameters' => array(
-                        'context' => 'sonata_banner',
-                        'filter' => array('context' => array('value' => 'sonata_banner')),
-                        'provider' => ''
+                        'context' => 'sonata_banner'
                     )
                 )
             );
