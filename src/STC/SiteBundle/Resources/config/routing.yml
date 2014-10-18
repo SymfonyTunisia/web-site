@@ -2,6 +2,10 @@ home:
     pattern:  /
     defaults: { _controller: STCSiteBundle:Site:home }
 
+symfonyTn:
+    pattern:  /symfony-tn
+    defaults: { _controller: STCSiteBundle:Site:symfonyTn }
+
 whoWeAre:
     pattern:  /who-we-are
     defaults: { _controller: STCSiteBundle:Site:whoWeAre }

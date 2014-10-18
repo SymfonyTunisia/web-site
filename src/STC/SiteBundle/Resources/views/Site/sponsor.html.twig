@@ -4,8 +4,7 @@
         {% for key,entity in entities %}
             <a href="{{ entity.url }}" {% if key % 3 %}class="magnifier" {% endif %}>
                 <div class="">
-                    <img style="visibility: visible; opacity: 1;"
-                         src="{{ asset('bundles//stcsite/img/page1-img6.jpg') }}" alt="{{ entity.name }}">
+                    {% media entity.log, 'fond' with {'alt': entity.name,'title': entity.name } %}
                 </div>
             </a>
         {% endfor %}

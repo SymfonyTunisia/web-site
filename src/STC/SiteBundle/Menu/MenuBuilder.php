@@ -60,13 +60,8 @@ class MenuBuilder
         );
 
         $menu->addChild(
-            $this->translator->trans('label.workshop', array(), 'messages'),
-            array('route' => 'event')
-        );
-
-        $menu->addChild(
-            $this->translator->trans('label.workshop', array(), 'messages'),
-            array('route' => 'event')
+            $this->translator->trans('label.symfonyTn', array(), 'messages'),
+            array('route' => 'symfonyTn')
         );
 
         $news = $menu->addChild(

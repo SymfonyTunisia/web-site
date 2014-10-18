@@ -27,6 +27,28 @@ sonata_media:
                 abstract: { width: 100, quality: 100}
                 wide:     { width: 820, quality: 100}
 
+        sonata_banner:
+            providers:
+                - sonata.media.provider.image
+
+            formats:
+                show: { width: 770, quality: 100}
+
+        sonata_sponsor:
+            providers:
+                - sonata.media.provider.image
+
+            formats:
+                show:     { width: 120, quality: 100}
+
+        sonata_event:
+            providers:
+                - sonata.media.provider.image
+                - sonata.media.provider.youtube
+
+            formats:
+                show:     { width: 270 , quality: 100}
+
         sonata_collection:
             providers:
               - sonata.media.provider.image

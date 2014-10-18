@@ -16,13 +16,8 @@ class SponsorAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('id')
             ->add('name')
-            ->add('enabled')
-            ->add('url')
-            ->add('createdAt')
-            ->add('updatedAt')
-        ;
+            ->add('enabled');
     }
 
     /**
@@ -31,20 +26,20 @@ class SponsorAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->add('id')
             ->add('name')
             ->add('enabled')
-            ->add('url')
             ->add('createdAt')
-            ->add('updatedAt')
-            ->add('_action', 'actions', array(
-                'actions' => array(
-                    'show' => array(),
-                    'edit' => array(),
-                    'delete' => array(),
+            ->add(
+                '_action',
+                'actions',
+                array(
+                    'actions' => array(
+                        'show' => array(),
+                        'edit' => array(),
+                        'delete' => array(),
+                    )
                 )
-            ))
-        ;
+            );
     }
 
     /**
@@ -53,13 +48,24 @@ class SponsorAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id')
             ->add('name')
             ->add('enabled')
             ->add('url')
-            ->add('createdAt')
-            ->add('updatedAt')
-        ;
+            ->add(
+                'logo',
+                'sonata_type_model_list',
+                array(
+                    'required' => false,
+                    'btn_list' => false
+                ),
+                array(
+                    'link_parameters' => array(
+                        'context' => 'sonata_sponsor',
+                        'filter' => array('context' => array('value' => 'sonata_sponsor')),
+                        'provider' => ''
+                    )
+                )
+            );
     }
 
     /**
@@ -68,12 +74,10 @@ class SponsorAdmin extends Admin
     protected function configureShowFields(ShowMapper $showMapper)
     {
         $showMapper
-            ->add('id')
             ->add('name')
             ->add('enabled')
             ->add('url')
             ->add('createdAt')
-            ->add('updatedAt')
-        ;
+            ->add('updatedAt');
     }
 }
