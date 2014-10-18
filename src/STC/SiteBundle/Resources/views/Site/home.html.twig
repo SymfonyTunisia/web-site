@@ -10,7 +10,7 @@
                 </div>
             </div>
         </div>
-        {% include "STCEventBundle:Event:lastEvent.html.twig" %}
+        {{ render(controller('STCEventBundle:Event:lastEvent')) }}
         <div class="container">
             <div class="row">
                 {% include "STCSiteBundle:Site:aboutMe.html.twig" %}

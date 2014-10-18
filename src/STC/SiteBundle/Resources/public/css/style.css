@@ -341,9 +341,15 @@ p {
 .border-horiz.extra {
   margin-bottom: 10px;
 }
+
 .txt-1 {
-  color: #ffffff;
-  padding: 3px 0 10px;
+    color: #ffffff;
+    padding: 3px 0 10px;
+    text-align: justify;
+}
+
+.inner-1 .txt {
+    text-align: justify;
 }
 /*------ list-services ------- */
 .list-services .thumbnail-1 {

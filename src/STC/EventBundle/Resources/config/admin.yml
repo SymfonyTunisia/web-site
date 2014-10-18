@@ -2,11 +2,16 @@ services:
     sonata.event.admin.event:
         class: STC\EventBundle\Admin\EventAdmin
         arguments: [~, STC\EventBundle\Entity\Event, SonataAdminBundle:CRUD]
+        calls:
+            - [setTranslationDomain,  [EventBundle] ]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: admin, label: Event}
+            - {name: sonata.admin, manager_type: orm,  group: "sonata_event" ,  label: label.event, label_catalogue: "EventBundle", label_translator_strategy: "sonata.admin.label.strategy.underscore" }
 
     sonata.event.admin.event_category:
         class: STC\EventBundle\Admin\EventCategoryAdmin
         arguments: [~, STC\EventBundle\Entity\EventCategory, SonataAdminBundle:CRUD]
+        calls:
+            - [setTranslationDomain,  [EventBundle] ]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: admin, label: EventCategory}
+            - {name: sonata.admin, manager_type: orm,  group: "sonata_event" ,  label: label.event_category, label_catalogue: "EventBundle", label_translator_strategy: "sonata.admin.label.strategy.underscore" }
+

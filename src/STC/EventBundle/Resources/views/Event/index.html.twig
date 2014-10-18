@@ -1,51 +1,32 @@
-{% extends '::base.html.twig' %}
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <article class="span12">
+                <h3>Events</h3>
+            </article>
+            <div class="clear"></div>
+            <ul class="thumbnails thumbnails-1 clearfix">
+                {% for entity in entities %}
+                    <li class="span3">
+                        <div class="thumbnail thumbnail-1">
+                            <h3>{{ entity.title }}</h3>
+                            <div class="">
+                                {% media entity.image, 'show' with {'alt': entity.title,'title': entity.title } %}
+                            </div>
+                            <section>
+                                <strong>
+                                    {{ entity.date }},  {{ entity.location }}
+                                </strong>
 
-{% block body -%}
-    <h1>Event list</h1>
-
-    <table class="records_list">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Date</th>
-                <th>Location</th>
-                <th>Description</th>
-                <th>Content</th>
-                <th>Rawcontent</th>
-                <th>Contentformatter</th>
-                <th>Enabled</th>
-                <th>Slug</th>
-                <th>Createdat</th>
-                <th>Updatedat</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for entity in entities %}
-            <tr>
-                <td><a href="{{ path('event_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-                <td>{{ entity.title }}</td>
-                <td>{% if entity.date %}{{ entity.date|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ entity.location }}</td>
-                <td>{{ entity.description }}</td>
-                <td>{{ entity.content }}</td>
-                <td>{{ entity.rawContent }}</td>
-                <td>{{ entity.contentFormatter }}</td>
-                <td>{{ entity.enabled }}</td>
-                <td>{{ entity.slug }}</td>
-                <td>{% if entity.createdAt %}{{ entity.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{% if entity.updatedAt %}{{ entity.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>
-                <ul>
-                    <li>
-                        <a href="{{ path('event_show', { 'id': entity.id }) }}">show</a>
+                                <p>{{ entity.description }}</p>
+                                <a href="{{ path('event_show', {'slug': entity.slug }) }}" class="btn btn-1">
+                                    Read More
+                                </a>
+                            </section>
+                        </div>
                     </li>
-                </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    {% endblock %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

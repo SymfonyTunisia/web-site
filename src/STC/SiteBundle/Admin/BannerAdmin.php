@@ -23,9 +23,7 @@ class BannerAdmin extends Admin
             ->add('name')
             ->add('client')
             ->add('start_date')
-            ->add('duration')
             ->add('enabled')
-            ->add('url')
             ->add('status');
     }
 
@@ -41,8 +39,6 @@ class BannerAdmin extends Admin
             ->add('duration')
             ->add('enabled')
             ->add('url')
-            ->add('created')
-            ->add('updated')
             ->add('status')
             ->add(
                 '_action',
@@ -69,7 +65,22 @@ class BannerAdmin extends Admin
             ->add('duration')
             ->add('enabled')
             ->add('url')
-            ->add('status');
+            ->add('status')
+            ->add(
+                'media',
+                'sonata_type_model_list',
+                array(
+                    'required' => false,
+                    'btn_list' => false
+                ),
+                array(
+                    'link_parameters' => array(
+                        'context' => 'sonata_banner',
+                        'filter' => array('context' => array('value' => 'sonata_banner')),
+                        'provider' => ''
+                    )
+                )
+            );
     }
 
     /**
@@ -84,8 +95,6 @@ class BannerAdmin extends Admin
             ->add('duration')
             ->add('enabled')
             ->add('url')
-            ->add('created')
-            ->add('updated')
             ->add('status');
     }
 }

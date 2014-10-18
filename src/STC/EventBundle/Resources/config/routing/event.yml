@@ -3,7 +3,7 @@ event:
     defaults: { _controller: "STCEventBundle:Event:index" }
 
 event_show:
-    path:     /{id}/show
+    path:     /{slug}/show
     defaults: { _controller: "STCEventBundle:Event:show" }
 
 

@@ -9,13 +9,17 @@ STC\EventBundle\Entity\Event:
                 strategy: AUTO
     fields:
         title:
-            type: text
+            type: string
+            length: 255
         date:
             type: date
+            nullable: true
         location:
             type: text
+            nullable: true
         description:
             type: text
+            nullable: true
         content:
             type: text
         rawContent:

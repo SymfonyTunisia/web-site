@@ -22,8 +22,6 @@ class EventAdmin extends Admin
         $datagridMapper
             ->add('title')
             ->add('date')
-            ->add('location')
-            ->add('description')
             ->add('enabled');
     }
 
@@ -58,13 +56,54 @@ class EventAdmin extends Admin
     {
         $formMapper
             ->add('title')
-            ->add('date')
+            ->add('category')
+            ->add('enabled')
+            ->add('date', 'sonata_type_datetime_picker')
             ->add('location')
             ->add('description')
-            ->add('content')
-            ->add('rawContent')
-            ->add('contentFormatter')
-            ->add('enabled');
+
+            ->add(
+                'content',
+                'sonata_formatter_type',
+                array(
+                    'required' => false,
+                    'source_field' => 'rawContent',
+                    'source_field_options' => array('attr' => array('class' => 'span10', 'rows' => 20)),
+                    'format_field' => 'contentFormatter',
+                    'target_field' => 'content',
+                    'event_dispatcher' => $formMapper->getFormBuilder()->getEventDispatcher()
+                )
+            )
+            ->add(
+                'image',
+                'sonata_type_model_list',
+                array(
+                    'required' => false,
+                    'btn_list' => false
+                ),
+                array(
+                    'link_parameters' => array(
+                        'context' => 'sonata_event',
+                        'filter' => array('context' => array('value' => 'sonata_event')),
+                        'provider' => ''
+                    )
+                )
+            )
+            ->add(
+                'images',
+                'sonata_type_model_list',
+                array(
+                    'required' => false,
+                    'btn_list' => false
+                ),
+                array(
+                    'link_parameters' => array(
+                        'context' => 'sonata_event',
+                        'filter' => array('context' => array('value' => 'sonata_event')),
+                        'provider' => ''
+                    )
+                )
+            );
     }
 
     /**

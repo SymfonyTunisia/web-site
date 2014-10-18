@@ -21,29 +21,53 @@ class EventController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('STCEventBundle:Event')->findAll();
+        $entities = $em->getRepository('STCEventBundle:Event')->findBy(array('enabled' => true));
 
-        return $this->render('STCEventBundle:Event:index.html.twig', array(
-            'entities' => $entities,
-        ));
+        return $this->render(
+            'STCEventBundle:Event:index.html.twig',
+            array(
+                'entities' => $entities,
+            )
+        );
     }
 
     /**
      * Finds and displays a Event entity.
      *
      */
-    public function showAction($id)
+    public function showAction($slug)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entity = $em->getRepository('STCEventBundle:Event')->find($id);
+        $entity = $em->getRepository('STCEventBundle:Event')->findOneBy(array('slug' => $slug, 'enabled' => true));
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find Event entity.');
         }
 
-        return $this->render('STCEventBundle:Event:show.html.twig', array(
-            'entity'      => $entity,
-        ));
+        return $this->render(
+            'STCEventBundle:Event:show.html.twig',
+            array(
+                'entity' => $entity,
+            )
+        );
+    }
+
+    /**
+     * Lists all Event entities.
+     *
+     */
+    public function lastEventAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $entities = $em->getRepository('STCEventBundle:Event')->findBy(array('enabled' => true));
+
+        return $this->render(
+            'STCEventBundle:Event:lastEvent.html.twig',
+            array(
+                'entities' => $entities,
+            )
+        );
     }
 }

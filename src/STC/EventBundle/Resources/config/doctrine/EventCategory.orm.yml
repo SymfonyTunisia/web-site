@@ -13,6 +13,7 @@ STC\EventBundle\Entity\EventCategory:
             length: 255
         description:
             type: text
+            nullable: true
         slug:
             type: string
             length: 128
