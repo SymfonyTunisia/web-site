@@ -194,7 +194,7 @@ body {
 	height: 100%;
 	width: 100%;;
     
-    background: url('../img/picts/leaves.jpg');
+    background: url('/encours/img/picts/leaves.jpg');
 
     background-repeat: no-repeat; 
     background-position: center;
@@ -821,19 +821,19 @@ border-bottom: 2px solid;
         transition: 1s;
 }
     .c-layout.c-metric{
-        background: url('../img/clock/metrics.svg');    
+        background: url('/encours/img/clock/metrics.svg');    
         background-repeat: no-repeat;
         background-size: 100% 100%;    
     }
     /* MINUTES */
     .c-layout.c-minute{
-        background: url('../img/clock/minutes.svg');    
+        background: url('/encours/img/clock/minutes.svg');    
         background-repeat: no-repeat;
         background-size: 100% 100%;    
     }
     /* SECONDS */
     .c-layout.c-second{
-        background: url('../img/clock/seconds.svg');    
+        background: url('/encours/img/clock/seconds.svg');    
         background-repeat: no-repeat;
         background-size: 100% 100%;  
     }
