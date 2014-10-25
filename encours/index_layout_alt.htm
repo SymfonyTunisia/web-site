@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!--
+COPYRIGHT by HighHay/Mivfx
+Before using this theme, you should accept themeforest licenses terms.
+http://themeforest.net/licenses
+-->
+<html lang='en'>
+
+<head>
+    <meta http-equiv='content-type' content='text/html; charset=UTF-8'>
+    <meta charset='utf-8'>
+
+    <!-- Your Page Title Here -->
+    <title>EN COURS - A responsive Coming Soon Template</title>
+
+    <!--  Disable screen scaling-->
+    <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0'>
+    <meta name='author' content='My.Comp.co digital agency'>
+    <meta name='description' content='MyComp.Co Will have an awsome website here soon. To get the latest news, follow us on Twitter and Facebook'>
+    <meta name='keywords' content='your, keywords'>
+    
+    <!-- Favicon and shortcut icon-->
+    <link rel='shortcut icon' type='image/ico' href='favicon.ico' />
+    <link rel='apple-touch-icon' href='apple-touch-icon-precomposed.png'>
+
+    <!-- Load page loader css -->
+    <link rel='stylesheet' href='css/pageloader.css' type='text/css'>
+    
+    <!-- Load FontAwesome Icons font -->
+    <link rel='stylesheet' href='css/font-awesome.css' type='text/css' media='all'>
+    
+    <!-- Load webfonts -->
+    <link rel='stylesheet' href='fonts/montserrat/stylesheet.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='fonts/opensans/stylesheet.css' type='text/css' media='all'>
+    
+    <!-- Load normalize css -->
+    <link rel='stylesheet' type='text/css' href='css/normalize.css' />
+    
+    <!-- Load main style -->
+    <link rel='stylesheet' id='main-css' href='css/style.css' type='text/css' media='all'>
+    
+
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class='page-loader'>
+        <div><i class='fa fa-spinner  fa-spin'></i><p>loading</p></div>
+    </div>
+    
+    <!-- Customize text colors and backround to your need Below (inside <div class='site-config'> tag)such as:
+            data-background='url("img/picts/cityrun.JPG")' url or color
+            data-dialog-color='#81456C' 
+            * See documentation for more
+
+        - Customize also your Ajax Server Here
+         data-subscription-server = './ajaxserver/server.php'
+         data-message-server = 'http://www.example.com/avenir/ajaxserver/server.php'
+             * use internal url (such as './ajaxserver/server.php') or 
+             * external URL such as:  url: 'http://www.example.com/avenir/ajaxserver/server.php'
+             * depending to your requirements
+    
+        - data-date attribute indicates the launching date (Format: MM/DD/YYYY HH:MN:SC)
+            * data-date-timezone indicates the time zone,  default value is +0,
+
+        - Replace also data-hrs-text, data-day-text
+            with your custom text if you want
+        - If you add text as data-zeroday-text value, then this text will be displayed instead of 00:00:00 when countdown goes 0. 
+-->
+    <div class='site-config' 
+         data-date='11/13/2014 20:00:00' 
+         data-date-timezone='+3' 
+         
+         data-hrs-text=''
+         data-day-text=''
+         data-zeroday-text = ''              
+         
+         data-background='url("img/picts/door.jpg")'  
+         data-background-mask='rgba(77, 77, 77, 0.5)' 
+                  
+         data-dialog-color='rgba(89, 70, 68, 0.8)'
+         
+         data-subscription-server = ''
+         data-message-server = ''
+         ></div>
+    <!--BEGIN OF video bg  - uncomment below to use Video as Background-->
+    <!--
+    <div id="container" class="video-container small-hide">
+        <video autoplay="autoplay" loop="loop" autobuffer="autobuffer" muted="muted"
+               width="640" height="360">
+            <source src="vid/loop-bg.webm" type="video/webm">
+            <source src="vid/loop-bg.mp4" type="video/mp4">
+        </video>
+    </div>
+    -->
+    <!--END OF video bg-->
+    
+    <div class='main-bg-mask' >        
+    </div>
+    
+    <!-- BEGIN OF Main Content -->
+    <div class='main-content row'>
+        <!-- BEGIN OF text as Left column content -->
+        <div class='main left col-50 column flex-block  flex-vcenter'>
+            <!-- BEGIN OF  left column header -->
+            <header class='header-top start'>
+                
+                <!-- BEGIN OF Replace with your hashtag or remove hashtag word -->
+                <h3 class='follow-text'>
+                    Follow us 
+                    <span class='text-bold social-desc hashtag'>
+                        #ourhash
+                    </span>
+                </h3>
+                <!-- END OF Replace with your hashtag or remove hashtag word -->
+                
+                <!-- BEGIN OF place of your Social network links here -->
+                <ul class='s-block'>
+                    <li class='square'>
+                        <a href='#' target="_blank">
+                            <i class='fa fa-facebook-square'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#' target="_blank">
+                            <i class='fa fa-twitter'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#' target="_blank">
+                            <i class='fa fa-tumblr'></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- END OF place of your Social network links here -->
+            </header>
+            <!-- END OF Left column header -->
+
+            <!-- BEGIN OF  Left column Description Section -->
+            <section class='left-desc'>
+                <!-- BEGIN OF Coming Soon Text-->
+                <h1 class='soon start'> 
+                    Coming soon
+                </h1>
+                <h2 class='title start'> 
+                    Megasite
+                </h2>
+                <!-- END OF Coming Soon Text-->
+
+                <!-- BEGIN OF Motto : Motto/Desciption/Invitation '-->
+                <p class='title-desc soon-desc text-justify start' >
+                    Here will be an amazing Website by <a href='#' class='text-altcolor'>MIVFX</a>. So do not forget to subscribe if you do not want to miss it :
+                </p>
+                <!-- END OF Motto -->
+
+                <!-- BEGIN OF Email Subscription Button -->
+                <div class='subscribe start'>
+                    <div class='subscribe-btn'>
+                        <p>subscribe</p>
+                        <form class='form magic send_email_form' method='post'>
+                            <div class='input-elements'>
+                                <input  class='email-input required' type='email' name='email' placeholder='Email Address' required data-validation-type='email'>
+                                <button class='email-btn' name='submit_email'>OK</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- END OF Email Subscription Button -->  
+
+                <!-- BEGIN OF Informations Dialog Butons-->
+                
+                <!-- BEGIN OF Comment/Uncomment Below to add/remove dialog button placed at RIGHT-->
+    
+                    <div class='dialog-btn start'>
+                        <ul class='d-block'>    
+                            <li class=''>
+                                <a class='show-info' href='#info'>
+                                    <i class='fa fa-info-circle'></i>
+                                </a>
+                            </li>
+                            <li class=''>
+                                <a class='show-message' href='#message'>
+                                    <i class='fa fa-comments '></i>
+                                </a>
+                            </li> 
+                            <li class=''>
+                                <a class='show-contact' href='#contact'>
+                                    <i class='fa fa-plus '></i>
+                                </a>
+                            </li>        
+                        </ul>
+                    </div>
+    
+                <!-- END OF Comment/Uncomment Below to add/remove dialog button placed at RIGHT-->
+                
+                <!-- BEGIN OF Comment/Uncomment Below to add/remove dialog button placed at BOTTOM-->
+                <div class='dialog-btn pos-bottom start'>
+<!--
+                    <ul class='d-block'> 
+                        <li class=''>
+                            <a class='show-info' href='#info'>
+                                <i class='fa fa-info'></i>About us
+                            </a>
+                        </li>
+                        <li class=''>
+                            <a class='show-message' href='#message'>
+                                <i class='fa fa-comments '></i>Message
+                            </a>
+                        </li> 
+                        <li class=''>
+                            <a class='show-contact' href='#contact'>
+                                <i class='fa fa-phone '></i>Contact
+                            </a>
+                        </li>        
+                    </ul>
+-->
+                </div>
+                <!-- BEGIN OF Comment/Uncomment Below to add/remove dialog button placed at BOTTOM-->
+                
+                <!-- END OF Informations Dialog Butons-->
+                
+            </section>
+            <!-- END OF  Left column Description Section -->
+            
+        </div>
+        <!-- END OF text as left column content  -->
+        
+        <!-- BEGIN OF right column content  -->
+        <div class='row right col-50 column '> 
+            
+            <!-- BEGIN OF Comment/Uncomment below to show logo at right, replace picture with your logo -->
+            <header class='logo-top small-hide'>
+                <img class='logo' src='img/picts/logo_white.png' alt='Logo image'>
+            </header>
+            <!-- END OF Comment/Uncomment below to show logo at right -->
+            
+            <!-- BEGIN OF Contdown -->
+            <div class='clock-layout' >
+                <div class='clock-container clock-countdown ' >
+                    <!-- BEGIN OF Comment/Uncomment below to show logo inside clock, replace picture with your logo -->
+                    <header class='c-logo-top'>
+                        <img class='logo' src='img/picts/logo_white.png' alt='Logo image'>
+                    </header>
+                    <!-- END OF Comment/Uncomment below to show logo inside clock -->
+                    
+                    
+                    <div class='c-metric c-layout'></div>
+                    <div class='c-minute c-layout minutes'></div>
+                    <div class='c-second c-layout seconds'></div>
+                    <div class='c-hour c-layout'>
+                        <span class='number hours'>00</span>                                                      
+                        <span class='metric'>h</span>
+                    </div>
+                    <div class='c-day c-layout'>                            
+                        <span class='number days'>000</span>
+                        <span class='metric'>days</span>
+                    </div>
+                </div>
+            </div>
+            <!-- END OF Contdown -->
+        </div>
+        <!-- END OF right column content  -->
+        
+        <!-- BEGIN OF Legal Notice footer -->
+        <footer class='footer small-hide'>
+            <p class='notice'>
+                Design by <a href='http://www.yourcomp.com/' class='link'>MyComp</a> <i class='fa fa-play fa-rotate-180'></i>
+            </p>
+        </footer>
+        <!-- END OF Legal Notice footer -->
+    </div>
+    <!-- END OF Main Content -->
+    
+    
+    
+    
+    
+    <!-- Dialogs Contents -->
+    <!--BEGIN OF  Dialogs UI or Custom UI -->
+    <div class='dialog-container'>
+        <div class='dialog-grid flex-block'>
+            <!--BEGIN OF custom dialog-->
+            <div class='dialog-frame dialog-custom'>
+                <section class='d-comment d-content'>
+                    <header class='d-header d-content-header'>
+                        <h2 class='dh-text'><i class='fa fa-gavel'></i> CUSTOM </h2>
+                        <a class='d-close'>
+                            <div class='d-close-x'></div>
+                        </a>
+                    </header>
+                    <div class='d-content-core'>
+                        <h5>CUSTOM DIALOG CONTENT</h5>
+                    </div>
+                </section>
+
+            </div>
+            <!--END OF custom dialog-->
+            
+            
+            <!--BEGIN OF messages dialog-->
+            <div class='dialog-frame dialog-message'>
+                <section class='d-comment d-content'>
+                    <header class='d-header d-content-header'>
+                        <h2 class='dh-text'><i class='fa fa-comments'></i> Message </h2>
+                        <a class='d-close'>
+                            <div class='d-close-x'></div>
+                        </a>
+                    </header>
+                    <form class='d-form send_message_form d-content-core' method='post'>
+                        <div class='input-elements'>
+                            <div class='f-block email-btn-group row'>
+                                <input  class='email-input required' type='email' name='email' placeholder='Email Address' required data-validation-type='email'/>
+                                <button class='email-btn' name='submit_message'><i class='fa fa-share'></i></button>
+                            </div>
+
+                            <input  class='name-input f-block row' type='text' name='name' placeholder='Name' required data-validation-type='text'/>
+                            <textarea class='comment-input f-block row' name='message' placeholder='Comments ... ' required></textarea>
+                        </div>
+                    </form>
+                </section>
+
+            </div>
+            <!--END OF messages dialog-->
+
+            <!-- BEGIN OF Contact dialog -->
+            <div class='dialog-frame dialog-contact '>
+                <section class='d-comment d-content '>
+                    <header class='d-header d-content-header'>
+                        <h2 class='dh-text'><i class='fa fa-phone '></i> Contact </h2>
+                        <a class='d-close'>
+                            <div class='d-close-x'></div>
+                        </a>
+                    </header>
+                    <div class='d-desc d-paper d-content-core'>
+                        <div class='input-elements'>
+                            <!--sample content-->
+                            <header class='row'>
+                                <h2>We are ... <span class='text-bold'>Ipsum</span></h2>                                                      
+                            </header>
+                            <h1 class='t-large text-bold text-center'><i class='fa fa-phone'></i> +00 23 123 45</h1>  
+                            <h1 class='t-large text-bold text-center'>hello.address@email.com</h1>
+                            <footer class='row text-center'>
+                                <address class='d-address'>
+                                    <p>Longview Street</p>
+                                    <p>Peacetown</p>
+                                    <p>21645 Antarctic</p>
+                                </address>
+                                
+<!--                                <img  class='d-qrcode' src='./img/picts/qrcode_vcard.png' alt='QR Code'>-->
+                            </footer>                        
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            <!-- END OF Contact dialog -->           
+
+            <!-- BEGIN OF info or about us dialog -->
+            <div class='dialog-frame dialog-info '>
+                <section class='d-comment d-content '>
+                    <header class='d-header d-content-header'>
+                        <h2 class='dh-text'><i class='fa fa-info-circle  d-close2'></i> About Us </h2>
+                        <a class='d-close'>
+                            <div class='d-close-x'></div>
+                        </a>
+                    </header>
+                    <div class='d-desc d-paper d-content-core'>
+                        <div class='input-elements'>
+                            <!--sample content-->
+                            <header class='row'>
+                                <h2>We are ... <span class='text-bold'>Ipsum</span></h2>
+
+                            </header>
+                            <article class='row desc text-center'>
+                                <img class='logo text-center' src='img/picts/logo.png' alt='Logo'>
+                                <div class='text-justify'>
+                                    <p>Sample content. Lorem ipsum dolor sit amet, <span class='text-bold'>consectetur</span> adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  </p>
+                                </div>
+                            </article>
+                            <footer class='row text-center'>
+                                <address class='d-address'>
+                                    <p>Longview Street</p>
+                                    <p>Peacetown</p>
+                                    <p>21645 Antarctic</p>
+                                </address>
+                            </footer>
+
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            <!-- END OF info or about us dialog -->
+            
+            
+        </div>
+    </div>
+    <!-- END OF Dialogs UI or Custom UI -->
+    
+    
+    <!-- BEGIN OF Scripts and plugins goes here--> 
+    
+    <!--Plugins script -->    
+    
+    <!--   BEGIN OF  uncomment if you want to use jquery from Google cdn-->
+    <!--    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
+    <!--   END OF uncomment if you want to use jquery from Google cdn-->
+    
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.maximage.js"></script>
+    <script type="text/javascript" src="js/jquery.downCount.js"></script>
+    <!--Main Plugin script -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <!--Form script -->
+    <script type="text/javascript" src="js/form_script.js"></script>
+    <!-- END OF Scripts and plugins goes here-->
+    
+</body>
+
+    
+</html>
