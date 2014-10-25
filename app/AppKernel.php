@@ -10,9 +10,6 @@ class AppKernel extends Kernel
      */
     public function init()
     {
-        // Please read http://symfony.com/doc/2.0/book/installation.html#configuration-and-setup
-        bcscale(3);
-
         parent::init();
     }
 
