@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="448.02225"
+   height="449.81421"
+   id="svg3897"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="minutes.svg">
+  <defs
+     id="defs3899" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.24274"
+     inkscape:cx="224.01562"
+     inkscape:cy="224.90796"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:window-width="1304"
+     inkscape:window-height="748"
+     inkscape:window-x="54"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-page="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-center="true"
+     inkscape:snap-object-midpoints="true"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       orientation="0,1"
+       position="236.23489,224.99443"
+       id="guide3060" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="224.3811,266.48271"
+       id="guide3062" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata3902">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(224.3811,224.84647)">
+    <path
+       style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.13191354000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
+       d="M 224.375 64.84375 C 220.22026 64.84375 216.8628 68.16969 216.8125 72.3125 C 136.04723 76.3908 71.8125 143.15966 71.8125 224.9375 C 71.8125 309.34254 140.25121 377.78125 224.65625 377.78125 C 309.06129 377.78125 377.5 309.34254 377.5 224.9375 C 377.5 142.98159 312.98179 76.09452 231.96875 72.28125 C 231.90224 68.152612 228.51949 64.84375 224.375 64.84375 z M 231.875 73.3125 C 312.38362 77.081153 376.46875 143.49438 376.46875 224.9375 C 376.46875 308.80211 308.52086 376.78125 224.65625 376.78125 C 140.79164 376.78125 72.8125 308.80211 72.8125 224.9375 C 72.8125 143.6832 136.62764 77.393308 216.875 73.34375 C 217.33552 77.088894 220.50535 80 224.375 80 C 228.25518 80 231.42815 77.072426 231.875 73.3125 z "
+       transform="translate(-224.3811,-224.84647)"
+       id="path2985-1" />
+  </g>
+</svg>
