@@ -1,19 +1,29 @@
-<div class="bg-content">
-    <div class="container">
-        <div class="row">
-            <div class="span12">
-                {{ render(controller('STCSiteBundle:Site:slider')) }}
-                {% include "STCSiteBundle:Site:welcome.html.twig" %}
-            </div>
-        </div>
+<!--============================== slider =================================-->
+
+<div class="flexslider">
+
+    <div class="flex-viewport">
+        <ul class="slides">
+
+            {% for entity in entities %}
+                <li class="clone">
+                    {% media entity.media, 'show' with {'alt': entity.name,'title': entity.name } %}
+                    <p class="flex-caption">{{ entity.name }}.</p>
+                </li>
+            {% endfor %}
+        </ul>
     </div>
-    <div id="content" class="content-extra">
-        {{ render(controller('STCEventBundle:Event:lastEvent')) }}
-        <div class="container">
-            <div class="row">
-                {% include "STCSiteBundle:Site:aboutMe.html.twig" %}
-                {{ render(controller('STCSiteBundle:Site:sponsor')) }}
-            </div>
-        </div>
-    </div>
+
+    <ol class="flex-control-nav flex-control-thumbs">
+        {% for entity in entities %}
+            <li >
+                {% media entity.media, 'show' with {'alt': entity.name,'title': entity.name } %}
+            </li>
+        {% endfor %}
+    </ol>
+    <ul class="flex-direction-nav">
+        <li><a class="flex-prev" href="#">Previous</a></li>
+        <li><a class="flex-next" href="#">Next</a></li>
+    </ul>
 </div>
+<span id="responsiveFlag"></span>

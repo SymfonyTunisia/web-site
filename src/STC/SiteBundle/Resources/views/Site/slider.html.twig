@@ -1,12 +1,16 @@
 <!--============================== slider =================================-->
 <div class="flexslider">
-    <ul class="slides">
-        {% for entity in entities %}
-            <li class="" style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;">
-                {% media entity.media, 'show' with {'alt': entity.name,'title': entity.name } %}
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="flex-viewport">
+        <ul class="slides">
+
+            {% for entity in entities %}
+                <li class="clone">
+                    {% media entity.media, 'show' with {'alt': entity.name,'title': entity.name } %}
+                    <p class="flex-caption">{{ entity.dec }}.</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
     <ul class="flex-direction-nav">
         <li><a class="flex-prev" href="#"></a></li>
         <li><a class="flex-next" href="#"></a></li>
