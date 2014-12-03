@@ -8,7 +8,7 @@
                         {% for entity in entities %}
                             <li class="clone">
                                 {% media entity.media, 'show' with {'alt': entity.name,'title': entity.name } %}
-                                <p class="flex-caption">{{ entity.dec }}.</p>
+                                <p class="flex-caption">{{ entity.name }}.</p>
                             </li>
                         {% endfor %}
 
