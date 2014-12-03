@@ -32,7 +32,8 @@ sonata_media:
                 - sonata.media.provider.image
 
             formats:
-                show: { width: 770, quality: 100}
+                show: { width: 950, quality: 100}
+                small: { width: 130, quality: 100}
 
         sonata_sponsor:
             providers:
