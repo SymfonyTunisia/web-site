@@ -11,35 +11,39 @@
             </div>
         </div>
     </div>
-
     <div class="portfolio portfolio-page container">
+        <ul class="thumbnails thumbnails-1 clearfix">
+            <div class="row">
 
-        {% for entity in entities %}
-            <ul class="thumbnails thumbnails-1 clearfix">
-                <div class="row">
-                    <div class="work">
-                        <ul class="portfolio-img">
-                            <li data-id="p-1" data-type="web-design" class="span3">
-                                <div class="thumbnail thumbnail-1">
+                <ul class="portfolio-img">
+                    {% for entity in entities %}
 
-                                    {% media entity.image, 'show' with {'alt': entity.title,'title': entity.title } %}
+                        <li data-id="p-1" data-type="web-design" class="span3">
+                            <div class="work">
 
-                                    <section>
-                                        <p>{{ entity.description }}</p>
+                                <a rel="prettyPhoto">{% media entity.image, 'show' with
+                                    {'alt': entity.title,'title': entity.title } %}
+                                </a>
 
-                                        <a href="{{ path('event_show', {'slug': entity.slug }) }}" class="type-7">
-                                            <span> </span> <span> En savoir plus </span>
-                                        </a>
-                                    </section>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </ul>
-        {% endfor %}
+                                <h4>{{ entity.location }}</h4>
+
+                                <p>{{ entity.description }}</p>
+
+                                <a href="{{ path('event_show', {'slug': entity.slug }) }}" class="type-7">
+                                    <span> </span> <span> En savoir plus </span>
+                                </a>
+
+                            </div>
+                        </li>
+
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </ul>
 
     </div>
+
 </div>
 </div>
 </div>
