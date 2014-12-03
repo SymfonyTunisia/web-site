@@ -29,11 +29,9 @@
                                     </div>
                                     <div>
                                         <header>
-
                                             <h2 class="sonata-blog-post-title">
                                                 <a href="{{ url('sonata_news_view', { 'permalink': sonata_news_permalink(post) }) }}">{{ post.title }}</a>
                                             </h2>
-
                                             <div class="sonata-blog-post-information">
                                                 <div class="post-info">
                                                     <i class="icon-user"></i>
@@ -61,18 +59,19 @@
                                                     {% endfor %}
                                                 </div>
                                             </div>
+                                            <div class="descrip-news">
+                                                {{ post.abstract }}
+                                            </div>
                                         </header>
                                     </div>
-                                    <div class="sonata-blog-post-abtract">
-                                        {{ post.abstract }}
-                                    </div>
-                                </div>
 
-                                <hr/>
+                                </div>
                                 <div class="descrip-news">
                                     <a href="{{ url('sonata_news_view', { 'permalink': sonata_news_permalink(post) }) }}">Lire
                                         la suite</a>
                                 </div>
+                                <hr/>
+
                             {% else %}
                                 {{ 'no_post_found'|trans({}, 'SonataNewsBundle') }}
 
