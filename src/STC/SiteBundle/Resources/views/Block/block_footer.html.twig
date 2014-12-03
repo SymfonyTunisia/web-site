@@ -13,7 +13,9 @@
                 </div>
                 <div class="widget span3">
                     <h4>Derniers Tweets</h4>
-                    <div class="show-tweets"></div>
+                    <div class="show-tweets">
+                        {% include 'STCSiteBundle:Block:tweet.html.twig' %}
+                    </div>
                 </div>
                 <div class="widget span3">
                     <h4>Facebook Photos</h4>
@@ -33,7 +35,13 @@
                 <div class="copyright span6">
                     <p> Symfony is a trademark of Fabien Potencier. All rights reserved. <a href="symfony.com">symfony.com</a></p>
                 </div>
-                <div class="social span6"> <a class="facebook" href="https://www.facebook.com/Symfony.TN?ref=ts&fref=ts"></a> <a class="sensio" href=""></a> <a class="github" href=""></a> <a class="googleplus" href=""></a> <a class="twitter" href="https://twitter.com/SymfonyTunisia"></a> </div>
+                <div class="social span6">
+                    <a class="sensio" href="//connect.sensiolabs.com/club/symfony-tunisia-community"></a>
+                    <a class="twitter" href="//twitter.com/SymfonyTunisia"></a>
+                    <a class="facebook" href="//www.facebook.com/Symfony.TN?ref=ts&fref=ts"></a>
+                    <a class="googleplus" href=""></a>
+                    <a class="github" href="//github.com/SymfonyTunisia"></a>
+                </div>
             </div>
         </div>
     </footer>
