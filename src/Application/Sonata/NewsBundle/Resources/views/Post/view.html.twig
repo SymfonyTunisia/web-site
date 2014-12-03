@@ -1,24 +1,37 @@
 <div id="content">
-    <div class="container">
+    <div class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="span12"><i class="icon-file page-title-icon"></i>
+
+                    <h2>Actualités /</h2>
+
+                    <p>Titre de l'actualité</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container news">
         <div class="row">
-            <article class="span12">
-                <h1>Actualités</h1>
-            </article>
+
             <div class="clear"></div>
-            <article class="sonata-blog-post-container">
+            <div></div>
+            <article class="box-news">
                 <header>
-                    <div class="sonata-blog-post-date-container">
+                    <div class="post-info">
                         <h5>
                             <i class="icon-calendar"></i>
                             {{ post.publicationDateStart | format_date }}
                         </h5>
                     </div>
 
-                    <h1 class="sonata-blog-post-title">
-                        <a href="{{ url('sonata_news_view', { 'permalink': sonata_news_permalink(post) }) }}">{{ post.title }}</a>
-                        <span class="sonata-blog-post-author">{{ 'archive_author'|trans({'%author%': post.author }, 'SonataNewsBundle') }}</span>
-                    </h1>
+                    <h3 class="sonata-blog-post-title">
+                        {{ post.title }}
 
+                    </h3>
+                    <div class="span5 image-detail">
+                        {{ post.image}}
+                    </div>
                     <div class="sonata-blog-post-information">
                         <div class="sonata-blog-post-tag-container">
                             <div class="sonata-blog-post-tag-title">
@@ -29,7 +42,7 @@
                                 {% endif %}
                                 {{ 'published_under'|transchoice(post.tags|length, {}, 'SonataNewsBundle') }}
                             </div>
-                            <div class="sonata-blog-post-tag-list">
+                            <div class="sonata-blog-post-tags">
                                 {% for tag in post.tags %}
                                     <a href="{{ url('sonata_news_tag', { 'tag': tag.slug } ) }}">{{ tag.name }}</a>
                                 {% endfor %}
@@ -39,7 +52,7 @@
                 </header>
 
                 <div class="sonata-blog-post-content">
-                    {{ post.content|raw }}
+                    <p> {{ post.content|raw }}</p>
                 </div>
             </article>
         </div>
