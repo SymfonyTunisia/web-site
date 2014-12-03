@@ -22,21 +22,6 @@ class Banner
     private $name;
 
     /**
-     * @var string
-     */
-    private $client;
-
-    /**
-     * @var \DateTime
-     */
-    private $start_date;
-
-    /**
-     * @var integer
-     */
-    private $duration;
-
-    /**
      * @var boolean
      */
     private $enabled;
@@ -51,11 +36,6 @@ class Banner
      * updates createdAt, updatedAt fields
      */
     use TimestampableEntity;
-
-    /**
-     * @var integer
-     */
-    private $status;
 
     /**
      * @var \Application\Sonata\MediaBundle\Entity\Media
@@ -110,75 +90,6 @@ class Banner
     }
 
     /**
-     * Set client
-     *
-     * @param string $client
-     * @return Banner
-     */
-    public function setClient($client)
-    {
-        $this->client = $client;
-
-        return $this;
-    }
-
-    /**
-     * Get client
-     *
-     * @return string 
-     */
-    public function getClient()
-    {
-        return $this->client;
-    }
-
-    /**
-     * Set start_date
-     *
-     * @param \DateTime $startDate
-     * @return Banner
-     */
-    public function setStartDate($startDate)
-    {
-        $this->start_date = $startDate;
-
-        return $this;
-    }
-
-    /**
-     * Get start_date
-     *
-     * @return \DateTime 
-     */
-    public function getStartDate()
-    {
-        return $this->start_date;
-    }
-
-    /**
-     * Set duration
-     *
-     * @param integer $duration
-     * @return Banner
-     */
-    public function setDuration($duration)
-    {
-        $this->duration = $duration;
-
-        return $this;
-    }
-
-    /**
-     * Get duration
-     *
-     * @return integer 
-     */
-    public function getDuration()
-    {
-        return $this->duration;
-    }
-
-    /**
      * Set enabled
      *
      * @param boolean $enabled
@@ -222,29 +133,6 @@ class Banner
     public function getUrl()
     {
         return $this->url;
-    }
-
-    /**
-     * Set status
-     *
-     * @param integer $status
-     * @return Banner
-     */
-    public function setStatus($status)
-    {
-        $this->status = $status;
-
-        return $this;
-    }
-
-    /**
-     * Get status
-     *
-     * @return integer 
-     */
-    public function getStatus()
-    {
-        return $this->status;
     }
 
     /**

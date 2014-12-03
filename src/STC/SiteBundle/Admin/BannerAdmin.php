@@ -75,6 +75,6 @@ class BannerAdmin extends Admin
         $showMapper
             ->add('name')
             ->add('enabled')
-            ->add('status');
+            ->add('url');
     }
 }
