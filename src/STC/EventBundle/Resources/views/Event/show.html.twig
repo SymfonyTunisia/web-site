@@ -1,24 +1,24 @@
 <div id="content">
-    <div class="container">
-        <div class="row">
-            <article class="span12">
-                <h1>{{ entity.title }}</h1>
-            </article>
-            <div class="clear"></div>
-            <article class="sonata-blog-post-container">
-                <header>
-                    <div class="sonata-blog-post-date-container">
-                        <h5>
-                            <i class="icon-calendar"></i>
-                            {{ entity.date | format_date }}
-                        </h5>
-                    </div>
-                </header>
+    <div class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="span12"><i class="icon-camera page-title-icon"></i>
 
-                <div class="sonata-blog-post-content">
-                    {{ entity.content|raw }}
+                    <h2>Evénements /</h2>
+
+                    <p>{{ entity.title }}</p>
                 </div>
-            </article>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="portfolio portfolio-page container events">
+        <div class="portfolio-navigator span12"><img src="bundles/stcsite/img/ttt.jpg" alt="">
+            <h5>Lieu : <span class="red">{{ entity.date | format_date }}</span></h5>
+        </div>
+        <div class="sonata-blog-post-content">
+            {{ entity.content|raw }}
         </div>
     </div>
 </div>
+
