@@ -15,7 +15,7 @@
         <div class="row">
 
             <div class="clear"></div>
-            <div></div>
+
             <article class="box-news">
                 <header>
                     <div class="post-info">
@@ -29,8 +29,9 @@
                         {{ post.title }}
 
                     </h3>
+
                     <div class="span5 image-detail">
-                        {{ post.image}}
+                        <img src="{{ asset(['images/', post.image]|join) }}"/>
                     </div>
                     <div class="sonata-blog-post-information">
                         <div class="sonata-blog-post-tag-container">
