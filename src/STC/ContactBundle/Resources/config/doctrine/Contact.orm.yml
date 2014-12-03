@@ -25,14 +25,6 @@ STC\ContactBundle\Entity\Contact:
         phone:
              type: string
              length: 25
-        address:
-            type: string
-            nullable: true
-            length: 128
-        zipCode:
-            type: string
-            length: 5
-            column: zip_code
         message:
             type: text
             nullable: true

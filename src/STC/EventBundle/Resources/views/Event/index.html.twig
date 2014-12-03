@@ -1,49 +1,35 @@
-<div id="content">
-    <div class="page-title">
-        <div class="container">
-            <div class="row">
-                <div class="span12"><i class="icon-calendar page-title-icon"></i>
+<div class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <i class="icon-calendar page-title-icon"></i>
 
-                    <h2>Evénements /</h2>
+                <h2>Evénements /</h2>
 
-                    <p>Vous trouverez ici tous nos événements</p>
-                </div>
+                <p>Vous trouverez ici tous nos événements</p>
             </div>
         </div>
     </div>
-    <div class="portfolio portfolio-page container">
-        <ul class="thumbnails thumbnails-1 clearfix">
-            <div class="row">
+</div>
+<div class="portfolio portfolio-page container">
+    <div class="row">
+        <ul class="portfolio-img">
+            {% for entity in entities %}
+                <li class="span3" data-type="print-design" data-id="p-12">
+                    <div class="work">
+                        <a rel="prettyPhoto">{% media entity.image, 'show' with
+                            {'alt': entity.title,'title': entity.title } %}
+                        </a>
 
-                <ul class="portfolio-img">
-                    {% for entity in entities %}
+                        <h4>{{ entity.location }}</h4>
 
-                        <li data-id="p-1" data-type="web-design" class="span3">
-                            <div class="work">
-
-                                <a rel="prettyPhoto">{% media entity.image, 'show' with
-                                    {'alt': entity.title,'title': entity.title } %}
-                                </a>
-
-                                <h4>{{ entity.location }}</h4>
-
-                                <p>{{ entity.description }}</p>
-
-                                <a href="{{ path('event_show', {'slug': entity.slug }) }}" class="type-7">
-                                    <span> </span> <span> En savoir plus </span>
-                                </a>
-
-                            </div>
-                        </li>
-
-                    {% endfor %}
-                </ul>
-            </div>
-
+                        <p>{{ entity.description }}</p>
+                        <a href="{{ path('event_show', {'slug': entity.slug }) }}" class="type-7">
+                            <span> </span> <span> En savoir plus </span>
+                        </a>
+                    </div>
+                </li>
+            {% endfor %}
         </ul>
-
     </div>
-
-</div>
-</div>
 </div>

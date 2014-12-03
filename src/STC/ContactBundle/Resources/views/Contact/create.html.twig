@@ -1,104 +1,79 @@
-<div id="content">
-    <div class="page-title">
-        <div class="container">
-            <div class="row">
-                <div class="span12"><i class="icon-envelope-alt page-title-icon"></i>
+<div class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="span12"><i class="icon-envelope-alt page-title-icon"></i>
 
-                    <h2>Contactez-nous /</h2>
+                <h2>Contactez-nous /</h2>
 
-                    <p>N'hésitez pas à nous contacter</p>
-                </div>
+                <p>N'hésitez pas à nous contacter</p>
             </div>
         </div>
     </div>
+</div>
+<div class="contact-us container">
+    <div class="row">
+        <div class="contact-form span7">
 
-
-    <div class="contact-us container">
-        <div class="row">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
                 Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper <a href="">suscipit lobortis</a>
                 nisl ut aliquip ex ea commodo consequat.</p>
 
-            <div class="contact-form span7">
+            {{ form_start(form, {'attr': {'class': 'contact_form' }}) }}
+            {{ form_errors(form) }}
 
-                <div class="inner-1">
-                    {{ form_start(form, {'attr': {'class': 'contact_form' }}) }}
-                    {{ form_errors(form) }}
-                    <fieldset>
-                        <div class="form-group {% if form.civility.vars.errors |length > 0 %}has-error{% endif %}">
-                            <label class="civility">
-                                {{ form_widget(form.civility) }}
-                            </label>
-                        </div>
-
-                        <div class="form-group {% if form.lastName.vars.errors |length > 0 %}has-error{% endif %}">
-                            <label class="lastName">
-                                {{ form_widget(form.lastName) }}
-                            </label>
-                        </div>
-
-                        <div class="form-group {% if form.firstName.vars.errors |length > 0 %}has-error{% endif %}">
-                            <label class="firstName">
-                                {{ form_widget(form.firstName) }}
-                            </label>
-                        </div>
-
-                        <div class="form-group {% if form.email.vars.errors |length > 0 %}has-error{% endif %}">
-                            <label class="email">
-                                {{ form_widget(form.email) }}
-                            </label>
-                        </div>
-
-                        <div class="form-group {% if form.phone.vars.errors |length > 0 %}has-error{% endif %}">
-                            <label class="phone">
-                                {{ form_widget(form.phone) }}
-                            </label>
-                        </div>
-
-                        <div class="form-group {% if form.zipCode.vars.errors |length > 0 %}has-error{% endif %}">
-                            <label class="zipCode">
-                                {{ form_widget(form.zipCode) }}
-                            </label>
-                        </div>
-
-                        <div class="form-group {% if form.address.vars.errors |length > 0 %}has-error{% endif %}">
-                            <label class="address">
-                                {{ form_widget(form.address) }}
-                            </label>
-                        </div>
-
-                        <div class="form-group {% if form.message.vars.errors |length > 0 %}has-error{% endif %}">
-                            <label class="message">
-                                {{ form_widget(form.message) }}
-                            </label>
-                        </div>
-
-                        {{ form_rest(form) }}
-                        <div class="buttons-wrapper">
-                            <button class="submit" type="submit" class="btn btn-1">
-                                {{ 'contact.submit'|trans({}, 'ContactBundle') }}
-                            </button>
-                        </div>
-                    </fieldset>
-                    {{ form_end(form) }}
-                </div>
-                </article>
+            <div class="form-group {% if form.civility.vars.errors |length > 0 %}has-error{% endif %}">
+                {{ form_label(form.civility) }}
+                {{ form_widget(form.civility) }}
 
             </div>
-            <div class="contact-address span5">
-                <h4>où sommes-nous</h4>
 
-                <div class="map"></div>
-                <h4>Adresse</h4>
+            <div class="form-group {% if form.lastName.vars.errors |length > 0 %}has-error{% endif %}">
+                {{ form_label(form.lastName) }}
+                {{ form_widget(form.lastName) }}
 
-                <p>Via Principe Amedeo 9 <br>
-                    10100, Torino, TO, Italy</p>
-
-                <p>Phone: 0039 333 12 68 347</p>
             </div>
 
+            <div class="form-group {% if form.firstName.vars.errors |length > 0 %}has-error{% endif %}">
+                {{ form_label(form.firstName) }}
+                {{ form_widget(form.firstName) }}
+
+            </div>
+
+            <div class="form-group {% if form.email.vars.errors |length > 0 %}has-error{% endif %}">
+                {{ form_label(form.email) }}
+                {{ form_widget(form.email) }}
+
+            </div>
+
+            <div class="form-group {% if form.phone.vars.errors |length > 0 %}has-error{% endif %}">
+                {{ form_label(form.phone) }}
+                {{ form_widget(form.phone) }}
+
+            </div>
+
+            <div class="form-group {% if form.message.vars.errors |length > 0 %}has-error{% endif %}">
+                {{ form_label(form.message) }}
+                {{ form_widget(form.message) }}
+            </div>
+
+            {{ form_rest(form) }}
+            <div class="buttons-wrapper">
+                <button class="submit" type="submit">
+                    {{ 'contact.submit'|trans({}, 'ContactBundle') }}
+                </button>
+            </div>
+            {{ form_end(form) }}
+        </div>
+        <div class="contact-address span5">
+            <h4>où sommes-nous</h4>
+
+            <div class="map"></div>
+            <h4>Adresse</h4>
+
+            <p>Via Principe Amedeo 9 <br>
+                10100, Torino, TO, Italy</p>
+
+            <p>Phone: 0039 333 12 68 347</p>
         </div>
     </div>
-
-
 </div>

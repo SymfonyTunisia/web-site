@@ -104,8 +104,6 @@ class ContactAdmin extends Admin
             ->add('firstName')
             ->add('email')
             ->add('phone')
-            ->add('address')
-            ->add('zipCode')
             ->add('message')
             ->add('createdAt')
             ->add('updatedAt');

@@ -38,10 +38,6 @@ class ContactType extends AbstractType
                 new NotBlank(array('message' => 'Oups, vous n’avez pas saisi votre « Prénom ».')),
                 new Length(array('min' => 3, 'max' => 48))
             ),
-            'zipCode' => array(
-                new NotBlank(array('message' => 'Oups, vous n’avez pas saisi votre « Code Postal ».')),
-                new Length(array('min' => 2, 'max' => 5))
-            ),
             'email' => array(
                 new NotBlank(array('message' => 'Oups, vous n’avez pas saisi votre « Email ».')),
                 new Email(),
@@ -57,7 +53,6 @@ class ContactType extends AbstractType
                     )
                 )
             ),
-            'address' => array(),
             'message' => array(new Length(array('max' => 1024))),
         );
 
@@ -131,34 +126,6 @@ class ContactType extends AbstractType
                 )
             )
             ->add(
-                'address',
-                null,
-                array(
-                    'label' => 'form.contact.address',
-                    'required' => false,
-                    'attr' => array(
-                        'placeholder' => 'form.contact.placeholder.address',
-                        'maxlength' => '64',
-                    ),
-                    'translation_domain' => 'ContactBundle',
-                    'constraints' => $constraints['address']
-                )
-            )
-            ->add(
-                'zipCode',
-                'text',
-                array(
-                    'label' => 'form.contact.zipCode',
-                    'required' => true,
-                    'attr' => array(
-                        'placeholder' => 'form.contact.placeholder.zipCode',
-                        'maxlength' => '5',
-                    ),
-                    'translation_domain' => 'ContactBundle',
-                    'constraints' => $constraints['zipCode']
-                )
-            )
-            ->add(
                 'message',
                 null,
                 array(
@@ -181,7 +148,7 @@ class ContactType extends AbstractType
                 $data = $event->getData();
                 $form = $event->getForm();
 
-                if (empty($data['civility']) && empty($data['firstName']) && empty($data['lastName']) && empty($data['email']) && empty($data['zipCode']) && empty($data['phone']) && empty($data['address'])) {
+                if (empty($data['civility']) && empty($data['firstName']) && empty($data['lastName']) && empty($data['email'])  && empty($data['phone'])) {
                     $form->addError(
                         new FormError("Oups, vous n’avez pas saisi l’ensemble des champs obligatoire.")
                     );

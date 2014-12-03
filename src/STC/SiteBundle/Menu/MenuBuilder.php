@@ -47,7 +47,7 @@ class MenuBuilder
     {
         $menu = $this->factory->createItem('menu');
         $route = $this->getRequest()->get('_route');
-        $menu->setChildrenAttributes(array('class' => 'nav sf-menu sf-js-enabled'));
+        $menu->setChildrenAttributes(array('class' => 'nav pull-right'));
 
         $menu->addChild(
             $this->translator->trans('label.whoWeAre', array(), 'messages'),
