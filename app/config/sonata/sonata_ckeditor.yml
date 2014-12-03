@@ -1,0 +1,8 @@
+ivory_ck_editor:
+    configs:
+        news:
+            toolbar:                [ [ "Source", "-", "Save" ], "/", [ "Anchor" ], "/", [ "Maximize" ] ]
+            uiColor:                "#000000"
+            filebrowserUploadRoute: "admin_sonata_news_post_create"
+            extraPlugins:           "wordcount"
+            # ...

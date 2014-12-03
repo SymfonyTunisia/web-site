@@ -5,7 +5,7 @@
                 {% for entity in entities %}
                     <li class="span3">
                         <div class="thumbnail thumbnail-1">
-                            <h3>{{ entity.title }}</h3>
+                            <h5>{{ entity.title }}</h5>
 
                             <div class="">
                                 {% media entity.image, 'show' with {'alt': entity.title,'title': entity.title } %}
