@@ -1,19 +1,31 @@
-<!--============================== slider =================================-->
-<div class="flexslider">
-    <div class="flex-viewport">
-        <ul class="slides">
+<div class="container">
+    <div class="row">
+        <div class="span10 offset1">
+            <div class="flexslider">
 
-            {% for entity in entities %}
-                <li class="clone">
-                    {% media entity.media, 'show' with {'alt': entity.name,'title': entity.name } %}
-                    <p class="flex-caption">{{ entity.dec }}.</p>
-                </li>
-            {% endfor %}
-        </ul>
+                <div class="flex-viewport">
+                    <ul class="slides">
+                        {% for entity in entities %}
+                            <li class="clone">
+                                {% media entity.media, 'show' with {'alt': entity.name,'title': entity.name } %}
+                                <p class="flex-caption">{{ entity.dec }}.</p>
+                            </li>
+                        {% endfor %}
+
+                    </ul>
+                </div>
+                <ol class="flex-control-nav flex-control-thumbs">
+                    {% for entity in entities %}
+                        <li>
+                            {% media entity.media, 'smal' with {'alt': entity.name,'title': entity.name } %}
+                        </li>
+                    {% endfor %}
+                </ol>
+                <ul class="flex-direction-nav">
+                    <li><a href="#" class="flex-prev">Previous</a></li>
+                    <li><a href="#" class="flex-next">Next</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <ul class="flex-direction-nav">
-        <li><a class="flex-prev" href="#"></a></li>
-        <li><a class="flex-next" href="#"></a></li>
-    </ul>
 </div>
-<span id="responsiveFlag"></span>

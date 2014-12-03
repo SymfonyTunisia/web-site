@@ -1,25 +1,16 @@
-<div class="row-1">
-    <div class="container">
-        <div class="row">
-            <ul class="thumbnails thumbnails-1">
-                {% for entity in entities %}
-                    <li class="span3">
-                        <div class="thumbnail thumbnail-1">
-                            <h5>{{ entity.title }}</h5>
+<div class="portfolio-title">
+    <h3>Nos évènements</h3>
+</div>
+<div class="row">
+    {% for entity in entities %}
+        <div class="work span3 ombrebleue">
+            {% media entity.image, 'show' with {'alt': entity.title,'title': entity.title } %}
+            <h4>{{ entity.title }}</h4>
 
-                            <div class="">
-                                {% media entity.image, 'show' with {'alt': entity.title,'title': entity.title } %}
-                            </div>
-                            <section>
-                                <p>{{ entity.description }}</p>
-                                <a href="{{ path('event_show', {'slug': entity.slug }) }}" class="btn btn-1">
-                                    En savoir plus
-                                </a>
-                            </section>
-                        </div>
-                    </li>
-                {% endfor %}
-            </ul>
+            <p>{{ entity.description }}</p>
+            <a class="type-7" href="{{ path('event_show', {'slug': entity.slug }) }}">
+                En savoir plus
+            </a>
         </div>
-    </div>
+    {% endfor %}
 </div>

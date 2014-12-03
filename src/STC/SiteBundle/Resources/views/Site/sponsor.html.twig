@@ -1,12 +1,14 @@
-<article class="span6">
-    <h3>Supporter par</h3>
-    <ul class="list-photo">
+<div class="work span4 supporters">
+    <div class="presentation-title">
+        <h3>Nos supporters</h3>
+    </div>
+    <ul>
         {% for key,entity in entities %}
-            <a href="{{ entity.url }}" {% if key % 3 %}class="magnifier" {% endif %}>
-                <div class="">
+            <li class="ombrebleue">
+                <a href="{{ entity.url }}">
                     {% media entity.logo, 'show' with {'alt': entity.name,'title': entity.name } %}
-                </div>
-            </a>
+                </a>
+            </li>
         {% endfor %}
     </ul>
-</article>
+</div>
