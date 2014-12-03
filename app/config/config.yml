@@ -2,8 +2,8 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
 
-    # Mopa Bootstrap
-    - { resource: mopa/mopa_bootstrap.yml }
+
+
 
     # FriendOfSymfony Bundles
     - { resource: fos/fos_rest.yml }
@@ -24,6 +24,7 @@ imports:
     - { resource: sonata/sonata_news.yml }
     - { resource: sonata/sonata_user.yml }
     - { resource: sonata/sonata_notification.yml }
+    - { resource: sonata/sonata_ckeditor.yml }
 
 framework:
     #esi:                   ~

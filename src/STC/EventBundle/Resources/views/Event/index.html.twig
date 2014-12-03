@@ -1,32 +1,45 @@
 <div id="content">
-    <div class="container">
-        <div class="row">
-            <article class="span12">
-                <h3>Events</h3>
-            </article>
-            <div class="clear"></div>
-            <ul class="thumbnails thumbnails-1 clearfix">
-                {% for entity in entities %}
-                    <li class="span3">
-                        <div class="thumbnail thumbnail-1">
-                            <h3>{{ entity.title }}</h3>
-                            <div class="">
-                                {% media entity.image, 'show' with {'alt': entity.title,'title': entity.title } %}
-                            </div>
-                            <section>
-                                <strong>
-                                    {{ entity.date }},  {{ entity.location }}
-                                </strong>
+    <div class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="span12"><i class="icon-calendar page-title-icon"></i>
 
-                                <p>{{ entity.description }}</p>
-                                <a href="{{ path('event_show', {'slug': entity.slug }) }}" class="btn btn-1">
-                                    En savoir plus
-                                </a>
-                            </section>
-                        </div>
-                    </li>
-                {% endfor %}
-            </ul>
+                    <h2>Evénements /</h2>
+
+                    <p>Vous trouverez ici tous nos événements</p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="portfolio portfolio-page container">
+
+        {% for entity in entities %}
+            <ul class="thumbnails thumbnails-1 clearfix">
+                <div class="row">
+                    <div class="work">
+                        <ul class="portfolio-img">
+                            <li data-id="p-1" data-type="web-design" class="span3">
+                                <div class="thumbnail thumbnail-1">
+
+                                    {% media entity.image, 'show' with {'alt': entity.title,'title': entity.title } %}
+
+                                    <section>
+                                        <p>{{ entity.description }}</p>
+
+                                        <a href="{{ path('event_show', {'slug': entity.slug }) }}" class="type-7">
+                                            <span> </span> <span> En savoir plus </span>
+                                        </a>
+                                    </section>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+        {% endfor %}
+
+    </div>
+</div>
+</div>
 </div>
