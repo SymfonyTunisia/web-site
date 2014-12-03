@@ -21,10 +21,7 @@ class BannerAdmin extends Admin
     {
         $datagridMapper
             ->add('name')
-            ->add('client')
-            ->add('start_date')
-            ->add('enabled')
-            ->add('status');
+            ->add('enabled');
     }
 
     /**
@@ -34,12 +31,8 @@ class BannerAdmin extends Admin
     {
         $listMapper
             ->add('name')
-            ->add('client')
-            ->add('start_date')
-            ->add('duration')
             ->add('enabled')
             ->add('url')
-            ->add('status')
             ->add(
                 '_action',
                 'actions',
@@ -60,12 +53,8 @@ class BannerAdmin extends Admin
     {
         $formMapper
             ->add('name')
-            ->add('client')
-            ->add('start_date')
-            ->add('duration')
             ->add('enabled')
             ->add('url')
-            ->add('status')
             ->add(
                 'media',
                 'sonata_type_model_list',
@@ -85,11 +74,7 @@ class BannerAdmin extends Admin
     {
         $showMapper
             ->add('name')
-            ->add('client')
-            ->add('start_date')
-            ->add('duration')
             ->add('enabled')
-            ->add('url')
             ->add('status');
     }
 }

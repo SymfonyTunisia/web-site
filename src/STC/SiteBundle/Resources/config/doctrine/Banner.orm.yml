@@ -12,19 +12,10 @@ STC\SiteBundle\Entity\Banner:
         name:
             type: string
             nullable: true
-        client:
-            type: string
-        start_date:
-            type: date
-        duration:
-            type: integer
         enabled:
             type: boolean
         url:
             type: string
-            nullable: true
-        status: # 0 - To validate,1 - Online, 2 - Offline
-            type: integer
             nullable: true
         createdAt:
             type: datetime
