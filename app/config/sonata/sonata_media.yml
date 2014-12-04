@@ -24,7 +24,7 @@ sonata_media:
                 - sonata.media.provider.image
 
             formats:
-                abstract: { width: 100, quality: 100}
+                abstract: { width: 316, quality: 100}
                 wide:     { width: 820, quality: 100}
 
         sonata_banner:
