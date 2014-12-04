@@ -2,28 +2,13 @@
     <div class="row">
         <div class="span10 offset1">
             <div class="flexslider">
-
-                <div class="flex-viewport">
-                    <ul class="slides">
-                        {% for entity in entities %}
-                            <li class="clone">
-                                {% media entity.media, 'show' with {'alt': entity.name,'title': entity.name } %}
-                                <p class="flex-caption">{{ entity.name }}.</p>
-                            </li>
-                        {% endfor %}
-
-                    </ul>
-                </div>
-                <ol class="flex-control-nav flex-control-thumbs">
+                <ul class="slides">
                     {% for entity in entities %}
                         <li>
-                            {% media entity.media, 'small' with {'alt': entity.name,'title': entity.name } %}
+                            {% media entity.media, 'show' with {'alt': entity.name,'title': entity.name } %}
+                            <p class="flex-caption">{{ entity.name }}.</p>
                         </li>
                     {% endfor %}
-                </ol>
-                <ul class="flex-direction-nav">
-                    <li><a href="#" class="flex-prev">Previous</a></li>
-                    <li><a href="#" class="flex-next">Next</a></li>
                 </ul>
             </div>
         </div>
