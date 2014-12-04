@@ -1,7 +1,7 @@
-STC\EventBundle\Entity\Speakeur:
+STC\EventBundle\Entity\Speaker:
     type: entity
-    table: stc_event_speakeur
-    repositoryClass: STC\EventBundle\Repository\SpeakeurRepository
+    table: stc_event_speaker
+    repositoryClass: STC\EventBundle\Repository\SpeakerRepository
     id:
         id:
             type: integer

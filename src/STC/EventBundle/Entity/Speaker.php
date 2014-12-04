@@ -5,10 +5,11 @@ namespace STC\EventBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
+
 /**
- * Speakeur
+ * Speaker
  */
-class Speakeur
+class Speaker
 {
     /**
      * @var integer
@@ -70,7 +71,6 @@ class Speakeur
      * updates createdAt, updatedAt fields
      */
     use TimestampableEntity;
-
     /**
      * @var \Application\Sonata\MediaBundle\Entity\Media
      */
@@ -88,6 +88,7 @@ class Speakeur
     {
         return (string) $this->getFirstName();
     }
+
     /**
      * Get id
      *
@@ -102,7 +103,7 @@ class Speakeur
      * Set firstName
      *
      * @param string $firstName
-     * @return Speakeur
+     * @return Speaker
      */
     public function setFirstName($firstName)
     {
@@ -125,7 +126,7 @@ class Speakeur
      * Set lastName
      *
      * @param string $lastName
-     * @return Speakeur
+     * @return Speaker
      */
     public function setLastName($lastName)
     {
@@ -148,7 +149,7 @@ class Speakeur
      * Set function
      *
      * @param string $function
-     * @return Speakeur
+     * @return Speaker
      */
     public function setFunction($function)
     {
@@ -171,7 +172,7 @@ class Speakeur
      * Set company
      *
      * @param string $company
-     * @return Speakeur
+     * @return Speaker
      */
     public function setCompany($company)
     {
@@ -194,7 +195,7 @@ class Speakeur
      * Set description
      *
      * @param string $description
-     * @return Speakeur
+     * @return Speaker
      */
     public function setDescription($description)
     {
@@ -217,7 +218,7 @@ class Speakeur
      * Set blog
      *
      * @param string $blog
-     * @return Speakeur
+     * @return Speaker
      */
     public function setBlog($blog)
     {
@@ -240,7 +241,7 @@ class Speakeur
      * Set urlTwitter
      *
      * @param string $urlTwitter
-     * @return Speakeur
+     * @return Speaker
      */
     public function setUrlTwitter($urlTwitter)
     {
@@ -263,7 +264,7 @@ class Speakeur
      * Set urlGit
      *
      * @param string $urlGit
-     * @return Speakeur
+     * @return Speaker
      */
     public function setUrlGit($urlGit)
     {
@@ -286,7 +287,7 @@ class Speakeur
      * Set topic
      *
      * @param string $topic
-     * @return Speakeur
+     * @return Speaker
      */
     public function setTopic($topic)
     {
@@ -309,7 +310,7 @@ class Speakeur
      * Set topicDescription
      *
      * @param string $topicDescription
-     * @return Speakeur
+     * @return Speaker
      */
     public function setTopicDescription($topicDescription)
     {
@@ -332,7 +333,7 @@ class Speakeur
      * Set logo
      *
      * @param \Application\Sonata\MediaBundle\Entity\Media $logo
-     * @return Speakeur
+     * @return Speaker
      */
     public function setLogo(\Application\Sonata\MediaBundle\Entity\Media $logo = null)
     {
@@ -355,7 +356,7 @@ class Speakeur
      * Set event
      *
      * @param \STC\EventBundle\Entity\Event $event
-     * @return Speakeur
+     * @return Speaker
      */
     public function setEvent(\STC\EventBundle\Entity\Event $event = null)
     {
