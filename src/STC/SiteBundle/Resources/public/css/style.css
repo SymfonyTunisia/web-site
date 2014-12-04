@@ -1067,7 +1067,7 @@ ul.portfolio-img li {
 }
 
  
-/* Ceci sert uniquement à référencer la transition (sans ceci l'ombre apparaitra mais il n'y aura pas d'animation) */
+/* Ceci sert uniquement ï¿½ rï¿½fï¿½rencer la transition (sans ceci l'ombre apparaitra mais il n'y aura pas d'animation) */
 /* Sur firefox 3.5+, opera 10.5+ et IE 9 beta les effets s'appliquent mais il n'y a pas d'animation */
  
 @-webkit-keyframes pulse {
@@ -1082,12 +1082,12 @@ ul.portfolio-img li {
 }
 }
 /* Ici le code pour appliquer une lueur externe */
-/* 0px de décalage en x, 0px de décalage en y, 12px de flou et la valeur en RGBA soit RedGreenBlueAlpha donc le 0.5 pour 50% d'opacité */
+/* 0px de dï¿½calage en x, 0px de dï¿½calage en y, 12px de flou et la valeur en RGBA soit RedGreenBlueAlpha donc le 0.5 pour 50% d'opacitï¿½ */
 .ombrebleue img:hover {
 	-webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
 	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
-	-webkit-animation: pulse 1.5s infinite ease-in-out; /* Ici on utilise l'animation référencée plus haut */
+	-webkit-animation: pulse 1.5s infinite ease-in-out; /* Ici on utilise l'animation rï¿½fï¿½rencï¿½e plus haut */
 	/* Webkit for Chrome and Safari */
   -webkit-transform: scale(1.2, 1.2);
 // This is the enlarged size scale of the image. -webkit-transition-duration: 500ms;
@@ -1202,7 +1202,7 @@ a.type-7:hover {
 .news .image-medium {
 	float: left;
 	margin: 0 30px 0 0;
-	width: 28%;
+	width: 25%;
 }
 .news .descrip-news p {
 	padding:0
