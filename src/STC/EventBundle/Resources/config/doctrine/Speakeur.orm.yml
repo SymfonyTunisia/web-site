@@ -1,7 +1,7 @@
-STC\EventBundle\Entity\Sponsor:
+STC\EventBundle\Entity\Speakeur:
     type: entity
-    table: stc_event_sponsor
-    repositoryClass: STC\EventBundle\Repository\SponsorRepository
+    table: stc_event_speakeur
+    repositoryClass: STC\EventBundle\Repository\SpeakeurRepository
     id:
         id:
             type: integer
@@ -9,19 +9,40 @@ STC\EventBundle\Entity\Sponsor:
             generator:
                 strategy: AUTO
     fields:
-        name:
+        firstName:
+            type: string
+            column: first_name
+            nullable: true
+        lastName:
+            type: string
+            column: last_name
+            nullable: true
+        function:
             type: string
             nullable: true
-        enable:
-            type: boolean
-        url:
+        company:
             type: string
             nullable: true
-        position:
+        description:
             type: string
             nullable: true
-        type:
+        blog:
             type: string
+            nullable: true
+        urlTwitter:
+            type: string
+            column: url_twitter
+            nullable: true
+        urlGit:
+            type: string
+            column: url_git
+            nullable: true
+        topic:
+            type: string
+            nullable: true
+        topicDescription:
+            type: string
+            column: topic_description
             nullable: true
         createdAt:
             type: datetime
