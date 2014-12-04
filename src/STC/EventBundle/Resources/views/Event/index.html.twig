@@ -14,10 +14,8 @@
     <div class="row">
         <ul class="portfolio-img">
             {% for entity in entities %}
-
                 <li data-id="p-1" data-type="web-design" class="span3">
                     <div class="work">
-
                         <a rel="prettyPhoto">{% media entity.image, 'show' with
                             {'alt': entity.title,'title': entity.title } %}
                         </a>
@@ -32,7 +30,6 @@
 
                     </div>
                 </li>
-
             {% endfor %}
         </ul>
     </div>
