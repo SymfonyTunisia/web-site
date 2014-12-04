@@ -10,7 +10,7 @@ body {
 }
 
 a {
-    color: #e85356 !important;
+    color: #e85356;
     text-decoration: none;
     -o-transition: all .3s;
     -moz-transition: all .3s;
