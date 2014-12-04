@@ -12,7 +12,15 @@ STC\EventBundle\Entity\Event:
             type: string
             length: 255
         date:
-            type: date
+            type: datetime
+            nullable: true
+        startDate:
+            type: datetime
+            column: start_date
+            nullable: true
+        endDate:
+            type: datetime
+            column: end_date
             nullable: true
         location:
             type: text
