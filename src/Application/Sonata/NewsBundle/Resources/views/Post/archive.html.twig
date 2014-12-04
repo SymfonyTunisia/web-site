@@ -18,7 +18,7 @@
             {% for post in pager.getResults() %}
                 <article class="box-news">
                     <div class="span4 image-medium">
-                        {% media post.image , 'show' with {'alt': post.title ,'title': post.title } %}
+                        {% media post.image , 'abstract' with {'alt': post.title ,'title': post.title } %}
                     </div>
                     <div>
                         <header>
