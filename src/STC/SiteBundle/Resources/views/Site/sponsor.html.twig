@@ -5,7 +5,7 @@
     <ul>
         {% for key,entity in entities %}
             <li class="ombrebleue">
-                <a href="{{ entity.url }}">
+                <a target="_blank" href="{{ entity.url }}">
                     {% media entity.logo, 'show' with {'alt': entity.name,'title': entity.name } %}
                 </a>
             </li>
