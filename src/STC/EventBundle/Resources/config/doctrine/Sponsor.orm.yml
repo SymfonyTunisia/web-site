@@ -1,0 +1,52 @@
+STC\EventBundle\Entity\Sponsor:
+    type: entity
+    table: stc_sponsor
+    repositoryClass: STC\EventBundle\Repository\SponsorRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            nullable: true
+        enable:
+            type: boolean
+        url:
+            type: string
+            nullable: true
+        position:
+            type: string
+            nullable: true
+        type:
+            type: string
+            nullable: true
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+    oneToOne:
+        logo:
+            targetEntity: Application\Sonata\MediaBundle\Entity\Media
+            cascade: ["all"]
+            joinColumn:
+                name: logo_id
+                eferencedColumnName: id
+            fetch: EAGER
+    manyToOne:
+        event:
+            targetEntity: STC\EventBundle\Entity\Event
+            cascade: ["persist"]
+            joinColumn:
+                name: event_id
+                referencedColumnName: id
+            fetch: EAGER
+    lifecycleCallbacks: {  }
