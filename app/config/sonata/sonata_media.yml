@@ -25,7 +25,7 @@ sonata_media:
 
             formats:
                 abstract: { width: 316, quality: 100}
-                wide:     { width: 820, quality: 100}
+                wide:     { width: 470, quality: 100}
 
         sonata_banner:
             providers:
