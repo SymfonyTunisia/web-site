@@ -40,6 +40,23 @@
 
                     <p>{{ post.content|raw }}</p>
                 </div>
+
+
+                {{ socialButtons( { 'facebook': {'locale':'fr_FR', 'send':true},'twitter':{'message':  post.title ,'url': url('sonata_news_view', { 'permalink': sonata_news_permalink(post) }) }}
+                ) }}
+
+                {% render(controller('SonataNewsBundle:Post:comments', {'postId': post.id})) %}
+
+                {% if post.iscommentable %}
+                    {% render(controller('SonataNewsBundle:Post:addCommentForm', {
+                    'postId': post.id,
+                    'form': form
+                    })) %}
+                {% else %}
+                    <div>
+                        {{ 'message_comments_are_closed'|trans({}, 'SonataNewsBundle') }}
+                    </div>
+                {% endif %}
             </article>
         </div>
     </div>

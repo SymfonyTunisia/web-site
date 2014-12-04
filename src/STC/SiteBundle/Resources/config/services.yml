@@ -15,3 +15,15 @@ services:
         scope: request # needed as we have the request as a dependency here
         tags:
             - { name: knp_menu.menu, alias: main } # The alias is what is used to retrieve the menu
+
+    site.socialBarHelper:
+        class : STC\SiteBundle\Helper\SocialBarHelper
+        tags :
+            - {name : 'templating.helper', alias : 'social-buttons'}
+        arguments : [ @templating ]
+
+    twig.extension.acme_social_bar:
+        class: STC\SiteBundle\Twig\Extensions\TwigSocialBar
+        tags:
+            - { name: 'twig.extension' }
+        arguments : [ @service_container ]

@@ -1,13 +1,18 @@
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h3>{{'title_leave_comment'|trans({}, 'SonataNewsBundle') }}</h3>
-    </div>
-    <div class="panel-body">
-        <form action="{{ url('sonata_news_add_comment', {'id': post_id}) }}" method="POST" class="form-horizontal" role="form">
-            {{ form_widget(form) }}
-            <div class="form-actions">
-                <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i>&nbsp;{{'btn_add_comment'|trans({}, 'SonataNewsBundle') }}</button>
-            </div>
-        </form>
+<div class="contact-us container">
+    <div class="row">
+        <div class="contact-form span4">
+
+            <h3>{{ 'title_leave_comment'|trans({}, 'SonataNewsBundle') }}</h3>
+
+            <form action="{{ url('sonata_news_add_comment', {'id': post_id}) }}" method="POST" class="contact_form"
+                  role="form">
+                {{ form_widget(form) }}
+                <button class="submit" type="submit">
+                    <i class="glyphicon glyphicon-pencil"></i>&nbsp;
+                    Ajouter
+                </button>
+
+            </form>
+        </div>
     </div>
 </div>
