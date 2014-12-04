@@ -41,23 +41,20 @@ sonata_page:
 
     assets:
         stylesheets:
+            - bundles/stcsite/bootstrap/css/bootstrap.css
+            - bundles/stcsite/bootstrap/css/bootstrap.min.css
+            - bundles/stcsite/prettyPhoto/css/prettyPhoto.css
             - bundles/stcsite/css/flexslider.css
             - bundles/stcsite/css/font-awesome.css
             - bundles/stcsite/css/style.css
 
-            - bundles/stcsite/bootstrap/css/bootstrap.css
-            - bundles/stcsite/bootstrap/css/bootstrap.min.css
-
-
-            - bundles/stcsite/prettyPhoto/css/prettyPhoto.css
-
 
         javascripts:
+            - bundles/stcsite/js/jquery-1.8.2.min.js
             - bundles/stcsite/js/jquery.quicksand.js
             - bundles/stcsite/js/jquery.tweet.js
             - bundles/stcsite/js/jquery.flexslider.js
             - bundles/stcsite/js/jquery.ui.map.min.js
-            - bundles/stcsite/js/jquery-1.8.2.min.js
             - bundles/stcsite/js/scripts.js
             - bundles/stcsite/prettyPhoto/js/jquery.prettyPhoto.js
 
