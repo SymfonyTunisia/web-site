@@ -18,7 +18,7 @@ use Gedmo\Timestampable\Traits\TimestampableEntity;
  */
 class Event
 {
-  
+
     /**
      * @var integer
      */
@@ -78,6 +78,11 @@ class Event
      * @var string
      */
     private $slug;
+
+    /**
+     * @var integer
+     */
+    private $position;
 
     /**
      * Hook timestampable behavior
@@ -369,6 +374,29 @@ class Event
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Set position
+     *
+     * @param integer $position
+     * @return Event
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * Get position
+     *
+     * @return integer 
+     */
+    public function getPosition()
+    {
+        return $this->position;
     }
 
     /**

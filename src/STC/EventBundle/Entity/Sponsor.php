@@ -1,6 +1,6 @@
 <?php
 
-namespace STC\SiteBundle\Entity;
+namespace STC\EventBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -11,6 +11,7 @@ use Gedmo\Timestampable\Traits\TimestampableEntity;
  */
 class Sponsor
 {
+
     /**
      * @var integer
      */
@@ -24,7 +25,7 @@ class Sponsor
     /**
      * @var boolean
      */
-    private $enabled;
+    private $enable;
 
     /**
      * @var string
@@ -32,20 +33,30 @@ class Sponsor
     private $url;
 
     /**
-     * @var integer
+     * @var string
      */
     private $position;
+
+    /**
+     * @var string
+     */
+    private $type;
 
     /**
      * Hook timestampable behavior
      * updates createdAt, updatedAt fields
      */
     use TimestampableEntity;
+
     /**
      * @var \Application\Sonata\MediaBundle\Entity\Media
      */
     private $logo;
 
+    /**
+     * @var \STC\EventBundle\Entity\Event
+     */
+    private $event;
 
     /**
      * @return string
@@ -54,6 +65,7 @@ class Sponsor
     {
         return (string) $this->getName();
     }
+
     /**
      * Get id
      *
@@ -88,26 +100,26 @@ class Sponsor
     }
 
     /**
-     * Set enabled
+     * Set enable
      *
-     * @param boolean $enabled
+     * @param boolean $enable
      * @return Sponsor
      */
-    public function setEnabled($enabled)
+    public function setEnable($enable)
     {
-        $this->enabled = $enabled;
+        $this->enable = $enable;
 
         return $this;
     }
 
     /**
-     * Get enabled
+     * Get enable
      *
      * @return boolean 
      */
-    public function getEnabled()
+    public function getEnable()
     {
-        return $this->enabled;
+        return $this->enable;
     }
 
     /**
@@ -136,7 +148,7 @@ class Sponsor
     /**
      * Set position
      *
-     * @param integer $position
+     * @param string $position
      * @return Sponsor
      */
     public function setPosition($position)
@@ -149,11 +161,34 @@ class Sponsor
     /**
      * Get position
      *
-     * @return integer 
+     * @return string 
      */
     public function getPosition()
     {
         return $this->position;
+    }
+
+    /**
+     * Set type
+     *
+     * @param string $type
+     * @return Sponsor
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return string 
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 
     /**
@@ -177,5 +212,28 @@ class Sponsor
     public function getLogo()
     {
         return $this->logo;
+    }
+
+    /**
+     * Set event
+     *
+     * @param \STC\EventBundle\Entity\Event $event
+     * @return Sponsor
+     */
+    public function setEvent(\STC\EventBundle\Entity\Event $event = null)
+    {
+        $this->event = $event;
+
+        return $this;
+    }
+
+    /**
+     * Get event
+     *
+     * @return \STC\EventBundle\Entity\Event 
+     */
+    public function getEvent()
+    {
+        return $this->event;
     }
 }

@@ -1,7 +1,7 @@
-STC\SiteBundle\Entity\Sponsor:
+STC\EventBundle\Entity\Sponsor:
     type: entity
-    table: stc_sponsors
-    repositoryClass: STC\SiteBundle\Repository\SponsorRepository
+    table: stc_event_sponsor
+    repositoryClass: STC\EventBundle\Repository\SponsorRepository
     id:
         id:
             type: integer
@@ -12,13 +12,16 @@ STC\SiteBundle\Entity\Sponsor:
         name:
             type: string
             nullable: true
-        enabled:
+        enable:
             type: boolean
         url:
             type: string
             nullable: true
         position:
-            type: integer
+            type: string
+            nullable: true
+        type:
+            type: string
             nullable: true
         createdAt:
             type: datetime
@@ -38,3 +41,12 @@ STC\SiteBundle\Entity\Sponsor:
                 name: logo_id
                 eferencedColumnName: id
             fetch: EAGER
+    manyToOne:
+        event:
+            targetEntity: STC\EventBundle\Entity\Event
+            cascade: ["persist"]
+            joinColumn:
+                name: event_id
+                referencedColumnName: id
+            fetch: EAGER
+    lifecycleCallbacks: {  }

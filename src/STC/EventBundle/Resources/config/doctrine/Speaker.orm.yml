@@ -1,0 +1,73 @@
+STC\EventBundle\Entity\Speaker:
+    type: entity
+    table: stc_event_speaker
+    repositoryClass: STC\EventBundle\Repository\SpeakerRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        firstName:
+            type: string
+            column: first_name
+            nullable: true
+        lastName:
+            type: string
+            column: last_name
+            nullable: true
+        function:
+            type: string
+            nullable: true
+        company:
+            type: string
+            nullable: true
+        description:
+            type: string
+            nullable: true
+        blog:
+            type: string
+            nullable: true
+        urlTwitter:
+            type: string
+            column: url_twitter
+            nullable: true
+        urlGit:
+            type: string
+            column: url_git
+            nullable: true
+        topic:
+            type: string
+            nullable: true
+        topicDescription:
+            type: string
+            column: topic_description
+            nullable: true
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+    oneToOne:
+        logo:
+            targetEntity: Application\Sonata\MediaBundle\Entity\Media
+            cascade: ["all"]
+            joinColumn:
+                name: logo_id
+                eferencedColumnName: id
+            fetch: EAGER
+    manyToOne:
+        event:
+            targetEntity: STC\EventBundle\Entity\Event
+            cascade: ["persist"]
+            joinColumn:
+                name: event_id
+                referencedColumnName: id
+            fetch: EAGER
+    lifecycleCallbacks: {  }

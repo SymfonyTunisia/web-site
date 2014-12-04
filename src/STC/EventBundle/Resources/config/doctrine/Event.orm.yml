@@ -1,6 +1,7 @@
 STC\EventBundle\Entity\Event:
     type: entity
     table: stc_event
+    repositoryClass: STC\EventBundle\Repository\EventRepository
     id:
         id:
             type: integer
@@ -49,6 +50,9 @@ STC\EventBundle\Entity\Event:
                     separator: _
                     fields:
                         - title
+        position:
+            type: integer
+            nullable: true
         createdAt:
             type: datetime
             gedmo:

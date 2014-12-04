@@ -29,15 +29,17 @@
     </div>
     <div class="galery row">
         <ul class="portfolio-img">
-            {% for key,galEvent in entity.images.galleryHasMedias %}
-                <li class="span4" data-type="web-design" data-id="p-1">
-                    {% if key >= 0 %}
-                        <a alt="{{ galEvent.media.name }}" title="{{ entity.title }}">
-                            {% media galEvent.media, 'show' with {'title' : entity.title , 'alt': entity.title } %}
-                        </a>
-                    {% endif %}
-                </li>
-            {% endfor %}
+            {% if entity.images %}
+                {% for key,galEvent in entity.images.galleryHasMedias %}
+                    <li class="span4" data-type="web-design" data-id="p-1">
+                        {% if key >= 0 %}
+                            <a alt="{{ galEvent.media.name }}" title="{{ entity.title }}">
+                                {% media galEvent.media, 'show' with {'title' : entity.title , 'alt': entity.title } %}
+                            </a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            {% endif %}
         </ul>
     </div>
 </div>

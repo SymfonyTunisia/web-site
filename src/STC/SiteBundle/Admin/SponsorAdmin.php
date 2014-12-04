@@ -28,6 +28,7 @@ class SponsorAdmin extends Admin
         $listMapper
             ->add('name')
             ->add('enabled')
+            ->add('position')
             ->add('createdAt')
             ->add(
                 '_action',
@@ -51,6 +52,7 @@ class SponsorAdmin extends Admin
             ->add('name')
             ->add('enabled')
             ->add('url')
+            ->add('position')
             ->add(
                 'logo',
                 'sonata_type_model_list',
@@ -72,6 +74,7 @@ class SponsorAdmin extends Admin
             ->add('name')
             ->add('enabled')
             ->add('url')
+            ->add('position')
             ->add('createdAt')
             ->add('updatedAt');
     }
