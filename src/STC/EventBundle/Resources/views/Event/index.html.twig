@@ -1,8 +1,7 @@
 <div class="page-title">
     <div class="container">
         <div class="row">
-            <div class="span12">
-                <i class="icon-calendar page-title-icon"></i>
+            <div class="span12"><i class="icon-calendar page-title-icon"></i>
 
                 <h2>Evénements /</h2>
 
@@ -15,21 +14,26 @@
     <div class="row">
         <ul class="portfolio-img">
             {% for entity in entities %}
-                <li class="span3" data-type="print-design" data-id="p-12">
+                <li data-id="p-1" data-type="web-design" class="span3">
                     <div class="work">
                         <a rel="prettyPhoto">{% media entity.image, 'show' with
                             {'alt': entity.title,'title': entity.title } %}
                         </a>
 
-                        <h4>{{ entity.location }}</h4>
+                        <h4>{{ entity.title }}</h4>
 
                         <p>{{ entity.description }}</p>
+
                         <a href="{{ path('event_show', {'slug': entity.slug }) }}" class="type-7">
                             <span> </span> <span> En savoir plus </span>
                         </a>
+
                     </div>
                 </li>
             {% endfor %}
         </ul>
     </div>
 </div>
+
+
+
