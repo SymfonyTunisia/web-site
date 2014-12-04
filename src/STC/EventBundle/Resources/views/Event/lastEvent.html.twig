@@ -5,23 +5,16 @@
     <div class="row">
         <ul class="portfolio-img">
             {% for entity in entities %}
-
                 <div class="work span3 ombrebleue">
-
                     <a rel="prettyPhoto">{% media entity.image, 'show' with
                         {'alt': entity.title,'title': entity.title } %}
                     </a>
-
                     <h4>{{ entity.title }}</h4>
-
                     <p>{{ entity.description }}</p>
-
                     <a href="{{ path('event_show', {'slug': entity.slug }) }}" class="type-7">
                         <span> </span> <span> En savoir plus </span>
                     </a>
-
                 </div>
-
             {% endfor %}
         </ul>
     </div>
