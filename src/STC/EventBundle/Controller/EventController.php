@@ -21,7 +21,7 @@ class EventController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('STCEventBundle:Event')->findBy(array('enabled' => true));
+        $entities = $em->getRepository('STCEventBundle:Event')->findEvent();
 
         return $this->render(
             'STCEventBundle:Event:index.html.twig',

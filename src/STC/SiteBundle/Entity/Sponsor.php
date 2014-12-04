@@ -15,6 +15,7 @@ class Sponsor
      * @var integer
      */
     private $id;
+
     /**
      * @var string
      */
@@ -31,11 +32,15 @@ class Sponsor
     private $url;
 
     /**
+     * @var integer
+     */
+    private $position;
+
+    /**
      * Hook timestampable behavior
      * updates createdAt, updatedAt fields
      */
     use TimestampableEntity;
-
     /**
      * @var \Application\Sonata\MediaBundle\Entity\Media
      */
@@ -49,7 +54,6 @@ class Sponsor
     {
         return (string) $this->getName();
     }
-
     /**
      * Get id
      *
@@ -127,6 +131,29 @@ class Sponsor
     public function getUrl()
     {
         return $this->url;
+    }
+
+    /**
+     * Set position
+     *
+     * @param integer $position
+     * @return Sponsor
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * Get position
+     *
+     * @return integer 
+     */
+    public function getPosition()
+    {
+        return $this->position;
     }
 
     /**

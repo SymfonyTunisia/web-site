@@ -1,6 +1,7 @@
 STC\SiteBundle\Entity\Sponsor:
     type: entity
     table: stc_sponsors
+    repositoryClass: STC\SiteBundle\Repository\SponsorRepository
     id:
         id:
             type: integer
@@ -15,6 +16,9 @@ STC\SiteBundle\Entity\Sponsor:
             type: boolean
         url:
             type: string
+            nullable: true
+        position:
+            type: integer
             nullable: true
         createdAt:
             type: datetime

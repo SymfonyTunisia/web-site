@@ -53,7 +53,7 @@ class SiteController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('STCSiteBundle:Sponsor')->findBy(array('enabled' => true));
+        $entities = $em->getRepository('STCSiteBundle:Sponsor')->findSponsor();
 
         return $this->render('STCSiteBundle:Site:sponsor.html.twig', array('entities' => $entities));
     }
