@@ -1,16 +1,28 @@
 <div class="portfolio-title">
     <h3>Nos évènements</h3>
 </div>
-<div class="row">
-    {% for entity in entities %}
-        <div class="work span3 ombrebleue">
-            {% media entity.image, 'show' with {'alt': entity.title,'title': entity.title } %}
-            <h4>{{ entity.title }}</h4>
+<div class="portfolio portfolio-page container">
+    <div class="row">
+        <ul class="portfolio-img">
+            {% for entity in entities %}
 
-            <p>{{ entity.description }}</p>
-            <a class="type-7" href="{{ path('event_show', {'slug': entity.slug }) }}">
-                En savoir plus
-            </a>
-        </div>
-    {% endfor %}
+                <div class="work span3 ombrebleue">
+
+                    <a rel="prettyPhoto">{% media entity.image, 'show' with
+                        {'alt': entity.title,'title': entity.title } %}
+                    </a>
+
+                    <h4>{{ entity.title }}</h4>
+
+                    <p>{{ entity.description }}</p>
+
+                    <a href="{{ path('event_show', {'slug': entity.slug }) }}" class="type-7">
+                        <span> </span> <span> En savoir plus </span>
+                    </a>
+
+                </div>
+
+            {% endfor %}
+        </ul>
+    </div>
 </div>
