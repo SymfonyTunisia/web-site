@@ -1,24 +1,43 @@
-<div id="content">
-    <div class="page-title">
-        <div class="container">
-            <div class="row">
-                <div class="span12"><i class="icon-camera page-title-icon"></i>
+<div class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="span12"><i class="icon-camera page-title-icon"></i>
 
-                    <h2>Evénements /</h2>
+                <h2>Evénements /</h2>
 
-                    <p>{{ entity.title }}</p>
-                </div>
+                <p>{{ entity.title }}</p>
             </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-    <div class="portfolio portfolio-page container events">
-        <div class="portfolio-navigator span12"><img src="bundles/stcsite/img/ttt.jpg" alt="">
-            <h5>Lieu : <span class="red">{{ entity.date | format_date }}</span></h5>
-        </div>
-        <div class="sonata-blog-post-content">
-            {{ entity.content|raw }}
         </div>
     </div>
 </div>
 
+<!-- Portfolio -->
+<div class="portfolio portfolio-page container events">
+    <div class="row">
+        <div class="portfolio-navigator span12">
+            {% media entity.image, 'show' with {'alt': entity.title,'title': entity.title } %}
+            <h4>{{ entity.title }}</h4>
+            <h5>Lieu : <span class="red">{{ entity.location }}</span></h5>
+            <h5>Date : <span class="red">{{ entity.date | format_date('dd M yyyy') }}</span></h5>
+            <h5>Heure : <span class="red">{{ entity.startDate | format_date('HH:m') }}</span> à
+                <span class="red">{{ entity.endDate | format_date('HH:m') }}</span>
+            </h5>
+
+            <p>&nbsp;</p>
+            {{ entity.content|raw }}
+        </div>
+    </div>
+    <div class="galery row">
+        <ul class="portfolio-img">
+            {% for key,galEvent in entity.images.galleryHasMedias %}
+                <li class="span4" data-type="web-design" data-id="p-1">
+                    {% if key >= 0 %}
+                        <a alt="{{ galEvent.media.name }}" title="{{ entity.title }}">
+                            {% media galEvent.media, 'show' with {'title' : entity.title , 'alt': entity.title } %}
+                        </a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

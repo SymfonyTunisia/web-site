@@ -21,36 +21,36 @@
 
                         <div class="nav-collapse collapse">
                             <ul class="nav pull-right">
-                                <li class="current-page">
+                                <li {% if app.request.get('_route') == 'home' %} class="current-page" {% endif %}>
                                     <a href="{{ path('home') }}">
                                         <i class="icon-home"></i><br/>
                                         Accueil
                                     </a>
                                 </li>
-                                <li>
+                                <li {% if app.request.get('_route') == 'whoWeAre' %} class="current-page" {% endif %}>
                                     <a href="{{ path('whoWeAre') }}">
                                         <i class="icon-user"></i><br/>
                                         Qui sommes-nous
                                     </a>
                                 </li>
-                                <li>
+                                <li {% if app.request.get('_route') in ['event','event_show'] %} class="current-page" {% endif %}>
                                     <a href="{{ path('event') }}">
                                         <i class="icon-calendar"></i><br/>
                                         événements
                                     </a>
                                 </li>
-                                <li>
+                                <li {% if app.request.get('_route') == 'symfonyTn' %} class="current-page" {% endif %}>
                                     <a href="{{ path('symfonyTn') }}">
                                         <i class="icon-tasks"></i><br/>
                                         Symphony tn</a>
                                 </li>
-                                <li>
+                                <li {% if app.request.get('_route') in ['sonata_news_archive','sonata_news_archive_monthly',' sonata_news_tag','sonata_news_collection ','sonata_news_archive_yearly','sonata_news_comment_moderation','sonata_news_view',' sonata_news_home'] %} class="current-page" {% endif %}>
                                     <a href="{{ path('sonata_news_archive') }}">
                                         <i class="icon-file"></i><br/>
                                         Actualité
                                     </a>
                                 </li>
-                                <li>
+                                <li {% if app.request.get('_route') == 'contact' %} class="current-page" {% endif %}>
                                     <a href="{{ path('contact') }}">
                                         <i class="icon-envelope-alt">
                                         </i><br/>Contact
