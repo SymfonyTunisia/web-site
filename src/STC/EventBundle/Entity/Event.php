@@ -18,6 +18,7 @@ use Gedmo\Timestampable\Traits\TimestampableEntity;
  */
 class Event
 {
+  
     /**
      * @var integer
      */
@@ -32,6 +33,16 @@ class Event
      * @var \DateTime
      */
     private $date;
+
+    /**
+     * @var \DateTime
+     */
+    private $startDate;
+
+    /**
+     * @var \DateTime
+     */
+    private $endDate;
 
     /**
      * @var string
@@ -88,7 +99,6 @@ class Event
      * @var \STC\EventBundle\Entity\EventCategory
      */
     private $category;
-
 
     /**
      * @return string
@@ -152,6 +162,52 @@ class Event
     public function getDate()
     {
         return $this->date;
+    }
+
+    /**
+     * Set startDate
+     *
+     * @param \DateTime $startDate
+     * @return Event
+     */
+    public function setStartDate($startDate)
+    {
+        $this->startDate = $startDate;
+
+        return $this;
+    }
+
+    /**
+     * Get startDate
+     *
+     * @return \DateTime 
+     */
+    public function getStartDate()
+    {
+        return $this->startDate;
+    }
+
+    /**
+     * Set endDate
+     *
+     * @param \DateTime $endDate
+     * @return Event
+     */
+    public function setEndDate($endDate)
+    {
+        $this->endDate = $endDate;
+
+        return $this;
+    }
+
+    /**
+     * Get endDate
+     *
+     * @return \DateTime 
+     */
+    public function getEndDate()
+    {
+        return $this->endDate;
     }
 
     /**

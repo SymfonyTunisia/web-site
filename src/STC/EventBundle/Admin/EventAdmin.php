@@ -33,6 +33,8 @@ class EventAdmin extends Admin
         $listMapper
             ->add('title')
             ->add('date')
+            ->add('startDate')
+            ->add('endDate')
             ->add('location')
             ->add('description')
             ->add('enabled')
@@ -59,6 +61,8 @@ class EventAdmin extends Admin
             ->add('category')
             ->add('enabled')
             ->add('date', 'sonata_type_datetime_picker')
+            ->add('startDate', 'sonata_type_datetime_picker')
+            ->add('endDate', 'sonata_type_datetime_picker')
             ->add('location')
             ->add('description')
 
@@ -110,6 +114,8 @@ class EventAdmin extends Admin
         $showMapper
             ->add('title')
             ->add('date')
+            ->add('startDate', 'sonata_type_datetime_picker')
+            ->add('endDate', 'sonata_type_datetime_picker')
             ->add('location')
             ->add('description')
             ->add('content')
