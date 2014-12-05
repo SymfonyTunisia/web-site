@@ -66,11 +66,24 @@ class SponsorAdmin extends Admin
                 'type',
                 'choice',
                 array(
-                    'label' => 'form.sponsor.function',
-                    'empty_value' => 'form.sponsor.function_empty_value',
+                    'label' => 'form.sponsor.type',
+                    'empty_value' => 'form.sponsor.type_empty_value',
                     'required' => true,
                     'translation_domain' => 'EventtBundle',
                     'choices' => Sponsor::$typeList
+                )
+            )
+            ->add(
+                'logo',
+                'sonata_type_model_list',
+                array(
+                    'required' => false,
+                    'btn_list' => false
+                ),
+                array(
+                    'link_parameters' => array(
+                        'context' => 'sonata_event'
+                    )
                 )
             );
     }
