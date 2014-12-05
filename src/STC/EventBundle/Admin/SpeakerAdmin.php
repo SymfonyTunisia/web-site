@@ -83,7 +83,7 @@ class SpeakerAdmin extends Admin
                 ),
                 array(
                     'link_parameters' => array(
-                        'context' => 'sonata_event'
+                        'context' => 'sonata_speaker'
                     )
                 )
             );
