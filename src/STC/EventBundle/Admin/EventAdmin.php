@@ -146,7 +146,7 @@ class EventAdmin extends Admin
         $id = $admin->getRequest()->get('id');
 
         $menu->addChild(
-            $this->trans('', array(), 'EventBundle'),
+            $this->trans('event.sidemenu.link_event_list', array(), 'EventBundle'),
             $admin->generateMenuUrl('edit', array('id' => $id))
         );
 
