@@ -53,12 +53,10 @@
                         <a>
                             {% media speaker.logo, 'wide' with {'alt': speaker.firstName,'title': speaker.firstName } %}
                         </a>
-                        <h4>{{ speaker.firstName }} {{ speaker.lastName }}</h4>
-
-                        <p>{{ speaker.function }}</p>
-
+                        <h5>{{ speaker.firstName }} {{ speaker.lastName }}</h5>
+                        <h4>{{ speaker.function }}</h4>
                         <p>{{ speaker.company }}</p>
-                        <a class="type-7" href="#"> <span> </span> <span> Savoir plus </span> </a>
+                        <a class="type-7" href="{{ path('speaker_show', {'id': entity.id }) }}"> <span> </span> <span> Savoir plus </span> </a>
                     </div>
                 {% endfor %}
             </ul>
