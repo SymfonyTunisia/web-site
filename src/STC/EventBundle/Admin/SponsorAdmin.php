@@ -60,7 +60,7 @@ class SponsorAdmin extends Admin
         $formMapper
             ->add('name')
             ->add('enable')
-            ->add('url')
+            ->add('url','url')
             ->add('position')
             ->add(
                 'type',
