@@ -19,6 +19,7 @@ use Gedmo\Timestampable\Traits\TimestampableEntity;
 class Event
 {
 
+  
     /**
      * @var integer
      */
@@ -90,6 +91,7 @@ class Event
      */
     use TimestampableEntity;
 
+
     /**
      * @var \Application\Sonata\MediaBundle\Entity\Gallery
      */
@@ -101,9 +103,28 @@ class Event
     private $image;
 
     /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $speakers;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $sponsors;
+
+    /**
      * @var \STC\EventBundle\Entity\EventCategory
      */
     private $category;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->speakers = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->sponsors = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * @return string
@@ -443,6 +464,72 @@ class Event
     public function getImage()
     {
         return $this->image;
+    }
+
+    /**
+     * Add speakers
+     *
+     * @param \STC\EventBundle\Entity\Speaker $speakers
+     * @return Event
+     */
+    public function addSpeaker(\STC\EventBundle\Entity\Speaker $speakers)
+    {
+        $this->speakers[] = $speakers;
+
+        return $this;
+    }
+
+    /**
+     * Remove speakers
+     *
+     * @param \STC\EventBundle\Entity\Speaker $speakers
+     */
+    public function removeSpeaker(\STC\EventBundle\Entity\Speaker $speakers)
+    {
+        $this->speakers->removeElement($speakers);
+    }
+
+    /**
+     * Get speakers
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getSpeakers()
+    {
+        return $this->speakers;
+    }
+
+    /**
+     * Add sponsors
+     *
+     * @param \STC\EventBundle\Entity\Sponsor $sponsors
+     * @return Event
+     */
+    public function addSponsor(\STC\EventBundle\Entity\Sponsor $sponsors)
+    {
+        $this->sponsors[] = $sponsors;
+
+        return $this;
+    }
+
+    /**
+     * Remove sponsors
+     *
+     * @param \STC\EventBundle\Entity\Sponsor $sponsors
+     */
+    public function removeSponsor(\STC\EventBundle\Entity\Sponsor $sponsors)
+    {
+        $this->sponsors->removeElement($sponsors);
+    }
+
+    /**
+     * Get sponsors
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getSponsors()
+    {
+        return $this->sponsors;
     }
 
     /**
