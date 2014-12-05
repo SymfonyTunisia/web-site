@@ -5,15 +5,18 @@
     <div class="row">
         <ul>
             {% for comment in pager.results %}
-                <div class="container presentation">
-                    <h2>
-                        <a href="{{ comment.url }}" target="new" rel="nofollow">{{ comment.name }}</a>
-                    </h2>
-                    <h5><i class="icon-calendar"></i> {{ comment.createdAt | format_date }}</h5>
-                    <p>
-                        {{ comment.message }}
-                    </p>
-                </div>
+                <article class="box-news">
+                    <header>
+                        <div class="post-info">
+                            <h5><i class="icon-calendar"></i>{{ comment.createdAt | format_date }} </h5>
+                        </div>
+                        <h3>{{ comment.name }}</h3>
+
+                        <p>
+                            {{ comment.message }}
+                        </p>
+                    </header>
+                </article>
 
             {% else %}
                 <div class="container presentation">
