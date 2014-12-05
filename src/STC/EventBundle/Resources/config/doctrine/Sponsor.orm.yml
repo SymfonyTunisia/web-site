@@ -48,5 +48,6 @@ STC\EventBundle\Entity\Sponsor:
             joinColumn:
                 name: event_id
                 referencedColumnName: id
+                inversedBy: sponsors
             fetch: EAGER
     lifecycleCallbacks: {  }

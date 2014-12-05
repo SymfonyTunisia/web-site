@@ -48,33 +48,19 @@
     <div class="portfolio portfolio-page container">
         <div class="row">
             <ul class="portfolio-img">
-                <div class="work span3 ombrebleue">
-                    <a rel="prettyPhoto">
-                        <img alt="" src="{{ asset('bundles/stcsite/img/portfolio/work1.jpg') }}">
-                    </a>
-                    <h4>Lorem Website</h4>
+                {% for speaker in entity.speakers %}
+                    <div class="work span3 ombrebleue">
+                        <a>
+                            {% media speaker.logo, 'wide' with {'alt': speaker.firstName,'title': speaker.firstName } %}
+                        </a>
+                        <h4>{{ speaker.firstName }} {{ speaker.lastName }}</h4>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                    <a class="type-7" href="#"> <span> </span> <span> Savoir plus </span> </a>
-                </div>
-                <div class="work span3 ombrebleue">
-                    <a rel="prettyPhoto">
-                        <img alt="" src="{{ asset('bundles/stcsite/img/portfolio/work1.jpg') }}">
-                    </a>
-                    <h4>Lorem Website</h4>
+                        <p>{{ speaker.function }}</p>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                    <a class="type-7" href="#"> <span> </span> <span> Savoir plus </span> </a>
-                </div>
-                <div class="work span3 ombrebleue">
-                    <a rel="prettyPhoto">
-                        <img alt="" src="{{ asset('bundles/stcsite/img/portfolio/work1.jpg') }}">
-                    </a>
-                    <h4>Lorem Website</h4>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                    <a class="type-7" href="#"> <span> </span> <span> Savoir plus </span> </a>
-                </div>
+                        <p>{{ speaker.company }}</p>
+                        <a class="type-7" href="#"> <span> </span> <span> Savoir plus </span> </a>
+                    </div>
+                {% endfor %}
             </ul>
         </div>
     </div>
@@ -84,24 +70,15 @@
     <div class="portfolio portfolio-page container">
         <div class="row">
             <ul class="portfolio-img">
-                <div class="work span3 ombrebleue">
-                    <a rel="prettyPhoto" href="#" target="_blank">
-                        <img alt="" src="{{ asset('bundles/stcsite/img/portfolio/work1.jpg') }}">
-                    </a>
-                    <h4>Lorem Website</h4>
-                </div>
-                <div class="work span3 ombrebleue">
-                    <a rel="prettyPhoto" href="#" target="_blank">
-                        <img alt="" src="{{ asset('bundles/stcsite/img/portfolio/work1.jpg') }}">
-                    </a>
-                    <h4>Lorem Website</h4>
-                </div>
-                <div class="work span3 ombrebleue">
-                    <a rel="prettyPhoto" href="#" target="_blank">
-                        <img alt="" src="{{ asset('bundles/stcsite/img/portfolio/work1.jpg') }}">
-                    </a>
-                    <h4>Lorem Website</h4>
-                </div>
+                {% for sponsor in entity.sponsors %}
+                    <div class="work span3 ombrebleue">
+                        <a href="{{ sponsor.url }}" target="_blank">
+                            {% media sponsor.logo, 'wide' with {'alt': sponsor.type,'title': sponsor.type } %}
+                        </a>
+                        <h4>{{ sponsor.name }}</h4>
+                        <h5>{{ sponsor.type }}</h5>
+                    </div>
+                {% endfor %}
             </ul>
         </div>
     </div>

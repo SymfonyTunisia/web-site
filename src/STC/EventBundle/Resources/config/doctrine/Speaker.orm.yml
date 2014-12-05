@@ -69,5 +69,6 @@ STC\EventBundle\Entity\Speaker:
             joinColumn:
                 name: event_id
                 referencedColumnName: id
+                inversedBy: speakers
             fetch: EAGER
     lifecycleCallbacks: {  }

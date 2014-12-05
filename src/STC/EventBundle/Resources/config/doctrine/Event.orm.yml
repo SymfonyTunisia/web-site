@@ -82,4 +82,11 @@ STC\EventBundle\Entity\Event:
         category:
           targetEntity: STC\EventBundle\Entity\EventCategory
           inversedBy: events
+    oneToMany:
+        speakers:
+            targetEntity: STC\EventBundle\Entity\Speaker
+            mappedBy: event
+        sponsors:
+                    targetEntity: STC\EventBundle\Entity\Sponsor
+                    mappedBy: event
     lifecycleCallbacks: { }
