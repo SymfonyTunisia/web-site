@@ -4,6 +4,8 @@ services:
         arguments: [~, STC\EventBundle\Entity\Event, SonataAdminBundle:CRUD]
         calls:
             - [setTranslationDomain,  [EventBundle] ]
+            - [addChild,  [@sonata.event.admin.sponsor]]
+            - [addChild,  [@sonata.event.admin.speaker]]
         tags:
             - {name: sonata.admin, manager_type: orm,  group: "sonata_event" ,  label: label.event, label_catalogue: "EventBundle", label_translator_strategy: "sonata.admin.label.strategy.underscore" }
 
@@ -18,11 +20,15 @@ services:
     sonata.event.admin.speaker:
         class: STC\EventBundle\Admin\SpeakerAdmin
         arguments: [~, STC\EventBundle\Entity\Speaker, SonataAdminBundle:CRUD]
+        calls:
+            - [setTranslationDomain,  [EventBundle] ]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: admin, label: Speaker}
+            - {name: sonata.admin, manager_type: orm, group: "sonata_event" ,  label: label.speaker, label_catalogue: "EventBundle", label_translator_strategy: "sonata.admin.label.strategy.underscore" }
 
     sonata.event.admin.sponsor:
         class: STC\EventBundle\Admin\SponsorAdmin
         arguments: [~, STC\EventBundle\Entity\Sponsor, SonataAdminBundle:CRUD]
+        calls:
+            - [setTranslationDomain,  [EventBundle] ]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: admin, label: Sponsor}
+            - {name: sonata.admin, manager_type: orm, group: "sonata_event" ,  label: label.sponsor, label_catalogue: "EventBundle", label_translator_strategy: "sonata.admin.label.strategy.underscore" }

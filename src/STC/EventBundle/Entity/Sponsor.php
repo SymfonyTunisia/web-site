@@ -12,6 +12,7 @@ use Gedmo\Timestampable\Traits\TimestampableEntity;
 class Sponsor
 {
 
+   
     /**
      * @var integer
      */
@@ -33,7 +34,7 @@ class Sponsor
     private $url;
 
     /**
-     * @var string
+     * @var integer
      */
     private $position;
 
@@ -47,6 +48,16 @@ class Sponsor
      * updates createdAt, updatedAt fields
      */
     use TimestampableEntity;
+
+    const TYPE_GOLD = 'GOLD';
+    const TYPE_BRONZE = 'BRONZE';
+    const TYPE_PLATINIUM = 'PLATINIUM';
+
+    public static $typeList = array(
+        self::TYPE_GOLD => 'Gold',
+        self::TYPE_BRONZE => 'Bronze',
+        self::TYPE_PLATINIUM => 'Platinium'
+    );
 
     /**
      * @var \Application\Sonata\MediaBundle\Entity\Media
@@ -65,7 +76,6 @@ class Sponsor
     {
         return (string) $this->getName();
     }
-
     /**
      * Get id
      *
@@ -148,7 +158,7 @@ class Sponsor
     /**
      * Set position
      *
-     * @param string $position
+     * @param integer $position
      * @return Sponsor
      */
     public function setPosition($position)
@@ -161,7 +171,7 @@ class Sponsor
     /**
      * Get position
      *
-     * @return string 
+     * @return integer 
      */
     public function getPosition()
     {
@@ -235,5 +245,12 @@ class Sponsor
     public function getEvent()
     {
         return $this->event;
+    }
+    /**
+     * @return string
+     */
+    public function getLabelType()
+    {
+        return isset(self::$typeList[$this->type]) ? self::$typeList[$this->type] : '';
     }
 }

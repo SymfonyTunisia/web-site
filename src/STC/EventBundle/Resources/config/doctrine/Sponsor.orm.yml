@@ -18,7 +18,7 @@ STC\EventBundle\Entity\Sponsor:
             type: string
             nullable: true
         position:
-            type: string
+            type: integer
             nullable: true
         type:
             type: string
