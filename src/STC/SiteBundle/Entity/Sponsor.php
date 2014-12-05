@@ -130,7 +130,24 @@ class Sponsor
      */
     public function getUrl()
     {
-        return $this->url;
+        if ($this->url == null) {
+            return null;
+        }
+
+        if (preg_match('@^(?:http://)([^/]+)@i', $this->url) || preg_match(
+                '@^(?:https://)([^/]+)@i',
+                $this->url
+            )
+        ) {
+            return $this->url;
+        }
+
+        $website = preg_replace('/\s+/', '', $this->url);
+        if (strlen($website) > 1 && (strpos($website, "http://") === false)) {
+            return 'http://' . $this->url;
+        }
+
+        return null;
     }
 
     /**
