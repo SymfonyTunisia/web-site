@@ -21,3 +21,101 @@ form.label_image: Image
 form.label_images: Gallery
 list.label__action: Action
 label.event_category: Categorie
+event.sidemenu.link_sponsor_list: Sponsor
+event.sidemenu.link_speaker_list: Conférencier
+sonata.event.admin.sponsor.list: Sponsor
+sonata.event.admin.speaker.list: Conférencier
+breadcrumb.link_event_category_list: Catégories
+list.label_name : Nom
+list.label_enable : Activer
+list.label_url : URL
+list.label_position : Position
+list.label_type : Type
+list.label_created_at : Date de création
+list.label_updated_at : Date de Modification
+filter.label_event: Événement
+filter.label_name: Nom
+filter.label_enable: Activer
+filter.label_url: URL
+filter.label_position: Position
+filter.label_type: Type
+filter.label_created_at: Date de Création
+filter.label_updated_at: date de Modification
+label.sponsor: Sponsor
+form.label_name : Nom
+form.label_enable: Activer
+form.label_url: URL
+form.label_position: Position
+form.label_type: Type
+show.label_name : Nom
+show.label_enable: Activer
+show.label_url: URL
+show.label_position: Position
+show.label_type: Type
+breadcrumb.link_sponsor_list : Sponsors
+breadcrumb.link_sponsor_create: Créer
+form.sponsor.type: Type
+form.sponsor.type_empty_value: Choisir Type...
+label.speaker: Conférencier
+form.label_first_name: Nom
+form.label_last_name: Prénom
+form.label_function: Fonction
+form.label_company: sociétée
+form.label_blog: Blog
+form.label_url_twitter: URL Twitter
+form.label_url_git: URL Github
+form.label_topic: Sujet
+form.label_topic_description: Description sujet
+filter.label_logo: Photo
+filter.label_first_name: Nom
+filter.label_last_name: Prénom
+filter.label_function: Fonction
+filter.label_company: sociétée
+filter.label_blog: Blog
+filter.label_url_twitter: URL Twitter
+filter.label_url_git: URL Github
+filter.label_topic: Sujet
+filter.label_topic_description: Description sujet
+filter.label_logo: Photo
+show.label_title: Titre
+show.label_date: Date
+show.label_location: Locale
+show.label_description: Description
+show.label_enabled: Activer
+show.label_content: Contenu
+show.label_slug: slug
+show.label_created_at: Date de Création
+show.label_updated_at: Date de Modification
+breadcrumb.link_speaker_list: Speakers
+breadcrumb.link_speaker_create: Créer
+form.label_logo : Photo
+list.label_first_name: Nom
+list.label_last_name: Prénom
+list.label_function: Fonction
+list.label_company: sociétée
+list.label_blog: Blog
+list.label_url_twitter: URL Twitter
+list.label_url_git: URL Github
+list.label_topic: Sujet
+list.label_topic_description: Description sujet
+show.label_first_name: Nom
+show.label_last_name: Prénom
+show.label_function: Fonction
+show.label_company: sociétée
+show.label_blog: Blog
+show.label_url_twitter: URL Twitter
+show.label_url_git: URL Github
+show.label_topic: Sujet
+show.label_topic_description: Description sujet
+event.group.general : Général
+event.group.config: Configuration
+form.label_start_date : Date Début
+form.label_end_date : Date Fin
+show.label_start_date : Date Début
+show.label_end_date : Date Fin
+filter.label_start_date : Date Début
+filter.label_start_date : Date Fin
+
+
+
+

@@ -57,10 +57,13 @@ class EventAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            ->with(
+                'event.group.general',
+                array(
+                    'class' => 'col-md-7'
+                )
+            )
             ->add('title')
-            ->add('category')
-            ->add('enabled')
-            ->add('date', 'sonata_type_datetime_picker')
             ->add('location')
             ->add('description')
             ->add(
@@ -100,7 +103,20 @@ class EventAdmin extends Admin
                         'context' => 'sonata_event'
                     )
                 )
-            );
+            )
+        ->end()
+        ->with(
+            'event.group.config',
+            array(
+                'class' => 'col-md-5'
+            )
+
+        )
+            ->add('enabled')
+            ->add('date', 'sonata_type_datetime_picker')
+            ->add('startDate', 'sonata_type_datetime_picker')
+            ->add('endDate', 'sonata_type_datetime_picker')
+            ->add('category');
     }
 
     /**
@@ -115,7 +131,6 @@ class EventAdmin extends Admin
             ->add('description')
             ->add('content')
             ->add('enabled')
-            ->add('slug')
             ->add('createdAt')
             ->add('updatedAt');
     }
