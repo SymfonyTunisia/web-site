@@ -66,3 +66,4 @@ sonata_block:
 
         sonata.page.block.header:
         sonata.page.block.footer:
+        sonata.contact.map:

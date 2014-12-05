@@ -1,0 +1,9 @@
+parameters:
+    sonata.contact.map.class: STC\ContactBundle\Block\MapBlockService
+
+services:
+    sonata.contact.map:
+        class: %sonata.contact.map.class%
+        tags:
+            - { name: sonata.block}
+        arguments: ["sonata.contact.map","@templating"]
