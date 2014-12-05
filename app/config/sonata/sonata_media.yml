@@ -48,7 +48,8 @@ sonata_media:
                 - sonata.media.provider.youtube
 
             formats:
-                show:     { width: 270 , quality: 100}
+                abstract: { width: 316, quality: 100}
+                wide:     { width: 470, quality: 100}
 
         sonata_collection:
             providers:

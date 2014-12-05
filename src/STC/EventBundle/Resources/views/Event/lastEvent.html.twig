@@ -6,8 +6,8 @@
         <ul class="portfolio-img">
             {% for entity in entities %}
                 <div class="work span3 ombrebleue">
-                    <a rel="prettyPhoto">{% media entity.image, 'show' with
-                        {'alt': entity.title,'title': entity.title } %}
+                    <a rel="prettyPhoto">
+                        {% media entity.image, 'abstract' with {'alt': entity.title,'title': entity.title } %}
                     </a>
                     <h4>{{ entity.title }}</h4>
                     <p>{{ entity.description }}</p>
