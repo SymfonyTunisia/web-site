@@ -1,0 +1,34 @@
+<div class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="span12"><i class="icon-camera page-title-icon"></i>
+
+                <h2>Speaker /</h2>
+
+                <p>{{ entity.firstName }} {{ entity.lastName }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio -->
+<div class="portfolio portfolio-page container events">
+    <div class="row">
+        <div class="portfolio-navigator span12">
+            {% media entity.logo, 'wide' with {'alt': entity.firstName,'title': entity.firstName } %}
+            <h4> {{ entity.firstName }} {{ entity.lastName }}</h4>
+            <h5>Fonction : <span class="red">{{ entity.function }}</span></h5>
+            <h5>Sociétée : <span class="red">{{ entity.company }}</span></h5>
+            <h5>Description : <span class="red">{{ entity.description }}</span></h5>
+            <h4>Blog : <a href=" {{ entity.blog }}"
+                          target="_blank">Blog {{ entity.firstName }} {{ entity.lastName }} </a></h4>
+            <h4>URL Twitter : <a href="{{ entity.urlTwitter }}"
+                                 target="_blank">Twitter {{ entity.firstName }} {{ entity.lastName }} </a></h4>
+            <h4>URL Github : <a href="{{ entity.urlGit }}"
+                                target="_blank">Github {{ entity.firstName }} {{ entity.lastName }}</a></h4>
+            <h5>Sujet : <span class="red">{{ entity.topic }}</span></h5>
+
+            <p>{{ entity.topicDescription }}</p>
+        </div>
+    </div>
+</div>

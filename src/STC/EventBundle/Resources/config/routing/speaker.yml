@@ -1,0 +1,6 @@
+speaker_show:
+    path:     /{id}/show
+    defaults: { _controller: "STCEventBundle:Speaker:show" }
+
+
+
