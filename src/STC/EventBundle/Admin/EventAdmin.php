@@ -7,6 +7,8 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
+use Sonata\AdminBundle\Admin\AdminInterface;
+use Knp\Menu\ItemInterface as MenuItemInterface;
 
 /**
  * Class EventAdmin
@@ -33,9 +35,6 @@ class EventAdmin extends Admin
         $listMapper
             ->add('title')
             ->add('date')
-            ->add('startDate')
-            ->add('endDate')
-            ->add('position')
             ->add('location')
             ->add('description')
             ->add('enabled')
@@ -61,13 +60,9 @@ class EventAdmin extends Admin
             ->add('title')
             ->add('category')
             ->add('enabled')
-            ->add('position')
             ->add('date', 'sonata_type_datetime_picker')
-            ->add('startDate', 'sonata_type_datetime_picker')
-            ->add('endDate', 'sonata_type_datetime_picker')
             ->add('location')
             ->add('description')
-
             ->add(
                 'content',
                 'sonata_formatter_type',
@@ -116,15 +111,38 @@ class EventAdmin extends Admin
         $showMapper
             ->add('title')
             ->add('date')
-            ->add('startDate', 'sonata_type_datetime_picker')
-            ->add('endDate', 'sonata_type_datetime_picker')
             ->add('location')
-            ->add('position')
             ->add('description')
             ->add('content')
             ->add('enabled')
             ->add('slug')
             ->add('createdAt')
             ->add('updatedAt');
+    }
+
+    protected function configureSideMenu(MenuItemInterface $menu, $action, AdminInterface $childAdmin = null)
+    {
+        if (!$childAdmin && !in_array($action, array('edit'))) {
+            return;
+        }
+
+        $admin = $this->isChild() ? $this->getParent() : $this;
+
+        $id = $admin->getRequest()->get('id');
+
+        $menu->addChild(
+            $this->trans('', array(), 'EventBundle'),
+            $admin->generateMenuUrl('edit', array('id' => $id))
+        );
+
+        $menu->addChild(
+            $this->trans('event.sidemenu.link_sponsor_list', array(), 'EventBundle'),
+            $admin->generateMenuUrl('sonata.event.admin.sponsor.list', array('id' => $id))
+        );
+
+        $menu->addChild(
+            $this->trans('event.sidemenu.link_speaker_list', array(), 'EventBundle'),
+            $admin->generateMenuUrl('sonata.event.admin.speaker.list', array('id' => $id))
+        );
     }
 }

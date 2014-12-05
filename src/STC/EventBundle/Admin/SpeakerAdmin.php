@@ -1,7 +1,6 @@
 <?php
 
 namespace STC\EventBundle\Admin;
-
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
@@ -10,13 +9,18 @@ use Sonata\AdminBundle\Show\ShowMapper;
 
 class SpeakerAdmin extends Admin
 {
+    public function getParentAssociationMapping()
+    {
+        return 'event';
+    }
+
     /**
      * @param DatagridMapper $datagridMapper
      */
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
+
         $datagridMapper
-            ->add('id')
             ->add('firstName')
             ->add('lastName')
             ->add('function')
@@ -26,10 +30,7 @@ class SpeakerAdmin extends Admin
             ->add('urlTwitter')
             ->add('urlGit')
             ->add('topic')
-            ->add('topicDescription')
-            ->add('createdAt')
-            ->add('updatedAt')
-        ;
+            ->add('topicDescription');
     }
 
     /**
@@ -38,7 +39,6 @@ class SpeakerAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->add('id')
             ->add('firstName')
             ->add('lastName')
             ->add('function')
@@ -49,16 +49,13 @@ class SpeakerAdmin extends Admin
             ->add('urlGit')
             ->add('topic')
             ->add('topicDescription')
-            ->add('createdAt')
-            ->add('updatedAt')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
                     'edit' => array(),
                     'delete' => array(),
                 )
-            ))
-        ;
+            ));
     }
 
     /**
@@ -67,7 +64,6 @@ class SpeakerAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id')
             ->add('firstName')
             ->add('lastName')
             ->add('function')
@@ -78,9 +74,19 @@ class SpeakerAdmin extends Admin
             ->add('urlGit')
             ->add('topic')
             ->add('topicDescription')
-            ->add('createdAt')
-            ->add('updatedAt')
-        ;
+            ->add(
+                'logo',
+                'sonata_type_model_list',
+                array(
+                    'required' => false,
+                    'btn_list' => false
+                ),
+                array(
+                    'link_parameters' => array(
+                        'context' => 'sonata_event'
+                    )
+                )
+            );
     }
 
     /**
@@ -89,7 +95,6 @@ class SpeakerAdmin extends Admin
     protected function configureShowFields(ShowMapper $showMapper)
     {
         $showMapper
-            ->add('id')
             ->add('firstName')
             ->add('lastName')
             ->add('function')
@@ -99,9 +104,6 @@ class SpeakerAdmin extends Admin
             ->add('urlTwitter')
             ->add('urlGit')
             ->add('topic')
-            ->add('topicDescription')
-            ->add('createdAt')
-            ->add('updatedAt')
-        ;
+            ->add('topicDescription');
     }
 }

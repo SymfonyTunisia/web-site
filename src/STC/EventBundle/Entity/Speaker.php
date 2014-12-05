@@ -374,4 +374,5 @@ class Speaker
     {
         return $this->event;
     }
+
 }

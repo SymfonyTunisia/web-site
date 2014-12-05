@@ -1,7 +1,7 @@
 <?php
 
 namespace STC\EventBundle\Admin;
-
+use STC\EventBundle\Entity\Sponsor;
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
@@ -10,21 +10,24 @@ use Sonata\AdminBundle\Show\ShowMapper;
 
 class SponsorAdmin extends Admin
 {
+    public function getParentAssociationMapping()
+    {
+        return 'event';
+    }
+
     /**
      * @param DatagridMapper $datagridMapper
      */
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('id')
             ->add('name')
             ->add('enable')
             ->add('url')
             ->add('position')
             ->add('type')
             ->add('createdAt')
-            ->add('updatedAt')
-        ;
+            ->add('updatedAt');
     }
 
     /**
@@ -33,7 +36,6 @@ class SponsorAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->add('id')
             ->add('name')
             ->add('enable')
             ->add('url')
@@ -47,8 +49,7 @@ class SponsorAdmin extends Admin
                     'edit' => array(),
                     'delete' => array(),
                 )
-            ))
-        ;
+            ));
     }
 
     /**
@@ -57,15 +58,21 @@ class SponsorAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id')
             ->add('name')
             ->add('enable')
             ->add('url')
             ->add('position')
-            ->add('type')
-            ->add('createdAt')
-            ->add('updatedAt')
-        ;
+            ->add(
+                'type',
+                'choice',
+                array(
+                    'label' => 'form.sponsor.function',
+                    'empty_value' => 'form.sponsor.function_empty_value',
+                    'required' => true,
+                    'translation_domain' => 'EventtBundle',
+                    'choices' => Sponsor::$typeList
+                )
+            );
     }
 
     /**
@@ -74,14 +81,12 @@ class SponsorAdmin extends Admin
     protected function configureShowFields(ShowMapper $showMapper)
     {
         $showMapper
-            ->add('id')
             ->add('name')
             ->add('enable')
             ->add('url')
             ->add('position')
             ->add('type')
             ->add('createdAt')
-            ->add('updatedAt')
-        ;
+            ->add('updatedAt');
     }
 }
