@@ -1,21 +1,28 @@
-<div class="sonata-blog-comment-container">
+<div class="portfolio-title">
     <h3>{{ 'title_comments'|trans({}, 'SonataNewsBundle') }}</h3>
+</div>
+<div class="portfolio portfolio-page container">
+    <div class="row">
+        <ul>
+            {% for comment in pager.results %}
+                <div class="container presentation">
+                    <h2>
+                        <a href="{{ comment.url }}" target="new" rel="nofollow">{{ comment.name }}</a>
+                    </h2>
 
-    <ul class="sonata-blog-comment-list">
-        {% for comment in pager.results %}
-            <li class="sonata-blog-comment">
-                <div class="sonata-blog-comment-name">
-                    <a href="{{ comment.url }}" target="new" rel="nofollow">{{ comment.name }}</a>
+                    <div class="sonata-blog-comment-date">
+                        {{ comment.createdAt | format_date }}
+                    </div>
+                    <p>
+                        {{ comment.message }}
+                    </p>
                 </div>
-                <div class="sonata-blog-comment-date">
-                    {{ comment.createdAt | format_date }}
+
+            {% else %}
+                <div class="container presentation">
+                    <p>{{ 'no_comments_available'|trans({}, 'SonataNewsBundle') }}</p>
                 </div>
-                <div class="sonata-blog-comment-message">
-                    {{ comment.message }}
-                </div>
-            </li>
-        {% else %}
-            <li>{{ 'no_comments_available'|trans({}, 'SonataNewsBundle') }}</li>
-        {% endfor %}
-    </ul>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
