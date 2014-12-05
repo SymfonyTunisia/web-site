@@ -69,9 +69,9 @@ class SpeakerAdmin extends Admin
             ->add('function')
             ->add('company')
             ->add('description')
-            ->add('blog')
-            ->add('urlTwitter')
-            ->add('urlGit')
+            ->add('blog','url')
+            ->add('urlTwitter','url')
+            ->add('urlGit','url')
             ->add('topic')
             ->add('topicDescription')
             ->add(
