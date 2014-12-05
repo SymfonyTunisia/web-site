@@ -34,13 +34,10 @@
                             <a href="{{ url('sonata_news_tag', { 'tag': tag.slug } ) }}">{{ tag.name }}</a>
                         {% endfor %}
                     </div>
+                    <div class="news-content">
+                        <p>{{ post.content|raw }}</p>
+                    </div>
                 </header>
-                <div class="news-content">
-                    <h5> {{ post.title }}</h5>
-
-                    <p>{{ post.content|raw }}</p>
-                </div>
-
 
                 {{ socialButtons( { 'facebook': {'locale':'fr_FR', 'send':true},'twitter':{'message':  post.title ,'url': url('sonata_news_view', { 'permalink': sonata_news_permalink(post) }) }}
                 ) }}

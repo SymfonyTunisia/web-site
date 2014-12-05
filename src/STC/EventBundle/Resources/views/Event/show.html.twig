@@ -18,9 +18,9 @@
             {% media entity.image, 'wide' with {'alt': entity.title,'title': entity.title } %}
             <h4>{{ entity.title }}</h4>
             <h5>Lieu : <span class="red">{{ entity.location }}</span></h5>
-            <h5>Date : <span class="red">{{ entity.date | format_date('dd M yyyy') }}</span></h5>
-            <h5>Heure : <span class="red">{{ entity.startDate | format_date('HH:m') }}</span> à
-                <span class="red">{{ entity.endDate | format_date('HH:m') }}</span>
+            <h5>Date : <span class="red">{{ entity.date | format_date }}</span></h5>
+            <h5>Heure : <span class="red">{{ entity.startDate | format_date }}</span> à
+                <span class="red">{{ entity.endDate | format_date  }}</span>
             </h5>
 
             <p>&nbsp;</p>

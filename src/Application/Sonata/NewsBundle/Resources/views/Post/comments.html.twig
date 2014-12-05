@@ -9,10 +9,7 @@
                     <h2>
                         <a href="{{ comment.url }}" target="new" rel="nofollow">{{ comment.name }}</a>
                     </h2>
-
-                    <div class="sonata-blog-comment-date">
-                        {{ comment.createdAt | format_date }}
-                    </div>
+                    <h5><i class="icon-calendar"></i> {{ comment.createdAt | format_date }}</h5>
                     <p>
                         {{ comment.message }}
                     </p>
