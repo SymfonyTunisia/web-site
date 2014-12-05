@@ -58,6 +58,20 @@ sonata_media:
             formats:
                 show:     { width: 120,quality: 100}
 
+        sonata_speaker:
+            providers:
+                - sonata.media.provider.image
+
+            formats:
+                show:     { width: 120, quality: 100}
+
+        sonata_event_sponsor:
+            providers:
+                - sonata.media.provider.image
+
+            formats:
+                show:     { width: 120, quality: 100}
+
         sonata_event:
             providers:
                 - sonata.media.provider.image
