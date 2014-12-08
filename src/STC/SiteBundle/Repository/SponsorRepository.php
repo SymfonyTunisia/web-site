@@ -19,8 +19,7 @@ class SponsorRepository extends EntityRepository
     {
         $query = $this->createQueryBuilder('a')
             ->andWhere('a.enabled =:enabled')
-            ->setParameter('enabled', true)
-            ->orderBy('a.position', 'ASC');
+            ->setParameter('enabled', true);
         return $query->getQuery()->getResult();
     }
 }
