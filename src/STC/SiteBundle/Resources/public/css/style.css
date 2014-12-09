@@ -260,13 +260,13 @@ strong {
     max-height: 296px;
 }
 .show-event .portfolio .work {
-    min-height: 462px;
-    max-height: 462px;
+    min-height: 472px !important;
+    max-height: 472px !important;
 }
 
 .show-event-sponsor .portfolio .work {
-    min-height: 381px;
-    max-height: 381px;
+    min-height: 381px !important;
+    max-height: 381px !important;
 }
 
 .portfolio .work:hover img {
