@@ -30,7 +30,7 @@
                     <li class="span4" data-type="web-design" data-id="p-1">
                         {% if key >= 0 %}
                             <a alt="{{ entity.title }}" title="{{ entity.title }}">
-                                {% media galEvent.media, 'show' with {'title' : entity.title , 'alt': entity.title } %}
+                                {% media galEvent.media, 'show' with {'title' : entity.title , 'alt': entity.title ,'width': '370' } %}
                             </a>
                         {% endif %}
                     </li>

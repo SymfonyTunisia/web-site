@@ -65,7 +65,7 @@ sonata_media:
 
             formats:
                 abstract: { width: 215, quality: 100}
-                show: { width: 270, quality: 100}
+                show: { width: 370, quality: 100}
                 wide: { width: 960, quality: 100}
 
         sonata_collection:
