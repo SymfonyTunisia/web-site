@@ -256,17 +256,19 @@ strong {
     text-align: center;
     background: #f8f8f8;
     border-bottom: 2px solid #e85356;
-    min-height: 296px;
-    max-height: 296px;
 }
 .show-event .portfolio .work {
-    min-height: 472px !important;
-    max-height: 472px !important;
+    min-height: 472px;
+    max-height: 472px;
 }
 
 .show-event-sponsor .portfolio .work {
-    min-height: 381px !important;
-    max-height: 381px !important;
+    min-height: 381px;
+    max-height: 381px;
+}
+.last-event .portfolio .work {
+    min-height: 296px;
+    max-height: 296px;
 }
 
 .portfolio .work:hover img {
