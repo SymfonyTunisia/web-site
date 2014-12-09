@@ -256,6 +256,8 @@ strong {
     text-align: center;
     background: #f8f8f8;
     border-bottom: 2px solid #e85356;
+    min-height: 296px;
+    max-height: 296px;
 }
 
 .portfolio .work:hover img {
