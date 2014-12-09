@@ -64,7 +64,7 @@
         <div class="row">
             <ul class="portfolio-img">
                 {% for sponsor in entity.sponsors %}
-                    <div class="work span4 ombrebleue">
+                    <div class="work span3 ombrebleue">
                         <a href="{{ sponsor.url }}" target="_blank">
                             {% media sponsor.logo, 'wide' with {'alt': sponsor.type,'title': sponsor.type } %}
                         </a>
