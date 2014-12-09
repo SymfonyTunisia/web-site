@@ -259,6 +259,10 @@ strong {
     min-height: 296px;
     max-height: 296px;
 }
+.show-event .portfolio .work {
+    min-height: 462px;
+    max-height: 462px;
+}
 
 .portfolio .work:hover img {
     opacity: 0.7;
