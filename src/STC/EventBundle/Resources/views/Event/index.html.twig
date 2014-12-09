@@ -10,11 +10,11 @@
         </div>
     </div>
 </div>
-<div class="portfolio portfolio-page container last-event">
+<div class="portfolio portfolio-page container">
     <div class="row">
         <ul class="portfolio-img">
             {% for entity in entities %}
-                <li data-id="p-1" data-type="web-design" class="span3">
+                <li data-id="p-1" data-type="web-design" class="span3  last-event">
                     <div class="work">
                         <a rel="prettyPhoto">
                             {% media entity.image, 'show' with {'alt': entity.title,'title': entity.title } %}

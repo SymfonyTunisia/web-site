@@ -41,11 +41,11 @@
     <div class="portfolio-title">
         <h3> Speaker</h3>
     </div>
-    <div class="portfolio portfolio-page container show-event">
+    <div class="portfolio portfolio-page container">
         <div class="row">
             <ul class="portfolio-img">
                 {% for speaker in entity.speakers %}
-                    <div class="work span3 ombrebleue">
+                    <div class="work span3 ombrebleue show-event">
                         <a>
                             {% media speaker.logo, 'wide' with {'alt': speaker.firstName,'title': speaker.firstName } %}
                         </a>
@@ -60,11 +60,11 @@
     <div class="portfolio-title">
         <h3>Sponsor</h3>
     </div>
-    <div class="portfolio portfolio-page container show-event-sponsor">
+    <div class="portfolio portfolio-page container">
         <div class="row">
             <ul class="portfolio-img">
                 {% for sponsor in entity.sponsors %}
-                    <div class="work span3 ombrebleue">
+                    <div class="work span3 ombrebleue show-event-sponsor">
                         <a href="{{ sponsor.url }}" target="_blank">
                             {% media sponsor.logo, 'wide' with {'alt': sponsor.type,'title': sponsor.type } %}
                         </a>
