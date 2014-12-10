@@ -51,7 +51,7 @@
                         </a>
                         <h5>{{ speaker.firstName }} {{ speaker.lastName }}</h5>
                         <h4>{{ speaker.function }}</h4>
-                        <a class="type-7" href="{{ path('speaker_show', {'id': entity.id }) }}"> <span> </span> <span> Savoir plus </span> </a>
+                        <a class="type-7" href="{{ path('speaker_show', {'id': speaker.id }) }}"> <span> </span> <span> Savoir plus </span> </a>
                     </div>
                 {% endfor %}
             </ul>
