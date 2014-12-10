@@ -64,7 +64,7 @@ html[xmlns] .slides {display: block;}
 .flex-control-paging li a:hover { background: #333; background: rgba(0,0,0,0.7); }
 .flex-control-paging li a.flex-active { background: #000; background: rgba(0,0,0,0.9); cursor: default; }
 
-.flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
+.flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden; display: none;}
 .flex-control-thumbs li {width: 25%; float: left; margin: 0;}
 .flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;max-height: 115px}
 .flex-control-thumbs img:hover {opacity: 1;}
