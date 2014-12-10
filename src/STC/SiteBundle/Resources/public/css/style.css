@@ -257,19 +257,6 @@ strong {
     background: #f8f8f8;
     border-bottom: 2px solid #e85356;
 }
-.show-event .portfolio .work {
-    min-height: 472px;
-    max-height: 472px;
-}
-
-.show-event-sponsor .portfolio .work {
-    min-height: 381px;
-    max-height: 381px;
-}
-.last-event .portfolio .work {
-    min-height: 296px;
-    max-height: 296px;
-}
 
 .portfolio .work:hover img {
     opacity: 0.7;
@@ -1446,6 +1433,7 @@ a.type-7:hover {
     padding: 0 20px;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
+    height: 60px;
 }
 
 .events .row img {
