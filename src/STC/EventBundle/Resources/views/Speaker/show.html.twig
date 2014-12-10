@@ -5,7 +5,7 @@
 
                 <h2>Speaker /</h2>
 
-                <p>{{ entity.firstName }} {{ entity.lastName }}</p>
+                <p> {{ entity.lastName }} {{ entity.firstName }}</p>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
         <div class="span12">
             <article class="box-news">
                 <header>
-                    <h3>{{ entity.firstName }} {{ entity.lastName }}</h3>
+                    <h3> {{ entity.lastName }} {{ entity.firstName }}</h3>
 
                     <div class="span5 image-detail">
                         {% media entity.logo, 'show' with {'alt': entity.firstName,'title': entity.firstName } %}

@@ -50,7 +50,7 @@
                         <a rel="prettyPhoto">
                             {% media speaker.logo, 'show' with {'alt': speaker.firstName,'title': speaker.firstName } %}
                         </a>
-                        <h5>{{ speaker.firstName }} {{ speaker.lastName }}</h5>
+                        <h5> {{ entity.lastName }} {{ speaker.firstName }}</h5>
                         <h4>{{ speaker.function }}</h4>
                         <a class="type-7" href="{{ path('speaker_show', {'id': speaker.id }) }}"> <span> </span> <span> Savoir plus </span>
                         </a>
