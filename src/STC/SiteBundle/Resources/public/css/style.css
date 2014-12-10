@@ -319,6 +319,7 @@ strong {
 .portfolio .work p {
     line-height: 24px;
     font-style: italic;
+    height: 120px;
 }
 
 .portfolio .video {
