@@ -19,6 +19,7 @@
             <h4>{{ entity.title }}</h4>
             <h5>Lieu : <span class="red">{{ entity.location }}</span></h5>
             <h5>Date : <span class="red">{{ entity.date | format_date }}</span></h5>
+
             <p>&nbsp;</p>
             {{ entity.content|raw }}
         </div>
@@ -51,7 +52,8 @@
                         </a>
                         <h5>{{ speaker.firstName }} {{ speaker.lastName }}</h5>
                         <h4>{{ speaker.function }}</h4>
-                        <a class="type-7" href="{{ path('speaker_show', {'id': entity.id }) }}"> <span> </span> <span> Savoir plus </span> </a>
+                        <a class="type-7" href="{{ path('speaker_show', {'id': speaker.id }) }}"> <span> </span> <span> Savoir plus </span>
+                        </a>
                     </div>
                 {% endfor %}
             </ul>
