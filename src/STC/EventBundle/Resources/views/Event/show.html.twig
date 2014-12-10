@@ -39,42 +39,47 @@
             {% endif %}
         </ul>
     </div>
-    <div class="portfolio-title">
-        <h3> Speaker</h3>
-    </div>
-    <div class="portfolio portfolio-page container">
-        <div class="row">
-            <ul class="portfolio-img">
-                {% for speaker in entity.speakers %}
-                    <div class="work span3 show-event">
-                        <a rel="prettyPhoto">
-                            {% media speaker.logo, 'show' with {'alt': speaker.firstName,'title': speaker.firstName } %}
-                        </a>
-                        <h5> {{ entity.lastName }} {{ speaker.firstName }}</h5>
-                        <h4>{{ speaker.function }}</h4>
-                        <a class="type-7" href="{{ path('speaker_show', {'id': speaker.id }) }}"> <span> </span> <span> Savoir plus </span>
-                        </a>
-                    </div>
-                {% endfor %}
-            </ul>
+    {% if entity.speakers %}
+        <div class="portfolio-title">
+            <h3> Speaker</h3>
         </div>
-    </div>
-    <div class="portfolio-title">
-        <h3>Sponsor</h3>
-    </div>
-    <div class="portfolio portfolio-page container">
-        <div class="row">
-            <ul class="portfolio-img">
-                {% for sponsor in entity.sponsors %}
-                    <div class="work span3 ombrebleue show-event-sponsor">
-                        <a href="{{ sponsor.url }}" target="_blank">
-                            {% media sponsor.logo, 'show' with {'alt': sponsor.type,'title': sponsor.type } %}
-                        </a>
-                        <h4>{{ sponsor.name }}</h4>
-                        <h5>{{ sponsor.type }}</h5>
-                    </div>
-                {% endfor %}
-            </ul>
+        <div class="portfolio portfolio-page container">
+            <div class="row">
+                <ul class="portfolio-img">
+                    {% for speaker in entity.speakers %}
+                        <div class="work span3 show-event">
+                            <a rel="prettyPhoto">
+                                {% media speaker.logo, 'show' with {'alt': speaker.firstName,'title': speaker.firstName } %}
+                            </a>
+                            <h5> {{ entity.lastName }} {{ speaker.firstName }}</h5>
+                            <h4>{{ speaker.function }}</h4>
+                            <a class="type-7" href="{{ path('speaker_show', {'id': speaker.id }) }}"> <span> </span>
+                                <span> Savoir plus </span>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
-    </div>
+    {% endif %}
+    {% if entity.sponsors %}
+        <div class="portfolio-title">
+            <h3>Sponsor</h3>
+        </div>
+        <div class="portfolio portfolio-page container">
+            <div class="row">
+                <ul class="portfolio-img">
+                    {% for sponsor in entity.sponsors %}
+                        <div class="work span3 ombrebleue show-event-sponsor">
+                            <a href="{{ sponsor.url }}" target="_blank">
+                                {% media sponsor.logo, 'show' with {'alt': sponsor.type,'title': sponsor.type } %}
+                            </a>
+                            <h4>{{ sponsor.name }}</h4>
+                            <h5>{{ sponsor.type }}</h5>
+                        </div>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% endif %}
 </div>
