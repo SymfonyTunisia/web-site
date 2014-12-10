@@ -46,7 +46,7 @@
         <div class="row">
             <ul class="portfolio-img">
                 {% for speaker in entity.speakers %}
-                    <div class="work span3 ombrebleue show-event">
+                    <div class="work span3 show-event">
                         <a rel="prettyPhoto">
                             {% media speaker.logo, 'show' with {'alt': speaker.firstName,'title': speaker.firstName } %}
                         </a>
