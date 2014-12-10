@@ -48,7 +48,7 @@
                 {% for speaker in entity.speakers %}
                     <div class="work span3 ombrebleue show-event">
                         <a>
-                            {% media speaker.logo, 'wide' with {'alt': speaker.firstName,'title': speaker.firstName } %}
+                            {% media speaker.logo, 'show' with {'alt': speaker.firstName,'title': speaker.firstName } %}
                         </a>
                         <h5>{{ speaker.firstName }} {{ speaker.lastName }}</h5>
                         <h4>{{ speaker.function }}</h4>
@@ -68,7 +68,7 @@
                 {% for sponsor in entity.sponsors %}
                     <div class="work span3 ombrebleue show-event-sponsor">
                         <a href="{{ sponsor.url }}" target="_blank">
-                            {% media sponsor.logo, 'wide' with {'alt': sponsor.type,'title': sponsor.type } %}
+                            {% media sponsor.logo, 'show' with {'alt': sponsor.type,'title': sponsor.type } %}
                         </a>
                         <h4>{{ sponsor.name }}</h4>
                         <h5>{{ sponsor.type }}</h5>
