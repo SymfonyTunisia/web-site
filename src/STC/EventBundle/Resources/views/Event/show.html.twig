@@ -47,7 +47,7 @@
             <ul class="portfolio-img">
                 {% for speaker in entity.speakers %}
                     <div class="work span3 ombrebleue show-event">
-                        <a>
+                        <a rel="prettyPhoto">
                             {% media speaker.logo, 'show' with {'alt': speaker.firstName,'title': speaker.firstName } %}
                         </a>
                         <h5>{{ speaker.firstName }} {{ speaker.lastName }}</h5>
