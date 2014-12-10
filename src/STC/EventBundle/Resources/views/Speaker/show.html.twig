@@ -10,25 +10,29 @@
         </div>
     </div>
 </div>
-
-<!-- Portfolio -->
-<div class="portfolio portfolio-page container events">
+<div class="container news">
     <div class="row">
-        <div class="portfolio-navigator span12">
-            {% media entity.logo, 'wide' with {'alt': entity.firstName,'title': entity.firstName } %}
-            <h4> {{ entity.firstName }} {{ entity.lastName }}</h4>
-            <h5>Fonction : <span class="red">{{ entity.function }}</span></h5>
-            <h5>Sociétée : <span class="red">{{ entity.company }}</span></h5>
-            <h5>Description : <span class="red">{{ entity.description }}</span></h5>
-            <h4>Blog : <a href=" {{ entity.blog }}"
-                          target="_blank">Blog {{ entity.firstName }} {{ entity.lastName }} </a></h4>
-            <h4>URL Twitter : <a href="{{ entity.urlTwitter }}"
-                                 target="_blank">Twitter {{ entity.firstName }} {{ entity.lastName }} </a></h4>
-            <h4>URL Github : <a href="{{ entity.urlGit }}"
-                                target="_blank">Github {{ entity.firstName }} {{ entity.lastName }}</a></h4>
-            <h5>Sujet : <span class="red">{{ entity.topic }}</span></h5>
+        <div class="span12">
+            <article class="box-news">
+                <header>
+                    <h3>{{ entity.firstName }} {{ entity.lastName }}</h3>
 
-            <p>{{ entity.topicDescription }}</p>
+                    <p>{{ entity.function }}</p>
+
+                    <p>{{ entity.company }}</p>
+
+                    <p>{{ entity.description }}</p>
+
+                    <div class="span5 image-detail">
+                        {% media entity.logo, 'show' with {'alt': entity.firstName,'title': entity.firstName } %}
+                    </div>
+                    <div class="news-content">
+                        <h3>{{ entity.topic }}</h3>
+
+                        <p>{{ entity.topicDescription }}</p>
+                    </div>
+                </header>
+            </article>
         </div>
     </div>
 </div>
