@@ -5,7 +5,7 @@
     <div class="row">
         <ul class="portfolio-img">
             {% for entity in entities %}
-                <div class="work span3 ombrebleue">
+                <div class="work span3">
                     <a rel="prettyPhoto">
                         {% media entity.image, 'abstract' with {'alt': entity.title,'title': entity.title } %}
                     </a>
