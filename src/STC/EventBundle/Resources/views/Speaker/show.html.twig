@@ -17,17 +17,26 @@
                 <header>
                     <h3>{{ entity.firstName }} {{ entity.lastName }}</h3>
 
-                    <p>{{ entity.function }}</p>
-
-                    <p>{{ entity.company }}</p>
-
-                    <p>{{ entity.description }}</p>
-
                     <div class="span5 image-detail">
                         {% media entity.logo, 'show' with {'alt': entity.firstName,'title': entity.firstName } %}
                     </div>
+
                     <div class="news-content">
-                        <h3>{{ entity.topic }}</h3>
+
+                        <h3>Fonction</h3>
+
+                        <p>{{ entity.function }}</p>
+
+                        <h3>Société</h3>
+
+                        <p>{{ entity.company }}</p>
+
+                        <h3>Desciption</h3>
+
+                        <p>{{ entity.description }}</p>
+
+                        <h3>Présentation</h3>
+                        <h5>{{ entity.topic }}</h5>
 
                         <p>{{ entity.topicDescription }}</p>
                     </div>
