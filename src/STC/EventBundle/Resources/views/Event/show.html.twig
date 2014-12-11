@@ -39,7 +39,7 @@
             {% endif %}
         </ul>
     </div>
-    {% if entity.speakers %}
+    {% if entity.speakers |length > 0 %}
         <div class="portfolio-title">
             <h3> Speaker</h3>
         </div>
@@ -62,7 +62,7 @@
             </div>
         </div>
     {% endif %}
-    {% if entity.sponsors %}
+    {% if entity.sponsors |length > 0 %}
         <div class="portfolio-title">
             <h3>Sponsor</h3>
         </div>
