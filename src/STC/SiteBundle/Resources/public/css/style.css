@@ -542,7 +542,7 @@ footer .social a {
     vertical-align: middle;
 }
 
-footer .social a.twitter {
+.social a.twitter {
     background: url(../img/social-icons/twitter.png) left bottom no-repeat;
 }
 
@@ -574,7 +574,7 @@ footer .social a.linkedin {
     background: url(../img/social-icons/linkedin.png) left bottom no-repeat;
 }
 
-footer .social a.facebook {
+.social a.facebook {
     background: url(../img/social-icons/facebook.png) left bottom no-repeat;
 }
 
