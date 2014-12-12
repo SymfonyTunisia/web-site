@@ -534,7 +534,7 @@ footer .social {
     text-align: right;
 }
 
-footer .social a {
+.social a {
     display: inline-block;
     width: 24px;
     height: 24px;
@@ -582,7 +582,7 @@ footer .social a.email {
     background: url(../img/social-icons/email.png) left bottom no-repeat;
 }
 
-footer .social a.github {
+.social a.github {
     background: url(../img/social-icons/github.png) left bottom no-repeat;
 }
 
@@ -606,7 +606,7 @@ footer .social a.tumblr {
     background: url(../img/social-icons/tumblr.png) left bottom no-repeat;
 }
 
-footer .social a.sensio {
+.social a.sensio {
     background: url(../img/social-icons/sensio.png) left bottom no-repeat;
 }
 
