@@ -53,9 +53,8 @@
                             </a>
                             <h5> {{ speaker.lastName }} {{ speaker.firstName }}</h5>
                             <h4>{{ speaker.function }}</h4>
-                            <a class="type-7" href="{{ path('speaker_show', {'id': speaker.id }) }}"> <span> </span>
-                                <span> Savoir plus </span>
-                            </a>
+
+                            <p>{{ speaker.company }}</p>
                         </div>
                     {% endfor %}
                 </ul>
@@ -74,6 +73,7 @@
                             <a href="{{ sponsor.url }}" target="_blank">
                                 {% media sponsor.logo, 'show' with {'alt': sponsor.type,'title': sponsor.type } %}
                             </a>
+
                             <h3>{{ sponsor.name }}</h3>
                             <h5>{{ sponsor.type }}</h5>
                         </div>
