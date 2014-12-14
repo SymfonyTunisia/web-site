@@ -8,8 +8,8 @@ sonata_seo:
         title:            Sonata Project
         metas:
             name:
-                keywords:             foo bar
-                description:          The description
+                keywords:             Symfony Tunisia Community
+                description:          Symfony Tunisia Community
                 robots:               index, follow
 
             property:
@@ -19,8 +19,8 @@ sonata_seo:
 
                 # Open Graph information
                 # see http://developers.facebook.com/docs/opengraphprotocol/#types or http://ogp.me/
-                'og:site_name':       Sonata Project Sandbox
-                'og:description':     A demo of the some rich bundles for your Symfony2 projects
+                'og:site_name':       Symfony Tunisia Community
+                'og:description':     La communauté tunisienne de Symfony « Symfony Tunisia Community »
 
             http-equiv:
                 'Content-Type':         text/html; charset=utf-8
