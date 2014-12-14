@@ -5,7 +5,7 @@ sonata_seo:
     encoding:             UTF-8
     page:
         default:          sonata.seo.page.default
-        title:            Sonata Project
+        title:            Symfony Tunisia Community
         metas:
             name:
                 keywords:             Symfony Tunisia Community
