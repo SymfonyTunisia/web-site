@@ -2,11 +2,10 @@
     {{ render(controller('STCSiteBundle:Site:slider')) }}
 </div>
 <div class="container presentation">
-    {% include "STCSiteBundle:Site:welcome.html.twig" %}
     <div class="what-we-do container">
         <div class="row">
             {% include "STCSiteBundle:Site:aboutMe.html.twig" %}
-            {{ render(controller('STCSiteBundle:Site:sponsor')) }}
+            {% include "STCSiteBundle:Site:welcome.html.twig" %}
         </div>
 
     </div>
