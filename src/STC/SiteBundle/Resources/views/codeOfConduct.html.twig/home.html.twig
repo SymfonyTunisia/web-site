@@ -1,0 +1,15 @@
+<div class="slider">
+    {{ render(controller('STCSiteBundle:Site:slider')) }}
+</div>
+<div class="container presentation">
+    <div class="what-we-do container">
+        <div class="row">
+            {% include "STCSiteBundle:Site:aboutMe.html.twig" %}
+            {% include "STCSiteBundle:Site:welcome.html.twig" %}
+        </div>
+
+    </div>
+</div>
+<div class="portfolio container portfolio-index">
+    {{ render(controller('STCEventBundle:Event:lastEvent')) }}
+</div>

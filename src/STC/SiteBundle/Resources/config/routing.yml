@@ -2,10 +2,6 @@ home:
     pattern:  /
     defaults: { _controller: STCSiteBundle:Site:home }
 
-symfonyTn:
-    pattern:  /symfony-tn
-    defaults: { _controller: STCSiteBundle:Site:symfonyTn }
-
 whoWeAre:
     pattern:  /who-we-are
     defaults: { _controller: STCSiteBundle:Site:whoWeAre }
@@ -13,3 +9,19 @@ whoWeAre:
 copyright:
     pattern:  /copyright
     defaults: { _controller: STCSiteBundle:Site:copyright }
+
+symfony_planning:
+    pattern:  /symfony-tn-planning
+    defaults: { _controller: STCSiteBundle:Site:symfonyPlanning }
+
+symfony_workshop:
+    pattern:  /symfony-tn-formation
+    defaults: { _controller: STCSiteBundle:Site:symfonyWorkshop }
+
+symfony_sponsor:
+    pattern:  /symfony-tn-sponsor
+    defaults: { _controller: STCSiteBundle:Site:symfonySponsor }
+
+code_of_conduct:
+    pattern:  /code-of-conduct
+    defaults: { _controller: STCSiteBundle:Site:codeOfConduct }

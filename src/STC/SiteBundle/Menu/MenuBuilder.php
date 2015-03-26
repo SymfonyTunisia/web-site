@@ -55,18 +55,18 @@ class MenuBuilder
         );
 
         $menu->addChild(
-            $this->translator->trans('label.event', array(), 'messages'),
-            array('route' => 'event')
+            $this->translator->trans('label.planning', array(), 'messages'),
+            array('route' => 'symfony_planning')
         );
 
         $menu->addChild(
-            $this->translator->trans('label.symfonyTn', array(), 'messages'),
-            array('route' => 'symfonyTn')
+            $this->translator->trans('label.workshop', array(), 'messages'),
+            array('route' => 'symfony_workshop')
         );
 
-        $news = $menu->addChild(
-            $this->translator->trans('label.news', array(), 'messages'),
-            array('route' => 'sonata_news_archive')
+        $menu->addChild(
+            $this->translator->trans('label.sponsor', array(), 'messages'),
+            array('route' => 'symfony_sponsor')
         );
 
         $menu->addChild(
@@ -74,9 +74,7 @@ class MenuBuilder
             array('route' => 'contact')
         );
 
-        if ($route == "sonata_news_archive" || $route == "sonata_news_view") {
-            $news->setCurrent(true);
-        }
+
 
         return $menu;
     }

@@ -21,14 +21,6 @@ class SiteController extends Controller
     /**
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function symfonyTnAction()
-    {
-        return $this->render('STCSiteBundle:Site:symfonyTn.html.twig');
-    }
-
-    /**
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
     public function whoWeAreAction()
     {
         return $this->render('STCSiteBundle:Site:whoWeAre.html.twig');
@@ -56,5 +48,37 @@ class SiteController extends Controller
         $entities = $em->getRepository('STCSiteBundle:Sponsor')->findSponsor();
 
         return $this->render('STCSiteBundle:Site:sponsor.html.twig', array('entities' => $entities));
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function symfonyPlanningAction()
+    {
+        return $this->render('STCSiteBundle:Site:symfonyPlanning.html.twig');
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function symfonyWorkshopAction()
+    {
+        return $this->render('STCSiteBundle:Site:symfonyWorkshop.html.twig');
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function symfonySponsorAction()
+    {
+        return $this->render('STCSiteBundle:Site:symfonySponsor.html.twig');
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function codeOfConductAction()
+    {
+        return $this->render('STCSiteBundle:Site:codeOfConduct.html.twig');
     }
 }

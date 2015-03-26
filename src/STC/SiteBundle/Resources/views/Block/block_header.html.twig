@@ -33,21 +33,21 @@
                                         Qui sommes-nous
                                     </a>
                                 </li>
-                                <li {% if app.request.get('_route') in ['event','event_show'] %} class="current-page" {% endif %}>
-                                    <a href="{{ path('event') }}">
+                                <li {% if app.request.get('_route') == 'symfony_planning' %} class="current-page" {% endif %}>
+                                    <a href="{{ path('symfony_planning') }}">
+                                        <i class="icon-tasks"></i><br/>
+                                        Planning</a>
+                                </li>
+                                <li {% if app.request.get('_route') in ['symfony_workshop'] %} class="current-page" {% endif %}>
+                                    <a href="{{ path('symfony_workshop') }}">
                                         <i class="icon-calendar"></i><br/>
-                                        événements
+                                        Formations
                                     </a>
                                 </li>
-                                <li {% if app.request.get('_route') == 'symfonyTn' %} class="current-page" {% endif %}>
-                                    <a href="{{ path('symfonyTn') }}">
-                                        <i class="icon-tasks"></i><br/>
-                                        Symfony tn</a>
-                                </li>
-                                <li {% if app.request.get('_route') in ['sonata_news_archive','sonata_news_archive_monthly',' sonata_news_tag','sonata_news_collection ','sonata_news_archive_yearly','sonata_news_comment_moderation','sonata_news_view',' sonata_news_home'] %} class="current-page" {% endif %}>
-                                    <a href="{{ path('sonata_news_archive') }}">
+                                <li {% if app.request.get('_route') in ['symfony_sponsor'] %} class="current-page" {% endif %}>
+                                    <a href="{{ path('symfony_sponsor') }}">
                                         <i class="icon-file"></i><br/>
-                                        Actualité
+                                        Sponsors
                                     </a>
                                 </li>
                                 <li {% if app.request.get('_route') == 'contact' %} class="current-page" {% endif %}>

@@ -1,0 +1,14 @@
+<div class="work span4 supporters">
+    <div class="presentation-title">
+        <h3>Nos supporters</h3>
+    </div>
+    <ul>
+        {% for key,entity in entities %}
+            <li class="ombrebleue">
+                <a target="_blank" href="{{ entity.url }}">
+                    {% media entity.logo, 'show' with {'alt': entity.name,'title': entity.name } %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
