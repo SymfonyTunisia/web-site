@@ -1788,3 +1788,80 @@ a.type-7:hover {
 .workshops_table .cta:hover{
     text-decoration: underline;
 }
+
+
+/*********************************
+*************CONTENT**************
+*********************************/
+
+html,body,#container{height:100%}
+body>#container{height:auto;min-height:100%}
+#main_content{display:table;border-collapse:separate;width:100%;padding:0 40px 3em 40px}
+#main_content>aside,#main_content>article{color:#222;display:table-cell}
+#main_content>article{text-align:left;padding-left:40px}
+#main_content ul#news-list{
+    position:relative;
+    border-left: 5px #666 solid;
+    padding-left: 15px;margin-left: 60px;
+}
+#main_content ul#news-list li{
+    border-width: 1px 1px 1px 15px;
+    border-color: gray;
+    border-style: solid;
+    /*ou bien seulement un border-left: 15px gray solid;*/
+    padding: 5px 0px 5px 10px;margin-bottom:10px;
+    position:relative;}
+#main_content ul#news-list li::before{
+    content:"";position:absolute;
+    border-width: 10px;border-color: transparent gray transparent transparent;border-style:solid;
+    left:-35px;
+}
+#main_content ul#news-list li:nth-child(even){background: #efefef}
+/* l'idee de la time-line, bien évidemment il faut réadapter le code html pour faire un truc propre*/
+#main_content ul#news-list li time{
+    position:absolute;
+    left: -128px;
+    background:gray;
+    color:white;font-size: 12px;line-height:12px;
+    padding: 2px;
+    -webkit-filter:drop-shadow(0 0 5px #aaa);
+    -moz-filter:drop-shadow(0 0 5px #aaa);
+    -o-filter:drop-shadow(0 0 5px #aaa);
+    filter:drop-shadow(0 0 5px #aaa);
+}
+#main_content ul#news-list li time::after{
+    content:"";
+    position:absolute;
+    border-width: 5px;
+    border-color: transparent transparent transparent gray;
+    border-style: solid;right: -10px;
+}
+.news-list{list-style-type:none;margin-bottom:50px;padding-left:0;overflow:auto;width:101ex;max-height:500px}
+.news{margin-bottom:10px;padding-bottom:1px;border-bottom:1px solid #EEE;padding-right:15px}
+.news h3{margin-top:1px;margin-bottom:10px}
+.news h3 .news-date{font-size:.6em}
+.news article{padding-left:10px}
+.news article :first-child{margin-top:0}
+.news .content[contenteditable="true"]{margin-top:17px;margin-bottom:16px}
+.news .buttons-set{margin-top:5px;margin-bottom:5px}
+.inline-news{list-style-type:none;font-size:.9em;color:#111}
+.inline-news:target ~ .inline-news{opacity:.5}
+span.news-date{color:#222;font-weight:normal}
+span.news-date time{color:#333}
+.inline-news .news-title{font-weight:bold}
+.inline-news .news-body{padding-left:20px;display:block;margin-bottom:.4em}
+a.news-title{color:inherit;text-decoration:inherit}
+.inline-news .news-body p,.inline-news .news-body blockquote,.inline-news .news-body ul,.inline-news .news-body ol,.inline-news .news-body li,.inline-news .news-body div{display:inline}
+.profile{margin-top:40px}
+.profile .avatar-wrapper{width:160px;float:left}
+.profile .infos{clear:left;position:relative;top:-132px;left:160px;max-width:700px;vertical-align:top;padding:25px 35px;background-color:white;-webkit-border-radius:10px;-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;border-radius:10px}
+.profile .avatar{-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;-o-border-radius:5px;border-radius:5px}
+.profile .infos h1{margin-top:0}
+.profile .infos h1 .username-wrapper{opacity:.4}
+.profile .infos .description{padding:10px}
+.profile-bar .avatar-small,.profile-bar .user,.logout-bar-link{vertical-align:middle}
+.profile-bar .user{margin-left:3px;margin-right:5px}
+.logout-bar-link{opacity:.8}
+.course .intro,.cursus .intro{margin-bottom:60px}
+.cursus header h1,.course header h1{margin-bottom:2px}
+.cursus header .details,.course header .details{margin-top:0;font-size:.8em;color:#333;padding-left:5px}
