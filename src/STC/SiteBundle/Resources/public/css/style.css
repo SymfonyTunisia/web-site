@@ -1865,3 +1865,56 @@ a.news-title{color:inherit;text-decoration:inherit}
 .course .intro,.cursus .intro{margin-bottom:60px}
 .cursus header h1,.course header h1{margin-bottom:2px}
 .cursus header .details,.course header .details{margin-top:0;font-size:.8em;color:#333;padding-left:5px}
+
+
+.sponsors-list, .sponsors-list li, .sponsors-list ul {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.sponsors-list h2 {
+    color: #931b7f;
+}
+
+.sponsors-list h3 {
+    display: inline;
+    margin-left: 10px;
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    color: #5d5d5d;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .7);
+    vertical-align: middle;
+}
+
+.sponsors-list h4, .sponsors-list h4 a {
+    margin-top: 25px;
+    padding: 0 20px;
+    font-family: 'Droid Sans', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #5d5d5d;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .7);
+}
+
+.sponsors-list h4 {
+    margin-top: 0;
+}
+
+.sponsors-list img {
+    padding: 0.5em;
+    border-radius:5px;
+    border-radius:5px;
+    border-radius:5px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+    width: 214px;
+    height: 121px;
+}
+
+.sponsors-list p {
+    margin: 1em 0 1em;
+}
+
+
