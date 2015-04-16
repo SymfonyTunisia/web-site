@@ -1796,7 +1796,7 @@ a.type-7:hover {
 
 html,body,#container{height:100%}
 body>#container{height:auto;min-height:100%}
-#main_content{display:table;border-collapse:separate;width:100%;padding:0 40px 3em 40px}
+#main_content{display:table;border-collapse:separate;width:100%;padding:0 40px 3em 40px; float:left;}
 #main_content>aside,#main_content>article{color:#222;display:table-cell}
 #main_content>article{text-align:left;padding-left:40px}
 #main_content ul#news-list{
